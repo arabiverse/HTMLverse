@@ -1,12 +1,80 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+background-color: whitesmoke;
+}
+
+
+
+header .red {
+  color: red;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: large;
+  padding: 2px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.navbar {
+  background-color: white;
+  margin-top: 10px;
+  border: #364fab 4px solid;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+
+}
+
+
+.navbar .nav-links a:hover {
+  color: #364fab;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section .sub-title {
+color: #364fab;
+}
+
+
 .sourcecode {
     direction: ltr;
-    background-color: black;
-    color: white;
-    padding: 4px;
 }
 
 .sourcecode pre span {
     color: green;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+.sourcecode pre {
+    background: #1e1e1e;     /* dark background */
+  color: #dcdcdc;          /* light text */
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
 }
