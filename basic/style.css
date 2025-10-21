@@ -3,7 +3,7 @@
 }
 
 body {
-background-color: whitesmoke;
+
 }
 
 
@@ -21,9 +21,10 @@ header h1 {
 }
 
 .navbar {
-  background-color: white;
+  background-color: #f9f9f9;
   margin-top: 10px;
-  border: #364fab 4px solid;
+  border: #364fab 2px solid;
+  border-radius: 4px;
 }
 
 .navbar .nav-links {
@@ -47,7 +48,7 @@ header h1 {
 }
 
 .box {
-  background-color: white;
+  background-color: whitesmoke;
   padding: 20px;
   margin-top: 20px;
   border-radius: 8px;
@@ -59,11 +60,10 @@ color: #364fab;
 }
 
 section {
-  background-color: whitesmoke;
-  padding: 20px;
-  border-radius: 8px;
+  
+  padding: 5px;
   margin-top: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 
