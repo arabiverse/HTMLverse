@@ -57,6 +57,16 @@ header h1 {
 
 .box .sub-title {
 color: #364fab;
+border-bottom: #364fab 2px solid;
+}
+
+.box .sub-title .hint {
+  background-color: darkblue;
+  color: white;
+  padding: 5px;
+  font-size: smaller;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 section {
