@@ -1,20 +1,37 @@
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  
+}
+
+
+nav {
+  margin-top: 10px;
+  background-color: whitesmoke;
+  border-top:#364fab  4px solid;
+  border-bottom: #364fab 4px solid;
+}
 
 
 .nav-links {
+  margin:10px 0;
+  padding: 0 10px;
   list-style: none;
   display: flex;
   gap: 20px;
+  overflow-x: auto;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color:black;
   font-weight: bold;
   transition: color 0.3s;
+  font-size: 1.3rem;
 }
 
 .nav-links a:hover {
