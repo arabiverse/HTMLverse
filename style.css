@@ -11,7 +11,6 @@ body {
 
 nav {
   margin-top: 10px;
-  background-color: whitesmoke;
   border-top:#364fab  4px solid;
   border-bottom: #364fab 4px solid;
 }
@@ -28,12 +27,18 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color:black;
+  color:#364fab;
   font-weight: bold;
   transition: color 0.3s;
   font-size: 1.3rem;
 }
 
 .nav-links a:hover {
-  color: #364fab;
+  color: black;
+}
+
+main {
+  padding: 20px;
+  background-color: whitesmoke;
+  min-height: 80vh;
 }

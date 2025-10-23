@@ -89,7 +89,7 @@ section {
 }
 
 .sourcecode pre {
-    background: #1e1e1e;     /* dark background */
+  background: #1e1e1e;     /* dark background */
   color: #dcdcdc;          /* light text */
   padding: 1em;
   border-radius: 8px;
