@@ -263,7 +263,141 @@
 	
 	</section>
 
+	<section>
+		<h2>ب. ما هي السمات وكيف تعمل؟</h2>
+		<p>السمة هي قيمة تُوضع داخل وسم فتح عنصر اتش.تي.إم.إل. تُوفر السمات معلومات إضافية حول العنصر أو تُحدد كيفية عمله.</p>
+		<h4>هذا هو بناء الجملة الأساسي لسمة ما:</h4>
+
+		<h3>القاعدة :</h3>
+		<div class="rules">
+			<h4>
+&lt;element attribute="value"&gt;&lt;/element&gt;
+			</h4>
+		</div>
+		<div class="translate">
+			<h4>
+&lt;العنصر السمة="القيمة"&gt;&lt;/العنصر&gt
+		</div>
+
+		<p>اسم السمة متبوع بعلامة يساوي (=) وقيمة بين علامتي اقتباس. يمكن أن تكون القيمة سلسلة نصية أو رقمًا، حسب السمة.</p>
+		<p>يستخدم هذا المثال الأول سمتي اتش.ريف (href) وتارغيت (target). تُحدد سمة اتش.ريف عنوان  للرابط (URL)، بينما تُحدد سمة تارغيت مكان فتح الرابط.</p>
+
+		<h3>المثال :</h3>
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;a href="https://d3j1x.github.io/HTMLverse/" target="__blank"&gt;تصفح موقع عالم اتش.تي.إم.إل&lt;/a&gt;
+		</code></pre>
+		</div>
+		<h3>معاينة :</h3>
+		<div class="preview">
+			<a href="https://d3j1x.github.io/HTMLverse/" target="__blank">تصفح موقع عالم اتش.تي.إم.إل</a>
+		</div>
+		<p>بدون سمة اتش.ريف <strong>(href)</strong>، لن يعمل الرابط لعدم وجود عنوان <strong>(URL)</strong> للوجهة. لذا، يجب تضمين سمة اتش.ريف هذه لجعل الرابط فعالاً. تتيح لك خاصية تارغيت="ــبلانك" <strong>("target="__blank)</strong> فتح الرابط في علامة تبويب جديدة بالمتصفح. ستتعلم المزيد عن سمة تارغيت في الدروس القادمة.</p>
+		<p>السمات المشتركة الأخرى هي السمة اس.ار.سي <strong>(src)</strong>، والسمة التْ <strong>(alt)</strong>، أو البديلة - والتي تستخدم لتحديد مصدر الصورة وتوفير نص وصفي بديل للصورة، على التوالي.</p>
+		
+		<h3>مثال</h3>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;img src="https://d3j1x.github.io/HTMLverse/basic/assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة."&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview">
+		<img src="assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة.">
+	</div>
+	
+	<p>على غرار سمة اتش.ريف <strong>(href)</strong>، تُعدّ سمة اس.ار.سي <strong>(src)</strong> ضروريةً لأنها تُحدد ملف الصورة المراد عرضه. سمة التْ <strong>(alt)</strong> ليست ضروريةً، ولكن يُنصح بها لأغراض إمكانية الوصول. تعني إمكانية الوصول ضمان قدرة الجميع، بمن فيهم ذوو الإعاقة، على استخدام وفهم أشياء مثل مواقع الويب والتطبيقات والمساحات المادية. ستتعلم المزيد عن إمكانية الوصول في الدروس القادمة.</p>
+	<p>بعض السمات فريدة بعض الشيء من حيث بناء جملتها النحوية مثل السمة شيكيد <strong>(checked)</strong></p>
+	
+	<h3>مثال</h3>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;input type="checkbox" checked /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<p>حاول النقر فوق مربع الاختيار في نافذة المعاينة لرؤيته يتناوب بين حالة محددة وحالة غير محددة.</p>
+	<div class="preview">
+		<input type="checkbox" checked />
+	</div>
+
+	<p>في المثال التالي، لدينا عنصر إدخال <strong>(input)</strong> مع ضبط سمة النوع <strong>(type)</strong> على "مربع اختيار" <strong>(checkbox)</strong>. تُستخدم المدخلات لجمع البيانات من المستخدمين، وتُحدد سمة النوع <strong>(type)</strong> نوع الإدخال. في هذه الحالة، يكون هذا الإدخال مربع اختيار <strong>(checkbox)</strong>. ستتعلم المزيد عن كيفية عمل المدخلات في الدروس القادمة.</p>
+	<p>تُستخدم السمة شيكيد <strong>(checked)</strong> لتحديد خانة الاختيار التي يجب تحديدها افتراضيًا. لا تتطلب السمة شيكيد <strong>(checked)</strong> قيمة. في حال وجودها، سيتم تحديد خانة الاختيار افتراضيًا. أما في حال عدم وجودها، فسيتم إلغاء تحديد خانة الاختيار. تُعرف هذه السمة باسم السمة المنطقية بوليان <strong>(boolean)</strong>. ستتعلم المزيد عن القيم المنطقية بشكل عام عند الانتقال إلى قسم جافاسكريبت (جا).</p>
+
+		<h3>مثال</h3>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;input type="checkbox" /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview">
+		<input type="checkbox" />
+	</div>
+
+	<p>هناك العديد من السمات المنطقية الشائعة التي ستصادفها في اتش.إم.إل <strong>(html)</strong>، مثل معطل "ديزايبليد" <strong>(disabled)</strong> وللقراءة فقط "ريد.أنلي" <strong>(readonly)</strong> ومطلوب "ريكوايريد" required. تُستخدم هذه السمات لتحديد حالة العنصر، مثل ما إذا كان "معطلاً" <strong>(disabled)</strong> أو "للقراءة فقط" <strong>(readonly)</strong> أو "مطلوباً" <strong>(required)</strong>.</p>
+
+	<h3>مثال</h3>
+	<p>هذا مثال على عنصر إدخال نص مُعطّل <strong>(disabled)</strong> افتراضيًا.</p>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;type="text" disabled /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<p>جرّب النقر على عنصر الإدخال في نافذة المعاينة.</p>
+	<div class="preview">
+		<input type="text" disabled>
+	</div>
+
+	<h3>مثال</h3>
+	<p>هذا مثال على عنصر إدخال نص غير مُعطّل افتراضيًا.</p>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;type="text" /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<p>يجب أن يكون بإمكانك الآن النقر فوقه والكتابة داخل الحقل.</p>
+	<div class="preview">
+		<input type="text" >
+	</div>
+
+	<p>تحتوي لغة اتش.تي.إم.إل <strong>(html)</strong> على العديد من السمات التي يُمكن استخدامها لتخصيص سلوك ومظهر عناصر صفحة الويب. يُعد فهم كيفية استخدام السمات <strong>(attributes)</strong> أمرًا أساسيًا لإنشاء محتوى ويب تفاعلي وسهل الوصول. في الدروس القليلة القادمة، ستتعلم المزيد عن سمات اتش.تي.إم.إل <strong>(html)</strong> وكيفية استخدامها بفعالية في مشاريع تطوير الويب الخاصة بك.</p>
+
+
+		<!-- Questions  أسئلة-->
+	<div class="questions">
+		<h3>أسئلة :</h3>
+		<h4>أي مما يلي يعد مثالاً على سمة منطقية <strong>(boolean attribute)</strong>؟</h4>
+		<p>١. src ❌</p>
+		<p>٣. href ❌</p>
+		<p><strong>٤. disabled ✅ </strong></p>
+		<p>٤. alt ❌</p>
+		
+		<br>
+		<h4>ما هو دور السمة <strong>(attribute)</strong> في اتش.تي.إم.إل <strong>(HTML)</strong>؟</h4>
+		<p><strong>١. توفر السمات (attributes) معلومات إضافية وتساعد في تحديد سلوك عناصر اتش.تي.إم.إل (HTML). ✅</strong></p>
+		<p>٢. تغير السمات (Attributes) لون الخلفية للعنصر. ❌</p>
+		<p>٣. السمات (Attributes) تغير حجم الخط للعنصر. ❌</p>
+		<p>٤. السمات (Attributes) تضيف وظيفة جافاسكريبت (JavaScript) إلى عنصر. ❌</p>
+		<br>
+		<h4>أي مما يلي هو بناء الجملة الصحيح للسمة المنطقية (boolean attribute) ؟</h4>
+		<p><strong>١. &lt;input type="checkbox" checked&gt; ✅</strong></p>
+		<p>٢. &lt;input type="checkbox" checked="on"&gt; ❌</p>
+		<p>٣. &lt;input type="checkbox" checked="off"&gt; ❌</p>
+		<p>٤. &lt;input type="checkbox" checked="isChecked"&gt; ❌</p>
+	</div>
+	</section>
+
 </div>
+
+
 
 
 

@@ -82,7 +82,7 @@ section {
 }
 
 
-.sourcecode,.errorcode {
+.sourcecode,.errorcode, .rules {
     direction: ltr;
 }
 
@@ -129,10 +129,18 @@ section {
 }
 
 .questions {
-  margin: 10px;
+  margin:40px 10px;
   padding: 10px;
   background-color: darkgray;
 }
 .questions h3 {
   text-align: center;
+}
+.rules {
+  text-align: center;
+  background-color: yellowgreen;
+}
+.translate {
+  text-align: center;
+  background-color: yellow;
 }
