@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 
   font-family: "Noto Kufi Arabic", sans-serif;
@@ -45,4 +49,8 @@ main {
   padding: 20px;
   background-color: whitesmoke;
   min-height: 80vh;
+}
+
+footer {
+  text-align: center;
 }

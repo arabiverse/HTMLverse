@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="red" href="./index.html">X</a>
+	<h1>أساسيات اتش.تي.إم.إل</h1>
+</header>
+
+<!-- BASIC 3 -->
+<div class="box">
+	<div class="sub-title">
+		<h1>٣. فهم خصائص اتش.تي.إم.إل</h1>
+		<span class="hint">نظري</span>
+		<h3>في هذه الوحدة، ستتعلم عن دور اتش.تي.إم.إل (HTML) في الويب (Web)، وما هي خصائص اتش.تي.إم.إل (HTML).</h3>
+	</div>
+
+	<section>
+	<h2>أ. ما الدور الذي يلعبه اتش.تي.إم.إل (HTML) في الويب (Web)؟</h2>
+	<p>	اتش.تي.إم.إل <strong>(html)</strong>، يرمز إلى لغة ترميز النص الفائق، هو لغة ترميز لإنشاء صفحات الويب <strong>(Web)</strong>. عندما تزور موقعًا إلكترونيًا وترى محتوى مثل الفقرات والعناوين والروابط والصور ومقاطع الفيديو؛ فهذا هو اتش.تي.إم.إل <strong>(html)</strong>.</p>
+	<h4>إليك مثال صغير يستخدم عناصر اتش.تي.إم.إل (html).</h4>
+	
+
+	<h3>الكود :</h3>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;h1&gt;عنصر العنوان الرئيسي&lt;/h1&gt;
+
+&lt;p&gt;أنا عنصر فقرة.&lt;/p&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview">
+		<h1>عنصر العنوان الرئيسي</h1>
+		<p>أنا عنصر فقرة.</p>
+	</div>
+
+	<br>
+	<p>تمثل لغة اتش.تي.إم.إل <strong>(html)</strong> محتوى وهيكل صفحة الويب من خلال استخدام العناصر. معظم العناصر سيكون لها وسم افتتاحي ووسم إغلاق. أحيانًا يُشار إلى هذه الوسوم على أنها وسوم بداية ونهاية. بين هذين الوسمين، سيكون لديك المحتوى. يمكن أن يكون هذا المحتوى نصًا أو عناصر اتش.تي.إم.إل <strong>(html)</strong> أخرى.</p>
+	<p>تبدأ كل من العلامات الافتتاحية والختامية بقوس زاوي أيسر <strong>(>)</strong>، وتنتهي بقوس زاوي أيمن <strong>(<)</strong>، ويوضع اسم العلامة بين هذين القوسين. على الرغم من أن أسماء علامات اتش.تي.إم.إل <strong>(html)</strong> لا تميز بين الحروف الكبيرة والصغيرة، إلا أنه من المقبول على نطاق واسع ومن الأفضل كتابتها بأحرف صغيرة.</p>
+
+	<h3>إليك نظرة أقرب على وسمات الفقرة الافتتاحية والختامية فقط:</h3>
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;p&gt;
+
+&lt;/p&gt;
+	</code></pre>
+	</div>
+	
+	<p>ما يميز وسم البداية عن وسم الإغلاق هو الشرطة المائلة الأمامية <strong>(/)</strong> الموضوعة مباشرة بعد القوس الزاوي الأيسر في وسم الإغلاق. بعض عناصر اتش.تي.إم.إل <strong>(html)</strong> لا تحتوي على وسم إغلاق. هذه تُعرف بالعناصر الفراغية.</p>
+
+	<h3>إليك مثال على عنصر صورة وهو عنصر فارغ:</h3>
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;img&gt;
+	</code></pre>
+	</div>
+
+	<p>لاحظ أن عنصر الصورة هذا ليس له وسم إغلاق ولا يحتوي على أي محتوى. العناصر الفارغة لا يمكن أن تحتوي على أي محتوى ولها وسم بدء فقط.</p>
+	<p>أحيانًا سترى عناصر فارغة تستخدم <strong>(/)</strong> قبل <strong>(<)</strong> هكذا:</p>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;img /&gt;
+	</code></pre>
+	</div>
+
+	<p>بينما يختار العديد من منسقي الأكواد مثل خاصية "بريتتيير" <strong>(Prettier)</strong> تضمين <strong>(/)</strong> في العناصر الفارغة، تشير مواصفات اتش.تي.إم.إل <strong>(html)</strong> إلى أن وجود <strong>(/)</strong> "لا يُعتبر وسم البداية وسمًا ذاتيًا الإغلاق بل إنه غير ضروري ولا يؤثر بأي شكل من الأشكال".</p>
+	<p>في تطوير الواقع العملي، سترى كلا الشكلين، لذا من المهم أن تكون على دراية بكليهما.</p>
+    <p>إذا كنت ترغب في عرض صورة، ستحتاج إلى تضمين بعض الخصائص داخل عنصر الصورة الخاص بك. الخاصية هي قيمة خاصة تُستخدم لضبط سلوك عنصر اتش.تي.إم.إل <strong>(html)</strong>.</p>	
+	<h3>إليك مثال على عنصر صورة يحتوي على سمة "اس.ار.سي" (src).</h3>
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;img src="https://d3j1x.github.io/HTMLverse/basic/assets/runnig-cats.jpg"&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview">
+		<img src="assets/running-cats.jpg">
+	</div>
+
+	<p>تُستخدم السمة "اس.ار.سي" <strong>(src)</strong> لتحديد موقع تلك الصورة. بالنسبة لعناصر الصور، من الممارسات الجيدة تضمين سمة أخرى تُسمى السمة "ألتْ" <strong>(alt)</strong>. تُستخدم السمة "ألتْ" <strong>(alt)</strong> لتوفير نص وصفي قصير للصور</p>
+
+	<h3>إليك مثال على عنصر صورة مع سمات "اس.ار.سي" (src) و "ألتْ" (alt).</h3>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;img src="https://d3j1x.github.io/HTMLverse/basic/assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة."&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview">
+		<img src="assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة.">
+	</div>
+
+	<p>قد تتساءل إذا كان اتش.تي.إم.إل <strong>(html)</strong> بمفرده كافياً لبناء موقع ويب. حسنًا، الإجابة هي: يعتمد ذلك. إذا كنت تبني مشروعًا عمليًا صغيرًا يعرض فقط النصوص والصور، قد يكون اتش.تي.إم.إل <strong>(html)</strong>
+ وحده كافيًا. ومع ذلك، إذا كنت بصدد إنشاء موقع ويب حديث واحترافي، فستحتاج إلى اتش.تي.إم.إل <strong>(html)</strong> و "سي.اس.اس" <strong>(css)</strong> و "جافاسكريبت" <strong>(javascript)</strong>.</p>
+	<p>اتش.تي.إم.إل <strong>(html)</strong> يستخدم للمحتوى والبنية. "سي.اس.اس" <strong>(css)</strong> يستخدم لتصميم الصفحة. "جافاسكريبت" <strong>(javascript)</strong>
+ يستخدم لإضافة التفاعل على صفحات الويب الخاصة بك. تشبيه جيد لذلك هو مقارنة اتش.تي.إم.إل <strong>(html)</strong> و "سي.اس.اس" <strong>(css)</strong> و "جافاسكريبت" <strong>(javascript)</strong>
+ بمبنى مكتمل.</p>
+	<p>تمثل اتش.تي.إم.إل <strong>(html)</strong> الكتل والخرسانة والحديد التي تكوّن الجدران. إنها الأساس الذي يجعل المبنى قويًا. تمثل "سي.اس.اس" <strong>(css)</strong> التصميم الداخلي والخارجي الذي يجعل المنزل جميلاً. تمثل "جافاسكريبت" <strong>(javascript)</strong> نظام الكهرباء والمياه الذي يضمن الوصول المستمر إلى المياه والكهرباء.</p>
+	<!-- Questions  أسئلة-->
+	<div class="questions">
+		<h3>أسئلة :</h3>
+		<h4>ماذا تعني اتش.تي.إم.إل؟</h4>
+		<p>١. لغة صانع النص الفائق ❌</p>
+		<p>٢. لغة علامة النص الفائق ❌</p>
+		<p>٣. لغة تنسيق النص الفائق ❌</p>
+		<p><strong>٤. لغة ترميز النص الفائق ✅ (HyperText Markup Language)</strong></p>
+		<br>
+		<h4>أي مما يلي هو الصيغة الصحيحة لعلامة الإغلاق؟</h4>
+		<p>١. &lt;;p&gt; ❌</p>
+		<p>٢. &lt;p&gt; ❌</p>
+		<p><strong>٣. &lt;p/&gt; ✅</strong></p>
+		<p>٤. &lt;///p/&gt; ❌</p>
+		<br>
+		<h4>أي مما يلي يعد سمة صالحة تستخدم داخل عنصر (img)؟</h4>
+		<p><strong>١. src ✅</strong></p>
+		<p>٢. bold ❌</p>
+		<p>٣. closing ❌</p>
+		<p>٤. div ❌</p>
+	</div>
+	
+	</section>
+
+	<section>
+		<h2>ب. ما هي السمات وكيف تعمل؟</h2>
+		<p>السمة هي قيمة تُوضع داخل وسم فتح عنصر اتش.تي.إم.إل <strong>(html)</strong>. تُوفر السمات معلومات إضافية حول العنصر أو تُحدد كيفية عمله.</p>
+		<h4>هذا هو بناء الجملة الأساسي لسمة ما:</h4>
+
+		<h3>القاعدة :</h3>
+		<div class="rules">
+			<h4>
+&lt;element attribute="value"&gt;&lt;/element&gt;
+			</h4>
+		</div>
+		<div class="translate">
+			<h4>
+&lt;العنصر السمة="القيمة"&gt;&lt;/العنصر&gt
+		</div>
+
+		<p>اسم السمة متبوع بعلامة يساوي <strong>(=)</strong> وقيمة بين علامتي اقتباس. يمكن أن تكون القيمة سلسلة نصية أو رقمًا، حسب السمة.</p>
+		<p>يستخدم هذا المثال الأول سمتي "اتش.ريف" <strong>(href)</strong> و "تارغيت" <strong>(target)</strong>
+. تُحدد سمة "اتش.ريف" <strong>(href)</strong> عنوان "للرابط" <strong>(URL)</strong>
+، بينما تُحدد سمة "تارغيت" <strong>(target)</strong>
+ مكان فتح الرابط.</p>
+		<h3>المثال :</h3>
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;a href="https://d3j1x.github.io/HTMLverse/" target="__blank"&gt;تصفح موقع عالم اتش.تي.إم.إل&lt;/a&gt;
+		</code></pre>
+		</div>
+		<h3>معاينة :</h3>
+		<div class="preview">
+			<a href="https://d3j1x.github.io/HTMLverse/" target="__blank">تصفح موقع عالم اتش.تي.إم.إل</a>
+		</div>
+		<p>بدون سمة "اتش.ريف" <strong>(href)</strong>، لن يعمل الرابط لعدم وجود عنوان <strong>(URL)</strong> للوجهة. لذا، يجب تضمين سمة "اتش.ريف" هذه لجعل الرابط فعالاً. تتيح لك خاصية تارغيت="ــبلانك" <strong>("target="__blank)</strong> فتح الرابط في علامة تبويب جديدة بالمتصفح. ستتعلم المزيد عن سمة "تارغيت" في الدروس القادمة.</p>
+		<p>السمات المشتركة الأخرى هي السمة "اس.ار.سي" <strong>(src)</strong>، والسمة "التْ" <strong>(alt)</strong>، أو البديلة - والتي تستخدم لتحديد مصدر الصورة وتوفير نص وصفي بديل للصورة، على التوالي.</p>
+		
+		<h3>مثال</h3>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;img src="https://d3j1x.github.io/HTMLverse/basic/assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة."&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview">
+		<img src="assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة.">
+	</div>
+	
+	<p>على غرار سمة "اتش.ريف" <strong>(href)</strong>، تُعدّ سمة "اس.ار.سي" <strong>(src)</strong> ضروريةً لأنها تُحدد ملف الصورة المراد عرضه. سمة "التْ" <strong>(alt)</strong> ليست ضروريةً، ولكن يُنصح بها لأغراض إمكانية الوصول. تعني إمكانية الوصول ضمان قدرة الجميع، بمن فيهم ذوو الإعاقة، على استخدام وفهم أشياء مثل مواقع الويب والتطبيقات والمساحات المادية. ستتعلم المزيد عن إمكانية الوصول في الدروس القادمة.</p>
+	<p>بعض السمات فريدة بعض الشيء من حيث بناء جملتها النحوية مثل السمة "شيكيد" <strong>(checked)</strong></p>
+	
+	<h3>مثال</h3>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;input type="checkbox" checked /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<p>حاول النقر فوق مربع الاختيار في نافذة المعاينة لرؤيته يتناوب بين حالة محددة وحالة غير محددة.</p>
+	<div class="preview">
+		<input type="checkbox" checked />
+	</div>
+
+	<p>في المثال التالي، لدينا عنصر "إدخال" <strong>(input)</strong> مع ضبط سمة "النوع" <strong>(type)</strong> على "مربع اختيار" <strong>(checkbox)</strong>. تُستخدم المدخلات لجمع البيانات من المستخدمين، وتُحدد سمة "النوع" <strong>(type)</strong> نوع الإدخال. في هذه الحالة، يكون هذا الإدخال "مربع اختيار" <strong>(checkbox)</strong>. ستتعلم المزيد عن كيفية عمل المدخلات في الدروس القادمة.</p>
+	<p>تُستخدم السمة "شيكيد" <strong>(checked)</strong> لتحديد خانة الاختيار التي يجب تحديدها افتراضيًا. لا تتطلب السمة "شيكيد" <strong>(checked)</strong> قيمة. في حال وجودها، سيتم تحديد خانة الاختيار افتراضيًا. أما في حال عدم وجودها، فسيتم إلغاء تحديد خانة الاختيار. تُعرف هذه السمة باسم السمة المنطقية "بوليان" <strong>(boolean)</strong>. ستتعلم المزيد عن القيم المنطقية بشكل عام عند الانتقال إلى قسم "جافاسكريبت" <strong>(javascript)</strong>
+.</p>
+
+		<h3>مثال</h3>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;input type="checkbox" /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview">
+		<input type="checkbox" />
+	</div>
+
+	<p>هناك العديد من السمات المنطقية الشائعة التي ستصادفها في اتش.إم.إل <strong>(html)</strong>، مثل معطل "ديزايبليد" <strong>(disabled)</strong> وللقراءة فقط "ريد.أنلي" <strong>(readonly)</strong> ومطلوب "ريكوايريد" required. تُستخدم هذه السمات لتحديد حالة العنصر، مثل ما إذا كان "معطلاً" <strong>(disabled)</strong> أو "للقراءة فقط" <strong>(readonly)</strong> أو "مطلوباً" <strong>(required)</strong>.</p>
+
+	<h3>مثال</h3>
+	<p>هذا مثال على عنصر إدخال نص "مُعطّل" <strong>(disabled)</strong> افتراضيًا.</p>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;type="text" disabled /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<p>جرّب النقر على عنصر الإدخال في نافذة المعاينة.</p>
+	<div class="preview">
+		<input type="text" disabled>
+	</div>
+
+	<h3>مثال</h3>
+	<p>هذا مثال على عنصر إدخال نص غير مُعطّل افتراضيًا.</p>
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;type="text" /&gt;
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<p>يجب أن يكون بإمكانك الآن النقر فوقه والكتابة داخل الحقل.</p>
+	<div class="preview">
+		<input type="text" >
+	</div>
+
+	<p>تحتوي لغة اتش.تي.إم.إل <strong>(html)</strong> على العديد من السمات التي يُمكن استخدامها لتخصيص سلوك ومظهر عناصر صفحة الويب. يُعد فهم كيفية استخدام "السمات" <strong>(attributes)</strong> أمرًا أساسيًا لإنشاء محتوى ويب تفاعلي وسهل الوصول. في الدروس القليلة القادمة، ستتعلم المزيد عن سمات اتش.تي.إم.إل <strong>(html)</strong> وكيفية استخدامها بفعالية في مشاريع تطوير الويب الخاصة بك.</p>
+
+
+		<!-- Questions  أسئلة-->
+	<div class="questions">
+		<h3>أسئلة :</h3>
+		<h4>أي مما يلي يعد مثالاً على سمة منطقية <strong>(boolean attribute)</strong>؟</h4>
+		<p>١. src ❌</p>
+		<p>٣. href ❌</p>
+		<p><strong>٤. disabled ✅ </strong></p>
+		<p>٤. alt ❌</p>
+		
+		<br>
+		<h4>ما هو دور السمة <strong>(attribute)</strong> في اتش.تي.إم.إل <strong>(HTML)</strong>؟</h4>
+		<p><strong>١. توفر السمات (attributes) معلومات إضافية وتساعد في تحديد سلوك عناصر اتش.تي.إم.إل (HTML). ✅</strong></p>
+		<p>٢. تغير السمات (Attributes) لون الخلفية للعنصر. ❌</p>
+		<p>٣. السمات (Attributes) تغير حجم الخط للعنصر. ❌</p>
+		<p>٤. السمات (Attributes) تضيف وظيفة جافاسكريبت (JavaScript) إلى عنصر. ❌</p>
+		<br>
+		<h4>أي مما يلي هو بناء الجملة الصحيح للسمة المنطقية (boolean attribute) ؟</h4>
+		<p><strong>١. &lt;input type="checkbox" checked&gt; ✅</strong></p>
+		<p>٢. &lt;input type="checkbox" checked="on"&gt; ❌</p>
+		<p>٣. &lt;input type="checkbox" checked="off"&gt; ❌</p>
+		<p>٤. &lt;input type="checkbox" checked="isChecked"&gt; ❌</p>
+	</div>
+	</section>
+
+</div>
+
+<!-- Pages -->
+<div class="page-nav">
+	<a class="prev" href="./basic2.html">&#8594; السابق</a>
+	<a class="next" href="./basic4.html">التالي &#8592;</a>
+</div>
+
