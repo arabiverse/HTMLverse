@@ -41,6 +41,10 @@
 			<a href="#4">تصحيح صفحة الحيوانات الأليفة</a>
 		</li>
 
+		<li>
+			<a href="#5">فهم قالب اتش.تي.إم.إل الأساسي</a>
+		</li>
+
 	</ul>
 </nav>
 
@@ -477,6 +481,104 @@
 	</div>
 	</section>
 </div>
+
+<!-- BASIC 5 -->
+ <div id="5" class="box">
+	<div class="sub-title">
+		<h1>٥. فهم قالب اتش.تي.إم.إل الأساسي</h1>
+		<span class="hint">نظري</span>
+		<h3>في هذه الدروس، ستتعلم عن قالب (Boilerplate) اتش.تي.إم.إل (HTML) الجاهز وهو نموذج معد مسبقًا لصفحات الويب (Web) الخاصة بك.</h3>
+	</div>
+
+	<section>
+		<h2>أ. ما هو دور عنصر الرابط (link) في لغة اتش.تي.أم.إل (HTML)، وكيف يمكن استخدامه للربط بملفات الأنماط (Stylesheets) الخارجية؟</h2>
+		<p>دعونا نتعلم عن عنصر الرابط <strong>(link)</strong>، وكيفية استخدامه للربط بملفات الأنماط <strong>(stylesheets)</strong> الخارجية.</p>
+		<p>يُستخدم عنصر الرابط <strong>(link)</strong> لربط الموارد الخارجية مثل أوراق الأنماط <strong>(stylesheets)</strong> وأيقونات <strong>(icons)</strong> الموقع.</p>
+		<h4>إليك الصياغة الأساسية لاستخدام عنصر الرابط (link) لملف (css) خارجي:</h4>
+
+		<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;link rel="stylesheet" href=./styles.css"&gt;
+	</code></pre>
+		</div>
+
+		<p>تُستخدم السمة "ريل" <strong>(rel)</strong> لتحديد العلاقة بين المورد المرتبط ومستند اتش.تي.إم.إل <strong>(html)</strong>. في هذه الحالة، نحتاج إلى تحديد أن المورد المرتبط هو ورقة أنماط <strong>(stylesheets)</strong>.</p>
+		<p>يعتبر من أفضل الممارسات فصل ملفات اتش.تي.إم.إل <strong>(html)</strong> و "سي.اس.اس" <strong>(css)</strong> في ملفات مختلفة. سيستخدم المطورون عنصر الرابط "لينك" <strong>(link)</strong> لملف "سي.اس.اس" <strong>(css)</strong> الخارجي بدلاً من كتابة كل شيء داخل مستند اتش.تي.إم.إل <strong>(html)</strong>.</p>
+		<p>تُستخدم خاصية "اتش.ريف" <strong>(href)</strong> لتحديد موقع عنوان <strong>(URL)</strong> للمورد الخارجي.</p>
+		<p>تشير النقطة <strong>(.)</strong> متبوعة بشرطة مائلة <strong>(/)</strong> في المثال إلى الكمبيوتر للنظر في المجلد الحالي، أو الدليل، عن ملف <strong>(styles.css)</strong>.</p>
+		<h4>يجب وضع عنصر الرابط (link) داخل عنصر الرأس (head) كما هو موضح في المثال التالي:</h4>
+		
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;head&gt;
+
+	&lt;meta charset="UTF-8"&gt;
+
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+	&lt;title&gt;أمثلة على عنصر الرابط&lt;/title&gt;
+
+	&lt;link rel="stylesheet" href="./styles.css"&gt;
+
+&lt;/head&gt;
+			</code></pre>
+		</div>
+	<p>غالبًا ما سترى عدة "عناصر رابط" <strong>(link elements)</strong> داخل "قاعدة كود" <strong>(codebase)</strong> احترافية تربط بأنماط <strong>(stylesheets)</strong> وأشكال <strong>(fonts)</strong> وأيقونات <strong>(icons)</strong> مختلفة. إليك مثالًا على استخدام عنصر الرابط <strong>(link)</strong> للربط "بخط خارجي" <strong>(external Font)</strong>
+ من غوغل <strong>(Google)</strong> يُسمى "بلاي.وريت كوبا" <strong>(Playwright Cuba)</strong>:</p>
+	
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+
+&lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
+
+&lt;link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet"&gt;
+
+			</code></pre>
+		</div>
+
+		<p>خطوط غوغل <strong>(google)</strong>
+ هي مجموعة من "الخطوط المخصصة" <strong>(custom fonts)</strong> المجانية <strong>(free)</strong> و"المفتوحة المصدر" <strong>(open source)</strong> التي يمكنك استخدامها داخل أي مشروع. يمكنك اختيار الخطوط <strong>(fonts)</strong>
+ التي ترغب في استخدامها وسيوفر لك غوغل <strong>(google)</strong> الكود اللازم لِـ اتش.تي.إم.إل <strong>(html)</strong> و"سي.اس.اس" <strong>(css)</strong>. في هذا المثال، قيمة "بري.كونكت" <strong>(preconnect)</strong> لخاصية "ريل" <strong>(rel)</strong> تخبر المتصفح <strong>(browser)</strong> بإنشاء اتصال مبكر مع القيمة المحددة في خاصية "اتش.ريف" <strong>(href)</strong>. يتم ذلك لتسريع أوقات تحميل <strong>(loading)</strong> هذه الموارد الخارجية.</p>
+		
+		<h4>استخدام شائع آخر لعنصر الرابط (link) هو الربط بالأيقونات (icons). إليك مثالاً على الربط (link) بأيقونة الموقع (favicon)</h4>
+		
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;link rel="icon" href="favicon.ico" /&gt;
+			</code></pre>
+		</div>
+		<p>أيقونة الموقع المفضلة، والتي تُعرف اختصارًا "فافيكون" <strong>(favicon)</strong>، هي أيقونة <strong>(icon)</strong> صغيرة تُعرض عادةً في تبويب المتصفح <strong>(browser tab)</strong> بجانب عنوان الموقع. يستخدم الكثير من المواقع أيقونة "فافيكون" <strong>(favicon)</strong> لعرض رمز علامتهم التجارية <strong>(brand icon)</strong>.</p>
+		
+		<!-- QUESTIONS -->
+		<div class="questions">
+		<h3>أسئلة :</h3>
+		<h4>ما هو دور عنصر الرابط (link) في اتش.تي.إم.إل (html)؟</h4>
+		<p>١. يحدد نوع المحتوى للموارد المرتبطة. ❌</p>
+		<p>٢. يحدد رؤية المورد المرتبط على صفحة الويب. ❌</p>
+		<p>٣. يُعرف حجم الخط للمورد المرتبط عند عرضه. ❌</p>
+		<p><strong>٤. يُستخدم للربط بالموارد الخارجية مثل أوراق الأنماط وأيقونات الموقع. ✅</strong></p>
+		
+		<br>
+		
+		<h4>ما هو دور الخاصية "ريل" (rel) داخل عنصر الرابط (link)؟</h4>
+		<p>١. يُستخدم للإشارة إلى لغة المستند المرتبط. ❌</p>
+		<p><strong>٢. يُستخدم لتحديد العلاقة بين المورد المرتبط ومستند اتش.تي.إم.إل (html). ✅</strong></p>
+		<p>٣. يُستخدم لتحديد نوع الوسائط للمستند المرتبط. ❌</p>
+		<p>٤. يُستخدم لتحديد حجم المستند المرتبط. ❌</p>
+		
+		<br>
+
+		<h4>ما هو الفافيكون (favicon)؟</h4>
+		<p>١. نوع من ملفات "جافاسكريبت" (javascript) يُستخدم لتعزيز وظائف الموقع. ❌</p>
+		<p>٢. نوع من الخطوط (fonts) يُستخدم لتنسيق النص على الموقع. ❌</p>
+		<p><strong>٣. أيقونة صغيرة تعرض عادةً في تبويب المتصفح بجانب عنوان الموقع. ✅</strong></p>
+		<p>٤. ميزة أمان تُستخدم لمنع هجمات البرمجة عبر المواقع (XSS). ❌</p>
+	</div>
+	</section>
+</div>
+
 
 
 
