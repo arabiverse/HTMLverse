@@ -115,6 +115,141 @@
 		<p>٤. ميزة أمان تُستخدم لمنع هجمات البرمجة عبر المواقع (XSS). ❌</p>
 	</div>
 	</section>
+
+	<section id="2">
+		<h2>ب. ما هو "نموذج اتش.تي.إم.إل" (HTML Boilerplate) ولماذا هو مهم؟</h2>
+		<p>دعونا نتعلم المزيد عن قالب اتش.تي.إم.إل <strong>(HTML boilerplate)</strong>.</p>
+		<p>ما هو قالب اتش.تي.إم.إل <strong>(HTML boilerplate)</strong>؟ إنه أشبه بقالب جاهز لصفحات الويب <strong>(webpages)</strong>. تخيّل أنه أساس أي منزل. يتضمن القالب الهيكل الأساسي والعناصر الأساسية التي يحتاجها كل مستند اتش.تي.إم.إل <strong>(html)</strong>. فهو يوفر عليك الوقت ويساعد على ضمان إعداد صفحاتك بشكل صحيح.</p>
+		
+		<h4>إليك مثال:</h4>
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="ar"&gt;
+
+	&lt;head&gt;
+		&lt;meta charset="UTF-8" /&gt;
+
+		&lt;meta 
+			name="viewport" 
+			content="width=device-width, initial-scale=1.0" /&gt;
+
+		&lt;title&gt;عالم اتش.تي.إم.إل&lt;/title&gt;
+
+		&lt;link rel="stylesheet" href="./styles.css" /&gt;
+	
+	&lt;/head&gt;
+
+	&lt;body&gt;
+
+	&lt;/body&gt;
+
+&lt;/html&gt;
+			</code></pre>
+		</div>
+
+		<p>دعونا نحلل الأجزاء الرئيسية لهذا النموذج. أولًا، هناك إعلان "دوك.تايب" <strong>(DOCTYPE)</strong>:</p>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;!DOCTYPE html&gt;
+			</code></pre>
+		</div>
+
+		<p>يُخبر المتصفحات بإصدار اتش.تي.إم.إل <strong>(html)</strong> الذي تستخدمه. ثم يأتي "وسم اتش.تي.إم.إل" <strong>(html tag)</strong>:</p>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="ar"&gt;
+
+		&lt;!-- جميع العناصر الأخرى تذهب إلى الداخل هنا --&gt;		
+
+&lt;/html&gt;
+			</code></pre>
+		</div>
+
+		<p>يُغطي هذا العنصر جميع محتوياتك، ويُمكنه تحديد لغة صفحتك. داخل وسم اتش.تي.إم.إل <strong>(html tag)</strong>، ستجد قسمين رئيسيين: رأس الصفحة <strong>(head)</strong> ونصها <strong>(body)</strong> :</p>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="ar"&gt;
+
+	&lt;head&gt;
+		&lt;!-- تظهر هنا البيانات الوصفية المهمة "متاداتا" (metadata) --&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;!-- العناوين والفقرات والصور وما إلى ذلك تذهب إلى الداخل هنا --&gt;
+	&lt;/body&gt;		
+
+&lt;/html&gt;
+			</code></pre>
+		</div>
+
+		<p>يحتوي القسم الرئيسي <strong>(head section)</strong> على معلومات مهمة خلف الكواليس:</p>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;head&gt;
+	&lt;meta charset="UTF-8" /&gt;
+
+	&lt;meta 
+		name="viewport" 
+		content="width=device-width, initial-scale=1.0" /&gt;
+
+	&lt;title&gt;عالم اتش.تي.إم.إل&lt;/title&gt;
+
+	&lt;link rel="stylesheet" href="./styles.css" /&gt;
+
+&lt;/head&gt;
+			</code></pre>
+		</div>
+
+		<p>تحتوي بيانات موقعك الوصفية، الموجودة في عناصر التعريف <strong>(metadata)</strong>، على تفاصيل حول أمور مثل ترميز الأحرف <strong>(character encoding)</strong>، وكيفية معاينة رابط صفحتك على مواقع مثل منصة فيسبوك. يُحدد عنوان موقعك، الموجود في عنصر العنوان، النص الذي يظهر في علامة تبويب <strong>(browser tab)</strong> أو نافذة المتصفح <strong>(window)</strong>. وأخيرًا، عادةً ما تربط أوراق الأنماط الخارجية <strong>(external stylesheets)</strong> لصفحتك في قسم الرأس <strong>(head section)</strong> باستخدام عناصر الارتباط <strong>(link elements)</strong>.</p>
+
+		<p>قسم الجسم <strong>(body section)</strong> هو المكان الذي يوضع فيه كل المحتوى الخاص بك:</p>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;body&gt;
+	&lt;h1&gt;أنا عنوان رئيسي&lt;/h1&gt;
+
+	&lt;p&gt;مثال لنص الفقرة&lt;/p&gt;
+&lt;/body&gt;
+			</code></pre>
+		</div>
+
+		<p>الآن، ما أهمية النموذج المعياري <strong>(boilerplate)</strong>؟ إنه يضمن هيكلة صفحاتك بشكل صحيح وعملها بكفاءة على مختلف المتصفحات <strong>(browsers)</strong>. يساعدك استخدام النموذج المعياري <strong>(boilerplate)</strong> على تجنب الأخطاء الشائعة واتباع أفضل الممارسات. إنه نقطة انطلاق ممتازة لأي مشروع ويب <strong>(web)</strong>. تذكر أنه يمكنك تخصيص نموذجك المعياري ليناسب احتياجاتك. مع اكتسابك الخبرة، يمكنك إضافة عناصر أو علامات تعريفية مفضلة لديك. مع استمرارك في تحسين نموذجك المعياري، ستجد أنه يوفر لك الوقت عند بدء مشاريع جديدة.</p>
+		<p>في المرة القادمة التي تبدأ فيها ملف اتش.تي.إم.إل <strong>(HTML file)</strong> جديدًا، فكّر في استخدام نموذج جاهز <strong>(boilerplate)</strong>. سيمنحك هذا أساسًا متينًا للبناء عليه.</p>
+	
+		<!-- QUESTIONS -->
+		<div class="questions">
+		<h3>أسئلة :</h3>
+		<h4>أين تريد تعيين ترميز الأحرف (character encoding) لصفحتك؟</h4>
+		<p>١. عنصر "ميتا" (meta) في الجسم (body). ❌</p>
+		<p>٢. عنصر الرأس (head) في الجسم (body). ❌</p>
+		<p><strong>٣. عنصر "ميتا" (meta) في الرأس (head). ✅</strong></p>
+		<p>٤. في "دوك.تايب" (DOCTYPE). ❌</p>
+		<br />
+
+		<h4>أين تريد تعيين اللغة (lang) لصفحتك؟</h4>
+		<p><strong>١. في وسم اتش.تي.إم.إل (html) الافتتاحي. ✅</strong></p>
+		<p>٢. عنصر "ميتا" (meta) في الجسم (body). ❌</p>
+		<p>٣. عنصر الرأس (head) في الجسم (body). ❌</p>
+		<p>٤. عنصر "ميتا" (meta) في الرأس (head). ❌</p>
+		<br />
+
+		<h4>ما هو الغرض من القالب النمطي (boilerplate)؟</h4>
+		<p>١. يوفر هيكلًا أساسيًا لمواقعك الإلكترونية.</p>
+		<p>٢. يضمن لك عدم إغفال أي عناصر أساسية.</p>
+		<p>٣. يسمح لك بالبدء بكتابة محتوى صفحتك بشكل أسرع.</p>
+		<p>٤. جميع ما سبق. ✅</strong></p>
+	</section>
 </div>
 
 
