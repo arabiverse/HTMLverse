@@ -250,6 +250,77 @@
 		<p>٣. يسمح لك بالبدء بكتابة محتوى صفحتك بشكل أسرع.</p>
 		<p>٤. جميع ما سبق. ✅</strong></p>
 	</section>
+
+	<section id="3">
+		<h2>ج. ما هو ترميز الأحرف "يو.تي.اف-٨" (UTF-8) ، ولماذا هو مطلوب؟</h2>
+		<p>ما هو ترميز الأحرف "يو.تي.اف-٨" <strong>(UTF-8)</strong> ، ولماذا هو مطلوب؟</p>
+		<p>"يو.تي.اف-٨" <strong>(UTF-8)</strong>، أو "تنسيق تحويل يو.سي.اس ٨" <strong>(UCS Transformation Format 8)</strong>، هو ترميز أحرف موحد يُستخدم على نطاق واسع على الإنترنت. وترميز الأحرف <strong>(Character encoding)</strong> هو الطريقة التي تستخدمها أجهزة الكمبيوتر لتخزين الأحرف كبيانات <strong>(data)</strong>. في جوهره، كل نص على صفحة ويب هو سلسلة من الأحرف المخزنة كبايت <strong>(bytes)</strong> واحد أو أكثر. في الحوسبة <strong>(computing)</strong>، البايت هو وحدة بيانات تتكون من ٨ بيت <strong>(8 bits)</strong>، أو أرقام ثنائية <strong>(binary digits)</strong>. يدعم "يو.تي.اف-٨" <strong>(UTF-8)</strong> جميع أحرف "مجموعة أحرف يونيكود" <strong>(Unicode character set)</strong>، وهذا يشمل الأحرف والرموز من جميع أنظمة الكتابة واللغات والرموز التقنية.</p>
+		<h4>فيما يلي مثال لاستخدام عنصر "ميتا" (meta) مع سمة "شارسات" (charset) لتعيين ترميز الأحرف إلى "يو.تي.اف-٨" (UTF-8):</h4>
+		
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta charset="UTF-8" /&gt;
+			</code></pre>
+		</div>
+
+		<p>من خلال ضبط ترميز الأحرف إلى "يو.تي.اف-٨" <strong>(UTF-8)</strong>، سيتم ضمان عرض الحرف <strong>"e"</strong> المميز <strong>(é)</strong> بشكل صحيح على الصفحة.</p>
+		<h4>فيما يلي مثال كود موسع لاستخدام ترميز الأحرف "يو.تي.اف-٨" (UTF-8):</h4>
+		
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="ar"&gt;
+
+	&lt;head&gt;
+
+		&lt;meta charset="UTF-8" /&gt;
+
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+		
+		&lt;title&gt;مثال ترميز الأحرف&lt;/title&gt;
+
+	&lt;/head&gt;
+
+	&lt;body&gt;
+
+		&lt;p&gt;هذا مثال على ترميز الأحرف: café, naïve, résumé.&lt;/p&gt;
+	
+		&lt;/body&gt;
+
+&lt;/html&gt;
+			</code></pre>
+		</div>
+
+		<p>بالنسبة لكل مشروع جديد تقوم بإنشائه، يجب عليك تضمين عنصر "ميتا" <strong>(meta)</strong> هذا مع تعيين سمة "شارسيت" <strong>(charset)</strong> إلى "يو.تي.افء٨" <strong>(UTF-8)</strong>.</p>
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+		<h3>أسئلة :</h3>
+
+		<h4>ما هي الخاصية المستخدمة لتعيين ترميز الأحرف "يو.تي.اف-٨" (UTF-8) لمستندات اتش.تي.إم.إل (HTML)؟</h4>
+		
+		<p>١. pattern ❌</p>
+		<p>٢. content ❌</p>
+		<p>٣. "شارسيت" (charset)<strong> ✅</strong></p>
+		<p>٤. lang ❌</p>
+		<br />
+
+		<h4>ما هو ترميز الأحرف (Character encoding)؟</h4>
+
+		<p><strong>١. طريقة تستخدمها أجهزة الكمبيوتر لتخزين الأحرف كبيانات (data). ✅</strong></p>
+		<p>٢. طريقة لضغط (compress) ملفات النصوص. ❌</p>
+		<p>٣. يحدد الخط المستخدم لعرض (display) النص على الشاشة. ❌</p>
+		<p>٤. يشير إلى عملية تحويل (converting) اللغة المنطوقة إلى نص مكتوب ❌</p>
+		<br />
+
+		<h4>كم عدد البيتات (bits) الموجودة داخل البايت (byte)؟</h4>
+		<p>١. (1) ❌</p>
+		<p>٢. (33) ❌</p>
+		<p>٣. (7) ❌</p>
+		<p><strong>٤. (8) ✅</strong></p>
+		
+	</section>
 </div>
 
 
