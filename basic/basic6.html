@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="red" href="./index.html">X</a>
+	<h1>أساسيات اتش.تي.إم.إل</h1>
+</header>
+
+
+ <div class="box">
+	<div class="sub-title">
+		<h1>٦. إنشاء تطبيق صور القطط</h1>
+		<span class="hint">ورشة عمل</span>
+        <h3>في هذه الورشة، سوف تتعلم كيفية العمل مع عناصر اتش.تي.إم.إل (HTML) الأساسية مثل العناوين (headings) والفقرات (paragraphs) والصور (images) والروابط (links) والقوائم (lists).</h3>
+	</div>
+
+	<section>
+		<h2>كود التطبيق (App) :</h2>
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="ar" dir="rtl"&gt;
+    
+    &lt;head&gt;
+    
+        &lt;meta charset="UTF-8" /&gt;
+        
+        &lt;title&gt;تطبيق صور القطط&lt;/title&gt;
+    
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    
+        &lt;main&gt;
+
+            &lt;h1&gt;تطبيق صور القطط&lt;/h1&gt;
+
+            &lt;section&gt;
+            
+                &lt;h2&gt;صور القطط&lt;/h2&gt;
+
+                &lt;!-- هذا تعليق لا يظهر على المتصفح --&gt;
+
+                &lt;p&gt; الجميع يحب &lt;a href="https://d3j1x.github.io/HTMLverse/basic/assets/runnig-cats.jpg" target="_blank"&gt;القطط اللطيفة&lt;/a&gt; على الانترنت! &lt;/p&gt;
+
+                &lt;p&gt; شاهد المزيد &lt;a href="https://freecatphotoapp.com"&gt;صور القطط&lt;/a&gt; في معرضنا. &lt;/p&gt;
+                
+                &lt;a href="https://freecatphotoapp.com"&gt;
+                    &lt;img src="https://d3j1x.github.io/HTMLverse/basic/assets/relaxing-cats.jpg" alt="قطة برتقالية لطيفة مستلقية على ظهرها"&gt;
+                &lt;/a&gt;
+
+            &lt;/section&gt;
+
+            &lt;section&gt;
+            
+                &lt;h2&gt;قوائم القطط&lt;/h2&gt;
+
+                &lt;h3&gt;الأشياء التي تحبها القطط:&lt;/h3&gt;
+                
+                &lt;ul&gt;
+                    
+                    &lt;li&gt;عُشبة القطة&lt;/li&gt;
+                    
+                    &lt;li&gt;مؤشرات الليزر&lt;/li&gt;
+                    
+                    &lt;li&gt;لازانيا&lt;/li&gt;
+                
+                &lt;/ul&gt;
+
+                &lt;figure&gt;
+                
+                    &lt;img src="https://d3j1x.github.io/HTMLverse/basic/assets/lasagna.jpg" alt="شريحة من اللازانيا على طبق."/&gt;
+                
+                    &lt;figcaption&gt;القطط &lt;em&gt; تحب &lt;/em&gt; اللازانيا.&lt;/figcaption&gt;
+                
+                &lt;/figure&gt;
+
+                &lt;h3&gt;أكثر 3 أشياء تكرهها القطط:&lt;/h3&gt;
+
+                &lt;ol&gt;
+                    
+                    &lt;li&gt;علاج البراغيث&lt;/li&gt;
+                    
+                    &lt;li&gt;الرعد&lt;/li&gt;
+                    
+                    &lt;li&gt;القطط أخرى&lt;/li&gt;
+
+                &lt;/ol&gt;
+
+                &lt;figure&gt;
+                
+                    &lt;img src="https://d3j1x.github.io/HTMLverse/basic/assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة."/&gt;
+                
+                    &lt;figcaption&gt;القطط &lt;strong&gt; تكره &lt;/strong&gt; القطط الأخرى.&lt;/figcaption&gt;
+                
+                &lt;figure&gt;
+                
+            &lt;/section&gt;
+
+        &lt;/main&gt;
+
+
+        &lt;footer&gt;
+
+            &lt;p&gt;لا حقوق التأليف والنشر - &lt;a href="https://d3j1x.github.io/HTMLverse/"&gt; عالم اتش.تي.إم.إل &lt;/a&gt;&lt;/p&gt;
+            
+        &lt;/footer&gt;
+
+
+        
+    &lt;/body&gt;
+
+&lt;/html&gt;
+	</code></pre>
+	</div>
+
+	<h2>النتيجة :</h2>
+	<div class="preview">
+	
+        <main>
+
+            <h1>تطبيق صور القطط</h1>
+
+            <section>
+            
+                <h2>صور القطط</h2>
+
+                <!-- هذا تعليق لا يظهر على المتصفح -->
+
+                <p> الجميع يحب <a href="./assets/runnig-cats.jpg" target="_blank">القطط اللطيفة</a> على الانترنت! </p>
+
+                <p> شاهد المزيد <a href="https://freecatphotoapp.com">صور القطط</a> في معرضنا. </p>
+                
+                <a href="https://freecatphotoapp.com">
+                    <img src="./assets/relaxing-cat.jpg" alt="قطة برتقالية لطيفة مستلقية على ظهرها">
+                </a>
+
+            </section>
+
+            <section>
+            
+                <h2>قوائم القطط</h2>
+
+                <h3>الأشياء التي تحبها القطط:</h3>
+                
+                <ul>
+                    
+                    <li>عُشبة القطة</li>
+                    
+                    <li>مؤشرات الليزر</li>
+                    
+                    <li>لازانيا</li>
+                
+                </ul>
+
+                <figure>
+                
+                    <img src="./assets/lasagna.jpg" alt="شريحة من اللازانيا على طبق."/>
+                
+                    <figcaption>القطط <em> تحب </em> اللازانيا.</figcaption>
+                
+                </figure>
+
+                <h3>أكثر 3 أشياء تكرهها القطط:</h3>
+
+                <ol>
+                    
+                    <li>علاج البراغيث</li>
+                    
+                    <li>الرعد</li>
+                    
+                    <li>القطط أخرى</li>
+
+                </ol>
+
+                <figure>
+                
+                    <img src="./assets/cats.jpg" alt="قطتان صغيرتان مخططان نائمَتان معًا على الأريكة."/>
+                
+                    <figcaption>القطط <strong> تكره </strong> القطط الأخرى.</figcaption>
+                
+                </figure>
+                
+            </section>
+
+        </main>
+
+
+        <footer>
+
+            <p>لا حقوق التأليف والنشر - <a href="https://d3j1x.github.io/HTMLverse/"> عالم اتش.تي.إم.إل </a></p>
+            
+        </footer>
+    
+	</div>
+	</section>
+
+</div>
+
+
+<!-- Pages -->
+<div class="page-nav">
+	<a class="prev" href="./basic5.html">&#8594; السابق</a>
+	<a class="next" href="#">التالي &#8592;</a>
+</div>
