@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="red" href="./index.html">X</a>
+	<h1>أساسيات اتش.تي.إم.إل</h1>
+</header>
+
+<!-- BASIC 3 -->
+<div class="box">
+	<div class="sub-title">
+		<h1>٧. أساسيات اتش.تي.إم.إل</h1>
+		<span class="hint">نظري</span>
+        <h3>في هذه الدروس، سوف تتعلم عن أساسيات اتش.تي.إم.إل (HTML fundamentals) مثل عنصر "ديڢ" (div)، وسمات "اي.دي" (id) و"كلاس" (class)، ونموذج اتش.تي.إم.إل (HTML boilerplate)، وكيانات اتش.تي.إم.إل (HTML entities)، والمزيد.</h3>
+	</div>
+
+	<section id="1">
+	<h2>أ. ما هي عناصر "ديڢ" (Div Elements) ومتى يجب عليك استخدامها؟</h2>
+	<p>يتم استخدام عنصر "ديڢ" <strong>(div)</strong> كحاوية <strong>(container)</strong> لتجميع العناصر الأخرى.</p>
+	<h4>هذا مثال لعنصر "ديڢ" (div).</h4>
+	
+
+	<h3>الكود :</h3>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;div&gt;
+
+    &lt;p&gt;مثال لعنصر الفقرة.&lt;/p&gt;
+
+&lt;/div&gt;
+	</code></pre>
+	</div>
+
+    <h2>معاينة :</h2>
+	<div class="preview">
+        <div>
+            <p>مثال لعنصر الفقرة.</p>
+        </div>
+    </div>
+
+    <p>ستستخدم عنصر "ديڢ" <strong>(div)</strong> بشكل أساسي لتجميع عناصر اتش.تي.إم.إل <strong>(HTML elements)</strong> التي تشترك في مجموعة من أنماط "سي.اس.اس" <strong>(CSS)</strong>. ستتعلم المزيد عن "سي.اس.اس" <strong>(CSS)</strong> في الدروس وورش العمل المستقبلية.</p>
+	<p>على الرغم من أن عنصر "ديڢ" <strong>(div)</strong> شائع الاستخدام في قواعد البيانات البرمجية، إلا أنه يجب الحذر من الإفراط في استخدامه. في بعض الأحيان، يكون استخدام عنصر آخر أنسب.</p>
+    <p>على سبيل المثال، إذا كنت تريد تقسيم المحتوى الخاص بك إلى أقسام <strong>(sections)</strong>، فسيكون عنصر القسم <strong>(section)</strong> أكثر ملاءمة من عنصر "ديڢ" <strong>(div)</strong>.</p>
+
+
+	<h3>إليك مثال عملي يحتوي على أكثر من قسم (section):</h3>
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;section&gt;
+
+    &lt;h2&gt;عنوان القسم الأول&lt;/h2&gt;
+    &lt;p&gt;هذا هو المحتوى الخاص بالقسم الأول.&lt;/p&gt;
+
+&lt;/section&gt;
+
+&lt;section&gt;
+
+    &lt;h2&gt;عنوان القسم الثاني&lt;/h2&gt;
+    &lt;p&gt;هذا هو المحتوى الخاص بالقسم الثاني.&lt;/p&gt;
+
+&lt;/section&gt;
+	</code></pre>
+	</div>
+
+    <h2>معاينة :</h2>
+    <div class="preview">
+        <section>
+            <h2>عنوان القسم الأول</h2>
+            <p>هذا هو المحتوى الخاص بالقسم الأول.</p>
+        </section>
+
+        <section>
+            <h2>عنوان القسم الثاني</h2>
+            <p>هذا هو المحتوى الخاص بالقسم الثاني.</p>
+        </section>
+    </div>
+
+    <p>لعنصر القسم <strong>(section)</strong> معنى دلالي <strong>(semantic meaning)</strong> مقارنةً بعنصر "ديڢ" <strong>(div)</strong> الذي ليس له معنى دلالي <strong>(not semantic)</strong>. الدلالات <strong>(Semantics)</strong> هي معاني الكلمات أو العبارات في اللغة. في لغة اتش.تي.إم.إل <strong>(HTML)</strong>، العناصر لها معناها الدلالي الخاص بها أيضًا. هذا يعني أنه عند استخدام عنصر قسم <strong>(section)</strong>، سيستوعب المتصفح <strong>(browser)</strong> معناه الدلالي <strong>(semantic meaning)</strong> ويفهم كيفية التعامل معه كقسم <strong>(as a section)</strong> - سواءً على أجهزة الكمبيوتر <strong>(desktops)</strong> أو الهواتف المحمولة <strong>(mobiles)</strong>، وما إلى ذلك.</p>
+    
+        
+	
+	
+	<!-- Questions  أسئلة-->
+	<div class="questions">
+		<h3>أسئلة :</h3>
+		<h4>ما المعنى الدلالي لعنصر "ديڢ" (div)؟</h4>
+		<p>أ. يمثل عنصر "ديڢ" (div) حاوية (container) للمحتوى التمهيدي أو مجموعة من الروابط الملاحية (navigational links). ❌</p>
+        <p>ب. يحدد عنصر "ديڢ" (div) تذييلًا (footer) للمستند أو القسم (section). ❌</p>
+        <p>ج. يحدد "ديڢ" (div) محتوى الصفحة الرئيسية ويجب أن يكون فريدًا (unique). ❌</p>
+        <p><strong>د. عنصر "ديڢ" (div) ليس له معنى دلالي (not semantic). ✅</strong></p>
+
+		<br>
+
+        <h4>أي مما يلي هو بناء الجملة الصحيح لعنصر "ديڢ" (div)؟</h4>
+		<p>أ. &lt;divEl/&gt; المحتوى يذهب هنا &lt;divEl&gt; ❌</p>
+        <p><strong>ب. &lt;div/&gt; المحتوى يذهب هنا &lt;div&gt; ✅</strong></p>
+        <p>ج. &lt;divElement/&gt; المحتوى يذهب هنا &lt;divElement&gt; ❌</p>
+        <p>د. &lt;divGroup/&gt; المحتوى يذهب هنا &lt;divGroup&gt; ❌</p>
+
+		<br>
+
+        <h4>أي من عناصر اتش.تي.إم.إل (HTML) التالية يستخدم عادة لتجميع المحتوى في أقسام (sections) مميزة؟</h4>
+        <p><strong>أ. section ✅</strong></p>
+		<p>ب. aside ❌</p>
+        <p>ج. nav ❌</p>
+        <p>د. h1 ❌</p>
+        
+
+	</div>
+	
+	</section>
+
+	<section id="2">
+        <h2>ب. ما هي المعرفات (IDs) والفئات (Classes)، ومتى يجب عليك استخدامها؟</h2>
+	</section>
+
+    <section id="3">
+        <h2>ج. ما هي كيانات اتش.تي.إم.إل (HTML Entities)، وما هي بعض الأمثلة الشائعة؟</h2>
+	</section>
+
+    <section id="4">
+        <h2>د. ما هو دور عنصر "سكريبت" (Script) في اتش.تي.إم.إل (HTML)، وكيف يمكن استخدامه للارتباط بملفات "الجافاسكريبت" (JavaScript) الخارجية؟</h2>
+	</section>
+
+
+
+</div>
+
+<!-- Pages -->
+<div class="page-nav">
+	<a class="prev" href="./basic6.html">&#8594; السابق</a>
+	<a class="next" href="#">التالي &#8592;</a>
+</div>
+
