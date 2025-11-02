@@ -134,6 +134,12 @@ section {
     font-weight: bold;
 }
 
+
+.help-code p {
+  direction: ltr;
+  text-align: right;
+}
+
 .sourcecode pre {
   background: #1e1e1e;     /* dark background */
   color: #dcdcdc;          /* light text */
@@ -199,6 +205,9 @@ section {
 .questions p {
   margin-right: 20px;
 }
+
+
+
 .rules {
   text-align: center;
   background-color: yellowgreen;
