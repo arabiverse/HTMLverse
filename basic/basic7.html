@@ -286,8 +286,8 @@
 
 		<p>باختصار، متى يُنصح باستخدام مُعرِّف <strong>(id)</strong> بدلاً من فئة <strong>(class)</strong>؟ يُفضَّل استخدام الفئات <strong>(classes)</strong> عند تطبيق مجموعة من الأنماط <strong>(styles)</strong> على عناصر متعددة. إذا كنت ترغب في استهداف عنصر مُحدَّد، يُفضَّل استخدام المُعرِّف <strong>(id)</strong> لأن قيم <strong>(value)</strong> هذه العناصر يجب أن تكون فريدة <strong>(unique)</strong>.</p>
 
-			<!-- Questions  أسئلة-->
-	<div class="questions">
+		<!-- Questions  أسئلة-->
+		<div class="questions">
 		<h3>أسئلة :</h3>
 
 		<h4>متى يجب عليك استخدام معرف (id) بدلاً من فئة (class)؟</h4>
@@ -314,11 +314,125 @@
         
         
 
-	</div>
+		</div>
 	</section>
 
     <section id="3">
         <h2>ج. ما هي كيانات اتش.تي.إم.إل (HTML Entities)، وما هي بعض الأمثلة الشائعة؟</h2>
+		<p>كيان اتش.إم.إل <strong>(html)</strong>، أو مرجع الحرف <strong>(character reference)</strong>، هو مجموعة من الأحرف المستخدمة لتمثيل حرف محجوز <strong>(reserved character)</strong> في اتش.إم.إل <strong>(html)</strong>.</p>
+
+		<p>لنفترض أنك تريد عرض النص "هذا عنصر <strong>(&lt;img/&gt;)</strong>" على الشاشة. إذا استخدمت الكود الحالي في المحرر، فلن تظهر النتيجة المطلوبة. حتى لو أضفت سمتي "اس.ار.سي" <strong>(src)</strong> و"التْ" <strong>(alt)</strong> إلى المثال، فستظهر صورة في منتصف الفقرة. هذه ليست النتيجة المطلوبة.</p>
+		<h3>المثال :</h3>
+		<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;p&gt; &lt;img/&gt; هذا عنصر &lt;/p&gt;
+	</code></pre>
+	</div>
+
+    <h4>معاينة :</h4>
+	<div class="preview">
+        <div>
+            <p>هذا عنصر <img/></p>
+        </div>
+    </div>
+
+	<p>عندما يرى مُحلِّل اتش.تي.إم.إل <strong>(HTML parser)</strong> رمز "أقل من" <strong>(>)</strong> متبوعًا باسم وسم اتش.تي.إم.إل <strong>(HTML tag)</strong>، يُفسِّر ذلك على أنه عنصر اتش.تي.إم.إل <strong>(html)</strong>. ولهذا السبب، لا تحصل على النتيجة المطلوبة "هذا عنصر <strong>(&lt;img/&gt;)</strong>" على الشاشة.</p>
+
+	<p>لإصلاح هذه المشكلة، يمكنك استخدام كيانات اتش.تي.إم.إل <strong>(HTML entities)</strong>.</p>
+	<h4>إليك مثال مُحدّث باستخدام كيانات اتش.تي.إم.إل (HTML entities) الصحيحة لرمزي "أصغر من" (<) و"أكبر من" (>). الآن، سترى عنصر (&lt;img/&gt;) على الشاشة.</h4>
+
+	<h3>المثال :</h3>
+	<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;p&gt; &amp;lt;img/&amp;gt; هذا عنصر &lt;/p&gt;
+	</code></pre>
+	</div>
+
+    <h4>معاينة :</h4>
+	<div class="preview">
+        <div>
+            <p>هذا عنصر &lt;img/&gt;<img/></p>
+        </div>
+    </div>
+
+	<p>تُعرف هذه الأنواع من مراجع الأحرف <strong>(character references)</strong> بمراجع الأحرف المُسمّاة <strong>(named character references)</strong>. تبدأ المراجع المُسمّاة بعلامة العطف <strong>(&)</strong> وتنتهي بفاصلة منقوطة <strong>(;)</strong>. باستخدام مرجع حرف مُسمّى <strong>(named character reference)</strong>، لن يخلط مُحلل اتش.تي.إم.إل <strong>(HTML parser)</strong> بينه وبين عنصر اتش.تي.إم.إل <strong>(HTML element)</strong> فعلي.</p>
+
+	<p>نوع آخر من مراجع الأحرف <strong>(character references)</strong> هو المرجع الرقمي العشري <strong>(the decimal numeric reference)</strong>. يبدأ هذا المرجع بعلامة <strong>(&)</strong> ورمز <strong>(#)</strong>، متبوعًا برقم عشري واحد أو أكثر، متبوعًا بفاصلة منقوطة <strong>(;)</strong>.</p>
+
+	<h4>فيما يلي مثال لاستخدام المرجع الرقمي العشري للرمز (<).</h4>
+
+	<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&amp;#60;
+	</code></pre>
+	</div>
+
+    <h4>معاينة :</h4>
+	<div class="preview">
+        <div>
+            &#60;
+        </div>
+    </div>
+
+	<p>آخر نوع من المراجع الرقمية هو المراجع السداسية عشرية <strong>(the hexadecimal numeric reference)</strong>. يبدأ هذا المرجع بعلامة <strong>(&)</strong> ورمز <strong>(#)</strong> وحرف <strong>(x)</strong>. ثم يتبعه رقم سداسي عشري واحد أو أكثر من أرقام "اس.كـي" <strong>(ASCII hex digits)</strong>، وينتهي بفاصلة منقوطة <strong>(;)</strong>.</p>
+	<h4>فيما يلي مثال لاستخدام المرجع الرقمي السداسي عشر(the hexadecimal numeric reference) للرمز (<).</h4>
+
+	<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&amp;#x3C;
+	</code></pre>
+	</div>
+
+    <h4>معاينة :</h4>
+	<div class="preview">
+        <div>
+            &#x3C;
+        </div>
+    </div>
+
+	<!-- Questions  أسئلة-->
+		<div class="questions">
+		<h3>أسئلة :</h3>
+
+		<h4>ما هو كيان اتش.تي.إم.إل "مرجع الحرف" (character reference)؟</h4>
+		<p>أ. مجموعة من خطوط جوجل (Google fonts). ❌</p>
+		<p>ب. مجموعة من الصور والتعليقات التوضيحية. ❌</p>
+		<p>ج. مجموعة من الأحرف تُستخدم لتمثيل أكواد "جاڢاسكريبت" (JavaScript). ❌</p>
+		<p><strong>د. مجموعة من الأحرف تُستخدم لتمثيل حرف محجوز في اتش.تي.إل.إل (HTML). ✅</strong></p>
+
+		<br>
+
+        <h4>ما هي أنواع مراجع الحرف (character references) الثلاثة؟</h4>
+		<p>أ. مراجع أحرف رقمية مسماة (Named)، رومانية (Roman) وسادسة عشرية(Hexadecimal numeric). ❌</p>
+		<p>ب. مراجع الأحرف الثمانية (Octal)، المسماة (Named) والثنائية (Binary). ❌</p>
+		<p><strong>ج. مراجع أحرف مُسمّاة (Named)، عشرية (Decimal numeric) وسداسية عشرية(Hexadecimal numeric). ✅</strong></p>
+		<p>د. مراجع أحرف غير متماثلة (Asymmetric)، عشرية (Decimal numeric) وسداسية عشرية (Hexadecimal numeric). ❌</p>
+		
+
+		<br>
+
+		<h4>أيٌّ مما يلي هو الصيغة الصحيحة لمرجع حرف مُسمّى (named character reference)؟</h4>
+		<div class="help-code">
+			<p><strong>✅ &amp;amp; .أ</strong></p>
+			<p>❌ ;amp; .ب</p>
+			<p>❌ &amp;amp&gt;&gt; .ج</p>
+			<p>❌ &amp;amp;&amp; .د</p>
+		</div>
+		
+		
+        
+        
+
+		</div>
+
 	</section>
 
     <section id="4">
