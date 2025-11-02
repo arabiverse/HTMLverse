@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/basic7.css">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | الأساسيات</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +47,7 @@
 	</code></pre>
 	</div>
 
-    <h2>معاينة :</h2>
+    <h3>معاينة :</h3>
 	<div class="preview">
         <div>
             <p>مثال لعنصر الفقرة.</p>
@@ -77,7 +78,7 @@
 	</code></pre>
 	</div>
 
-    <h2>معاينة :</h2>
+    <h3>معاينة :</h3>
     <div class="preview">
         <section>
             <h2>عنوان القسم الأول</h2>
@@ -127,6 +128,193 @@
 
 	<section id="2">
         <h2>ب. ما هي المعرفات (IDs) والفئات (Classes)، ومتى يجب عليك استخدامها؟</h2>
+		<p>تضيف سمة "اي.دي" <strong>(id)</strong> معرفًا فريدًا إلى عنصر اتش.تي.إم.إل <strong>(html)</strong>.</p>
+		<h4>فيما يلي مثال لعنصر (h1) مع معرف العنوان (id of title):</h4>
+
+		<h3>الكود :</h3>
+
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1 id="title"&gt;صفحة مراجعة الفيلم&lt;/h1&gt;
+		</code></pre>
+		</div>
+
+    	<h3>معاينة :</h3>
+		<div class="preview">
+        <h1>صفحة مراجعة الفيلم</h1>
+    	</div>
+
+		<p>يمكنك الرجوع إلى مُعرِّف العنوان <strong>(id of title)</strong> داخل "جافاسكريبت" <strong>(JavaScript)</strong> أو "سي.اس.اس" <strong>(CSS)</strong>.</p>
+
+		<h4>إليك مثال "سي.اس.اس" (CSS) يُشير إلى مُعرِّف العنوان لتغيير لون (color) النص إلى الأحمر (red):</h4>
+
+		<h3>الكود :</h3>
+		<h4>اتش.تي.إم.إل (HTML):</h4>
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="ar" dir="rtl"&gt;
+
+  &lt;head&gt;
+
+    &lt;meta charset="utf-8" /&gt;
+
+    &lt;meta
+       name="viewport"
+       content="width=device-width, initial-scale=1.0" /&gt;
+
+    &lt;title&gt;مثال لصفحة المراجعة&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href="./styles.css" /&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;h1 id="title"&gt;صفحة مراجعة الفيلم&lt;/h1&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+
+		</code></pre>
+		</div>
+		<h4>سي.اس.اس (CSS):</h4>
+		<div class="sourcecode-css">
+		<pre><span>code <br></span><code>
+#title {
+	color: red;
+}
+		</code></pre>
+		</div>
+		<h3>معاينة :</h3>
+		<div class="preview">
+        <h1 id="title-basic7">صفحة مراجعة الفيلم</h1>
+    	</div>
+
+		<p>يُشير رمز التجزئة <strong>(#)</strong> الموجود أمام العنوان إلى رغبتك في استهداف مُعرّف <strong>(id)</strong> بهذه القيمة. يجب عدم استخدام أسماء المُعرّفات <strong>(IDs)</strong> أكثر من مرة، ويجب أن تكون فريدة <strong>(unique)</strong> دائمًا. تجدر الإشارة أيضًا إلى أنه لا يمكن أن تحتوي قيم المُعرّفات <strong>(id values)</strong> على مسافات <strong>(spaces)</strong>.</p>
+		<h4>فيما يلي مثال لتطبيق الكلمات "ماين" (main) و"هيادينغ" (heading) على قيمة سمة "اي.دي" (id):</h4>
+
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1 id="main heading"&gt;"ماين هيادينغ"&lt;/h1&gt;
+		</code></pre>
+		</div>
+
+		<p>سوف ترى المتصفحات <strong>(Browsers)</strong> هذه المساحة <strong>(space)</strong> كجزء من المعرف <strong>(id)</strong> مما سيؤدي إلى مشكلات غير مرغوب فيها عندما يتعلق الأمر بالتصميم والكتابة النصية. يجب أن تحتوي قيم سمة المعرف <strong>(id)</strong> فقط على أحرف <strong>(letters)</strong> وأرقام <strong>(digits)</strong> وشرطات سفلية <strong>(underscores)</strong> وشرطات <strong>(dashes)</strong>.</p>
+		<p>على النقيض من سمة "اي.دي" <strong>(id)</strong>، لا يلزم أن تكون قيمة سمة "كلاس" <strong>(class)</strong> فريدة ويمكن أن تحتوي على مسافات <strong>(spaces)</strong>.</p>
+
+		<h4>فيما يلي مثال لتطبيق فئة (class) تسمى "بوكس" (box) على عنصر "ديڢ" (div).</h4>
+
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;div class="box"&gt;&lt;/div&gt;
+		</code></pre>
+		</div>
+		<p>إذا أردتَ إضافة أسماء فئات <strong>(class)</strong> متعددة إلى عنصر، يمكنكَ ذلك بفصل الأسماء بمسافة <strong>(space)</strong>.</p>
+
+		<h4> إليكَ مثال مُحدّث لتطبيق فئات متعددة (class) على عنصر "ديڢ" (div).</h4>
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;div class="box red-box"&gt;&lt;/div&gt;
+		</code></pre>
+		</div>
+
+		<h4>فيما يلي مثال آخر لتطبيق فئات (classes) متعددة على عناصر "ديڢ" (div) متعددة.</h4>
+
+		<h3>الكود :</h3>
+		<h4>اتش.تي.إم.إل (HTML):</h4>
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="ar" dir="rtl"&gt;
+
+  &lt;head&gt;
+
+    &lt;meta charset="utf-8" /&gt;
+
+    &lt;meta
+       name="viewport"
+       content="width=device-width, initial-scale=1.0" /&gt;
+
+    &lt;title&gt;مثال لصفحة المراجعة&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href="./styles.css" /&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+	&lt;div class="box red-box"&gt;&lt;/div&gt;
+	&lt;div class="box blue-box"&gt;&lt;/div&gt;
+	&lt;div class="box red-box"&gt;&lt;/div&gt;
+	&lt;div class="box blue-box"&gt;&lt;/div&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+
+		</code></pre>
+		</div>
+		<h4>سي.اس.اس (CSS):</h4>
+		<div class="sourcecode-css">
+		<pre><span>code <br></span><code>
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.red-box {
+  background-color: red;
+}
+
+.blue-box {
+  background-color: blue;
+}
+		</code></pre>
+		</div>
+
+		<h3>معاينة :</h3>
+		<div class="preview">
+        <div class="box-basic7 red-box-basic7"></div>
+    	<div class="box-basic7 blue-box-basic7"></div>
+    	<div class="box-basic7 red-box-basic7"></div>
+    	<div class="box-basic7 blue-box-basic7"></div>
+    	</div>
+
+		<p>باختصار، متى يُنصح باستخدام مُعرِّف <strong>(id)</strong> بدلاً من فئة <strong>(class)</strong>؟ يُفضَّل استخدام الفئات <strong>(classes)</strong> عند تطبيق مجموعة من الأنماط <strong>(styles)</strong> على عناصر متعددة. إذا كنت ترغب في استهداف عنصر مُحدَّد، يُفضَّل استخدام المُعرِّف <strong>(id)</strong> لأن قيم <strong>(value)</strong> هذه العناصر يجب أن تكون فريدة <strong>(unique)</strong>.</p>
+
+			<!-- Questions  أسئلة-->
+	<div class="questions">
+		<h3>أسئلة :</h3>
+
+		<h4>متى يجب عليك استخدام معرف (id) بدلاً من فئة (class)؟</h4>
+		<p>أ. استخدم فئة (class) عندما تريد معرفًا فريدًا ينطبق فقط على عنصر واحد. ❌</p>
+		<p><strong>ب. استخدم معرفًا (id) عندما تحتاج إلى معرف فريد لعنصر معين، واستخدم فئة (class) عندما تريد تطبيق الأنماط أو السلوك على عناصر متعددة. ✅</strong></p>
+        <p>ج. استخدم معرفًا (id) عندما تريد تصميم عناصر متعددة بشكل متسق عبر أجزاء مختلفة من صفحتك على الويب. ❌</p>
+		<p>د. استخدم معرفًا (id) عندما تريد تطبيق أنماط (styles) يمكن تجاوزها بسهولة بواسطة أنماط أخرى في "سي.اس.اس" (CSS) الخاص بك. ❌</p>
+
+		<br>
+
+        <h4>ماذا يحدث إذا استخدمت نفس المعرف (id) أكثر من مرة في اتش.تي.إم.إل (HTML) الخاص بك؟</h4>
+		<p><strong>أ. قد يؤدي ذلك إلى نتائج غير مرغوب فيها ومشكلات عند محاولة تطبيق الأنماط أو استهداف عنصر في "جاڢاسكريبت" (JavaScript). ✅</strong></p>
+		<p>ب. سيتعطل البرنامج. ❌</p>
+        <p>ج. لن يحدث شيء. ❌</p>
+		<p>د. ستظهر رسالة تنبيه (alert) منبثقة في نافذة المتصفح (window). ❌</p>
+
+		<br>
+
+		<h4>أي مما يلي ليس قيمة صحيحة لسمة المعرف (id)؟</h4>
+		<p>أ. "id="heading ❌</p>
+        <p>ب. "id="main-heading ❌</p>
+		<p>ج. "id="main ❌</p>
+		<p><strong>د. "id="main heading ✅</strong></p>
+        
+        
+
+	</div>
 	</section>
 
     <section id="3">

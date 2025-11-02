@@ -124,7 +124,7 @@ section {
 }
 
 
-.sourcecode,.errorcode, .rules {
+.sourcecode,.errorcode, .rules, .sourcecode-css {
     direction: ltr;
 }
 
@@ -136,6 +136,22 @@ section {
 
 .sourcecode pre {
   background: #1e1e1e;     /* dark background */
+  color: #dcdcdc;          /* light text */
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+}
+
+.sourcecode-css pre span {
+    color: yellowgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.sourcecode-css pre {
+  background: #2a2a72;     /* dark background */
   color: #dcdcdc;          /* light text */
   padding: 1em;
   border-radius: 8px;
@@ -180,7 +196,7 @@ section {
   text-align: center;
 }
 
-.questions h4 {
+.questions p {
   margin-right: 20px;
 }
 .rules {
