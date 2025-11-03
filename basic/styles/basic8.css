@@ -1,0 +1,8 @@
+.seo-code {
+    direction: ltr;
+    background-color: darkblue;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: auto;
+}
