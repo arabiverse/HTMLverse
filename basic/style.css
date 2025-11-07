@@ -53,7 +53,7 @@ main {
 .navbar .nav-links a {
   text-decoration: none;
   color: darkblue;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -70,7 +70,7 @@ main {
 
 .navbar .nav-links .second-nav .second-links a {
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #2a2a72;
 }
@@ -202,6 +202,10 @@ section {
   text-align: center;
 }
 
+.questions h5 {
+  font-size: 1rem;
+}
+
 .questions p {
   margin-right: 20px;
 }
@@ -217,10 +221,13 @@ section {
   background-color: yellow;
 }
 
+
+
 .br {
   border: #1e1e1e dashed 1px;
   padding: 2px;
   font-weight: 900;
-  background-color: darkgray;
+  background-color: rgb(198, 198, 198);
   font-size: 1rem;
+  color: black;
 }
