@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arabiverse.github.io/HTMLverse/sitemap.xml
+Host: https://arabiverse.github.io
