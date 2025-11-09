@@ -34,7 +34,23 @@
 	<section>
 	<h3>قصص المستخدم :</h3>
 	
-
+    <h4>١. يجب أن يكون لديك عنصر <code class="br">h1</code> للعنوان الرئيسي للصفحة.</h4>
+    <h4>٢. يجب أن يكون لديك عنصرين للقسم <code class="br">section</code>.</h4>
+    <h4>٣. داخل عنصر القسم <code class="br">section</code> الأول، يجب أن يكون لديك عنصر <code class="br">h2</code> لعنوان الفيديو الذي يتم تشغيله.</h4>
+    <h4>٤. أسفل عنصر <code class="br">h2</code>، يجب أن يكون لديك عنصر فيديو <code class="br">video</code> مع عناصر تحكم <code class="br">controls</code> وسمات عرض <code class="br">width</code>. يجب ضبط سمة العرض <code class="br">width</code> على <code class="br">640</code>.</h4>
+    <h4>٥. داخل عنصر الفيديو <code class="br">video</code>، يجب أن يكون لديك عنصر مصدر <code class="br">source</code> مع سمة <code class="br">src</code> تشير إلى ملف فيديو وسمة النوع <code class="br">type</code>.</h4>
+    <ul>
+        <li>يمكنك استخدام</li>
+        <div class="long-link"><code class="br">https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4</code>.</div>
+     </ul>
+    <h4>٦. داخل عنصر القسم <code class="br">section</code> الثاني، يجب أن يكون لديك عنصر <code class="br">h2</code> لعنوان الأغنية التي يتم تشغيلها.</h4>
+    <h4>٧. أسفل عنصر <code class="br">h2</code>، يجب أن يكون لديك عنصر صوتي <code class="br">audio</code> يحتوي على عناصر التحكم <code class="br">controls</code> وسمات الحلقة او التكرار <code class="br">loop</code>، وسمة "اس.ار.سي" <code class="br">src</code> التي تشير إلى ملف صوتي <em>audio file</em>.</h4>
+    <ul>
+        <li>يمكنك استخدام</li>
+        <div class="long-link"><code class="br">https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3</code>.</div>
+        <li>أو</li>
+        <div class="long-link"><code class="br">https://cdn.freecodecamp.org/curriculum/js-music-player/we-are-going-to-make-it.mp3</code>.</div>
+    </ul>
 
 
 
@@ -50,14 +66,33 @@
 &lt;head&gt;
 
   &lt;meta charset="UTF-8" /&gt;
-  &lt;title&gt;&lt;/title&gt;
-  &lt;meta name="description" content=""/&gt;
+  &lt;title&gtمشغل الصوت والفيديو&lt;/title&gt;
+  &lt;meta name="description" content="إنشاء مشغل الصوت والفيديو"/&gt;
 
 &lt;/head&gt;
 
 &lt;body&gt;
 
-  
+  &lt;h1&gt;مشغل الصوت والفيديو&lt;/h1&gt;
+
+  &lt;section&gt;
+        &lt;h2&gt;عنوان الفيديو&lt;/h2&gt;
+
+        &lt;video controls width="640"&gt;
+            &lt;source src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" type="mp4" /&gt;
+        &lt;/video&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+        &lt;h2&gt;عنوان الأغنية&lt;/h2&gt;
+
+        &lt;audio 
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/we-are-going-to-make-it.mp3" 
+            loop
+            controls
+            &gt;
+        &lt;/audio&gt;
+  &lt;/section&gt;
 
 
 &lt;/body&gt;
@@ -69,6 +104,31 @@
 	<h3>معاينة :</h3>
 	<div class="preview" role="presentation">
 		
+        <h1>مشغل الصوت والفيديو</h1>
+
+  <section>
+        <h2>عنوان الفيديو</h2>
+
+        <video controls  width="640">
+           <source 
+           src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4" 
+           type="video/mp4" />
+        </video>
+  </section>
+
+ <section>
+        <h2>عنوان الأغنية</h2>
+        
+        <audio 
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/we-are-going-to-make-it.mp3" 
+            loop
+            controls
+            >
+        </audio>
+  </section>
+
+
+
 	</div>
 	</section>
 
