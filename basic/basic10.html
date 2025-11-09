@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | تصحيح صفحة كامبربوت"/>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="red" href="./index.html">X</a>
+	<h1>أساسيات اتش.تي.إم.إل</h1>
+</header>
+
+<main>
+
+<!-- BASIC 2 -->
+<div class="box">
+	<div class="sub-title">
+		<h2>١٠. إنشاء صفحة وكالة سفر</h2>
+		<span class="hint">مختبر</span>
+        <p>الهدف: استيفاء قصص المستخدم أدناه والحصول على جميع الاختبارات اللازمة لإكمال المختبر.</p>
+	</div>
+
+	<section>
+	<h3>قصص المستخدم :</h3>
+	<h4>١. يجب أن يكون لديك إعلان <code class="br">DOCTYPE</code>.</h4>
+    <h4>٢. يجب أن يكون لديك عنصر <code class="br">html</code> مع تعيين <code class="br">lang</code> إلى <code class="br">ar</code> و <code class="br">dir</code> إلى <code class="br">rtl</code>.</h4>
+	  <h4>٣. يجب أن يكون لديك عنصر "هاد" <code class="br">head</code> يحتوي على عنصر "ميتا" <code class="br">meta</code> "ڢويد" <em>void</em> مع مجموعة أحرف <code class="br">charset</code> مضبوطة على <code class="br">utf-8</code> وعنوان <code class="br">title</code> يحتوي على نص "صفحة وكالة سفر".</h4>
+    <h4>٤. يجب أن يكون لديك علامة تعريفية <code class="br">meta</code> في عنصر الرأس <code class="br">head</code> الخاص بك تحتوي على وصف قصير <em>short description</em> لموقع الويب الخاص بك لتحسين محركات البحث <em>SEO</em>.</h4>
+    <h4>٥. يجب أن يكون لديك عنصر <code class="br">h1</code> لتقديم وجهات سفرك.</h4>
+    <h4>٦. يجب أن يكون لديك فقرة <code class="br">p</code> أسفل عنصر <code class="br">h1</code> تقدم لك فرص السفر.</h4>
+    <h4>٧. يجب أن يكون لديك عنصر <code class="br">h2</code> مع النص "الحزم".</h4>
+    <h4>٨. يجب أن يكون لديك عنصر <code class="br">p</code> يقدم مقدمة موجزة للحزم المختلفة.</h4>
+    <h4>٩. يجب أن يكون لديك عنصر قائمة <code class="br">ul</code> غير مرتب يحتوي على عنصرين <code class="br">li</code>. يجب أن يحتوي العنصران على النص "رحلات جماعية" و"رحلات خاصة"، على التوالي. يجب أن يكون نص كل عنصر قائمة محاطًا بعنصر ربط <code class="br">a</code>.</h4>
+    <h4>١٠. يجب أن يكون لديك عنصر <code class="br">h2</code> مع النص أفضل المسارات.</h4>
+    <h4>١١. يجب أن يكون لديك ثلاثة عناصر شكلية <code class="br">figure</code> على الأقل، يحتوي كل منها على عنصر مرساة <code class="br">a</code> وعنصر تسمية توضيحية <code class="br">figcaption</code>.</h4>
+    <h4>١٢. يجب أن تحتوي عناصر المرساة الثلاثة <code class="br">a</code> على عنصر <code class="br">img</code> مع سمة "الت" <code class="br">alt</code> مناسبة وسمة "اس.ار.سي" <code class="br">src</code> مضبوطة على صورة صالحة كمحتوى لها. يمكنك استخدام:
+<br>https://arabiverse.github.io/HTMLverse/basic/assets/colosseo.jpg <br> https://arabiverse.github.io/HTMLverse/basic/assets/alps.jpg <br> https://arabiverse.github.io/HTMLverse/basic/assets/sea.jpg <br>
+إذا أردت.</h4>
+    <h4>١٣. يجب أن تحتوي جميع عناصر المرساة <code class="br">a</code> الخمسة لديك على سمة <code class="br">href</code> بقيمة https://arabiverse.github.io/HTMLverse/ وسمة <code class="br">target</code> بقيمة <code class="br">blank_</code>.</h4>
+
+
+
+	<h3>الحل :</h3>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ar" dir="rtl"&gt;
+
+&lt;head&gt;
+
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;صفحة وكالة سفر&lt;/title&gt;
+  &lt;meta name="description" content="سافر بأمان وحرية"/&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;h1&gt;وجهات سفر&lt;/h1&gt;
+  &lt;p&gt;فرص السفر&lt;/p&gt;
+
+  &lt;h2&gt;الحزم&lt;/h2&gt;
+  &lt;p&gt;مقدمة موجزة للحزم المختلفة&lt;/p&gt;
+
+  &lt;ul&gt;
+
+    &lt;li&gt;&lt;a href="https://arabiverse.github.io/HTMLverse" target="_blank">رحلات جماعية&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://arabiverse.github.io/HTMLverse" target="_blank">رحلات خاصة&lt;/a&gt;&lt;/li&gt;
+  
+  &lt;/ul&gt;
+
+  &lt;h2&gt;أفضل المسارات&lt;/h2&gt;
+
+  &lt;figure&gt;
+
+    &lt;a href="https://arabiverse.github.io/HTMLverse" target="_blank"&gt;
+      &lt;img src="https://arabiverse.github.io/HTMLverse/basic/assets/colosseo.jpg" alt="الحضارات"&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;الحضارات&lt;/figcaption&gt;
+
+  &lt;/figure&gt;
+
+  &lt;figure&gt;
+
+    &lt;a href="https://arabiverse.github.io/HTMLverse" target="_blank"&gt;
+      &lt;img src="https://arabiverse.github.io/HTMLverse/basic/assets/alps.jpg" alt="الجبال"&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;الجبال&lt;/figcaption&gt;
+
+  &lt;/figure&gt;
+
+  &lt;figure&gt;
+
+    &lt;a href="https://arabiverse.github.io/HTMLverse" target="_blank"&gt;
+      &lt;img src="https://arabiverse.github.io/HTMLverse/basic/assets/sea.jpg" alt="الجزر"&gt;
+    &lt;/a&gt;
+    &lt;figcaption&gt;الجزر&lt;/figcaption&gt;
+
+  &lt;/figure&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview" role="presentation">
+		<h1>وجهات سفر</h1>
+  <p>فرص السفر</p>
+  <h2>الحزم</h2>
+  <p>مقدمة موجزة للحزم المختلفة</p>
+
+  <ul>
+    <li><a href="https://arabiverse.github.io/HTMLverse" target="_blank">رحلات جماعية</a></li>
+    <li><a href="https://arabiverse.github.io/HTMLverse" target="_blank">رحلات خاصة</a></li>
+  </ul>
+
+  <h2>أفضل المسارات</h2>
+
+  <figure>
+    <a href="https://arabiverse.github.io/HTMLverse" target="_blank">
+      <img src="assets/colosseo.jpg" alt="الحضارات">
+    </a>
+    <figcaption>الحضارات</figcaption>
+  </figure>
+
+  <figure>
+    <a href="https://arabiverse.github.io/HTMLverse" target="_blank">
+      <img src="assets/alps.jpg" alt="الجبال">
+    </a>
+    <figcaption>الجبال</figcaption>
+  </figure>
+
+  <figure>
+    <a href="https://arabiverse.github.io/HTMLverse" target="_blank">
+      <img src="assets/sea.jpg" alt="الجزر">
+    </a>
+    <figcaption>الجزر</figcaption>
+  </figure>
+	</div>
+	</section>
+
+</div>
+
+</main>
+
+<!-- Pages -->
+<div class="page-nav">
+	<a class="prev" href="./basic9.html">&#8594; السابق</a>
+	<a class="next" href="#">التالي &#8592;</a>
+</div>
+
+</body>
+</html>
