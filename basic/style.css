@@ -141,14 +141,49 @@ section {
 }
 
 .sourcecode pre {
-  background: #1e1e1e;     /* dark background */
-  color: #dcdcdc;          /* light text */
-  padding: 1em;
-  border-radius: 8px;
+  background: #0f111a; /* sleek deep navy instead of plain black */
+  color: #e6e6e6;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
   overflow-x: auto;
   font-family: "Fira Code", monospace;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
 }
+
+/* Optional: add a soft gradient bar at the top (like VS Code tabs) */
+.sourcecode pre::before {
+  content: "";
+  display: block;
+  height: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: linear-gradient(90deg, #ff5f56, #ffbd2e, #27c93f);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Slightly dim scrollbars for better aesthetics */
+.sourcecode pre::-webkit-scrollbar {
+  height: 8px;
+}
+.sourcecode pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+.sourcecode pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+
+
+
 
 .sourcecode-css pre span {
     color: yellowgreen;
