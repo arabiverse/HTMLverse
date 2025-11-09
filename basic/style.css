@@ -265,4 +265,11 @@ section {
   background-color: rgb(198, 198, 198);
   font-size: 1rem;
   color: black;
+ 
+  
+}
+
+.long-link {
+  overflow-x: auto;
+  
 }
