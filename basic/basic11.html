@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | العمل مع عناصر الصوت والفيديو"/>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <a class="red" href="./index.html">X</a>
+        <h1>أساسيات اتش.تي.إم.إل</h1>
+    </header>
+
+
+<main>
+<!-- BASIC 11 -->
+<div class="box">
+	<div class="sub-title">
+		<h2>١١. العمل مع عناصر الصوت والفيديو</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+	</div>
+
+<section id="1">
+	<h3>ما هي أدوار عناصر اتش.تي.إم.إل HTML الصوت <code class="br">audio</code> والفيديو <code class="br">video</code>، وكيف تعمل؟</h3>
+    <p>يتيح لك عنصرا الصوت <code class="br">audio</code> والفيديو <code class="br">video</code> إضافة محتوى صوتي وفيديو إلى مستندات اتش.تي.إم.إل HTML. يدعم عنصر الصوت <code class="br">audio</code> تنسيقات الصوت الشائعة مثل mp3، wav و ogg، بينما يدعم عنصر الفيديو <code class="br">video</code> تنسيقات mp4، ogg و webm.</p>
+    <p>لتضمين محتوى صوتي على صفحتك على الويب، يمكنك استخدام عنصر الصوت <code class="br">audio</code> مع الإشارة إلى موقع ملف الصوت <em>audio file</em> الخاص بك من خلال السمة "اس.ار.سي" <code class="br">src</code>.</p>
+    <h4>كما ترى في نافذة المعاينة، لا يظهر أي شيء على الصفحة.</h4>
+	
+
+	<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"&gt;&lt;/audio&gt;
+	</code></pre>
+	</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"></audio>
+	</div>
+
+	<br>
+    <p>إذا كنت تريد رؤية مشغل الصوت <em>audio player</em> على الصفحة، فيمكنك إضافة عنصر الصوت <code class="br">audio</code> باستخدام سمة عناصر التحكم <code class="br">controls</code>.</p>
+
+	<h4>اضغط على زر التشغيل في نافذة المعاينة للاستماع إلى إحدى أغاني "كوينسي لارسون" <em>Quincy Larson</em>.</h4>
+	<h4>الكود :</h4>
+    <div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" controls&gt;&lt;/audio&gt;
+	</code></pre>
+	</div>
+    <h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+        <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" controls></audio>
+	</div>
+
+    <p>تُمكّن سمة "عناصر التحكم" <code class="br">controls</code> المستخدمين <em>users</em> من إدارة تشغيل الصوت، بما في ذلك ضبط مستوى الصوت، وإيقاف التشغيل مؤقتًا أو استئنافه. سمة "عناصر التحكم" <code class="br">controls</code> هي سمة منطقية <em>boolean attribute</em> يُمكن إضافتها إلى أي عنصر لتمكين عناصر التحكم المدمجة في التشغيل. في حال حذفها، لن تظهر أي عناصر تحكم.</p>
+    <p>إلى جانب سمات المصدر <code class="br">src</code> وعناصر التحكم <code class="br">controls</code>، هناك العديد من السمات الأخرى التي تُحسّن وظائف عنصر الصوت <code class="br">audio</code>. سمة الحلقة <code class="br">loop</code> هي سمة منطقية <em>boolean attribute</em> تُشغّل الصوت باستمرار <em>continuously</em>.</p>
+    <h4>إليكم مثالاً على استخدام خاصية التكرار <code class="br">loop</code> لتشغيل إحدى أغاني "كوينسي لارسون" <em>Quincy Larson</em> بعنوان "لا أستطيع البقاء" <em>Can't stay down</em>. لمشاهدة التكرار أثناء التشغيل، امسح رأس التشغيل قرب نهاية الأغنية، وسيبدأ التشغيل مجددًا بعد انتهائها.</h4>
+
+    <h4>الكود :</h4>
+    <div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;audio 
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" 
+    loop
+    controls
+    &gt;
+&lt;/audio&gt;
+	</code></pre>
+	</div>
+    <h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+        <audio
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+            loop
+            controls
+            >
+        </audio>
+	</div>
+    <br>
+    <p>هناك سمة أخرى يمكنك استخدامها وهي سمة كتم الصوت <code class="br">muted</code>. عند وجودها في عنصر الصوت (الصوت)، ستبدأ هذه السمة المنطقية <em>boolean attribute</em> تشغيل الصوت في حالة صامت <code class="br">muted</code>.</p>
+    <h4>إليك مثال على استخدام خاصية "كتم الصوت" <code class="br">muted</code>. للاستماع إلى الموسيقى، انقر على أيقونة مستوى الصوت في مشغل الصوت <em>audio player</em>.</h4>
+
+        
+    <h4>الكود :</h4>
+    <div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;audio 
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" 
+    loop
+    controls
+    muted
+    &gt;
+&lt;/audio&gt;
+	</code></pre>
+	</div>
+    <h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+        <audio
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+            loop
+            controls
+            muted
+            >
+        </audio>
+	</div>
+    <br>
+
+    <p>فيما يتعلق بأنواع <em>types</em> ملفات الصوت <em>audio file</em>، تختلف المتصفحات <em>browsers</em> في دعمها لكل نوع. ولتحقيق ذلك، يمكنك استخدام عناصر المصدر <code class="br">source</code> داخل عنصر الصوت <code class="br">audio</code>، وسيختار المتصفح أول مصدر يفهمه.</p>
+    <h4>فيما يلي مثال لاستخدام عناصر مصدر <code class="br">source</code> متعددة لعنصر صوتي <code class="br">audio</code>:</h4>
+
+            <h4>الكود :</h4>
+    <div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;audio controls&gt;
+  &lt;source src="audio.ogg" type="audio/ogg" /&gt;
+  &lt;source src="audio.wav" type="audio/wav" /&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg" /&gt;
+&lt;/audio&gt;
+	</code></pre>
+	</div>
+
+    <p>سيبدأ المتصفح أولاً بنوع <strong>ogg</strong>، وإذا لم يتمكن من تشغيل الصوت، فسينتقل إلى النوع التالي في القائمة.</p>
+    <p>جميع السمات التي تعلمناها حتى الآن مدعومة <em>supported</em> أيضًا في عنصر الفيديو <code class="br">video</code>. </p>
+
+    <h4>إليك مثال على استخدام عنصر فيديو <code class="br">video</code> مع سمات التكرار <code class="br">loop</code>، وعناصر التحكم <code class="br">controls</code>، وكتم الصوت <code class="br">muted</code>. يمكن إضافة سمة التشغيل التلقائي <code class="br">autoplay</code> إلى وسم الفيديو <code class="br">video</code> الافتتاحي لتشغيل الفيديو تلقائيًا.</h4>
+    <h5><mark>ملاحظة:</mark> تُستخدم خاصية العرض <code class="br">width</code> هنا لتصغير حجم الفيديو وإظهاره بشكل أفضل في نافذة المعاينة. ستتعلم المزيد عن خاصية العرض <code class="br">width</code> في دروس قادمة.</h5>
+
+    <h4>الكود :</h4>
+    <div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    loop
+    controls
+    muted
+    width="400"
+    &gt;
+&lt;/video&gt;
+	</code></pre>
+	</div>
+    <h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+        <video
+            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+            loop
+            controls
+            muted
+            width="400"
+        >
+        </video>
+	</div>
+
+    <p>بالنسبة لسمة "اس.ار.سي" <code class="br">src</code> او "المصدر" <code class="br">source</code>، نستخدم فيديو بعنوان "بيڨ باك بوني" <em>Big Buck Bunny</em>  من <em>archive.org</em>. إذا أردت عرض صورة <strong>image</strong> أثناء تنزيل الفيديو، يمكنك استخدام سمة "الملصق" <code class="br">poster</code>. هذه السمة غير متاحة لعناصر الصوت <code class="br">audio</code>، وهي خاصة بعنصر الفيديو <code class="br">video</code>.</p>
+    <h4>فيما يلي مثال لاستخدام سمة الملصق <code class="br">poster</code> مع المحتوى المقدم بواسطة <em>peach.blender.org</em>.</h4>
+
+        <h4>الكود :</h4>
+    <div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;video
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    loop
+    controls
+    muted
+    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+    width="400"
+    &gt;
+&lt;/video&gt;
+	</code></pre>
+	</div>
+
+    <h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+        <video
+            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+            loop
+            controls
+            muted
+            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+            width="400"
+        >
+        </video>
+	</div>
+
+
+
+    <!-- Questions  أسئلة-->
+	<div class="questions">
+		<h4>أسئلة :</h4>
+		<h5>ما هي الخاصية التي تسمح ببدء تشغيل الصوت في حالة صامت؟</h5>
+		<p>١. <code class="br">mute</code> ❌</p>
+		<p>٢. <code class="br">quiet</code> ❌</p>
+		<p>٣. <code class="br">pause</code> ❌</p>
+		<p><mark>٤. <code class="br">muted</code> ✅ </mark></p>
+		<br>
+
+		<h5>ما هي الخاصية التي تسمح لك برؤية أزرار التشغيل والإيقاف المؤقت؟</h5>
+		<p>١. <code class="br">loop</code> ❌</p>
+        <p><mark>٢. <code class="br">controls</code> ✅</mark></p>
+		<p>٣. <code class="br">details</code> ❌</p>
+		<p>٤. <code class="br">muted</code> ❌</p>
+		<br>
+        <h5>ما الغرض من سمة "الملصق" <code class="br">poster</code> في عنصر الفيديو <code class="br">video</code>؟</h5>
+		<p>١. لضبط مصدر الفيديو. ❌</p>
+		<p>٢. للتحكم في تشغيل الفيديو. ❌</p>
+		<p><mark>٣. لعرض صورة أثناء تنزيل الفيديو. ✅ </mark></p>
+		<p>٤. لكتم صوت الفيديو. ❌</p>
+	</div>
+	
+</section>
+
+	
+
+</div>
+
+</main>
+
+    <!-- Pages -->
+    <div class="page-nav">
+        <a class="prev" href="./basic10.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </div>
+
+</body>
+</html>
