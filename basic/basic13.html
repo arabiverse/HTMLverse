@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | العمل مع الصور وملفات SVGs"/>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="red" href="./index.html">X</a>
+	<h1>أساسيات اتش.تي.إم.إل</h1>
+</header>
+
+
+<main>
+<!-- BASIC 8 -->
+<div class="box">
+	<div class="sub-title">
+		<h2>العمل مع الصور وملفات SVGs</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+	</div>
+
+	<section id="1">
+	<h3>أ. ما هي الطرق الشائعة لتحسين موارد الوسائط Optimize Media Assets ؟</h3>
+    <p>تحسين محركات البحث <em>SEO - Search Engine Optimization</em> هو عملية تُحسّن صفحات الويب لزيادة ظهورها وترتيبها في نتائج البحث. إحدى طرق تحسين محركات البحث <em>SEO</em> لموقعك هي إضافة وصف موجز <em>short description</em> لصفحة الويب باستخدام عنصر "ميتا" <code class="br">meta</code>.</p>
+    <h4>فيما يلي مثال لاستخدام عنصر "ميتا" <code class="br">meta</code> لتعيين وصف الصفحة page description لموقع البستنة:</h4>
+	
+
+	<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;meta
+        name="description"
+        content="اكتشف نصائح وتقنيات الخبراء للبستنة في المساحات الصغيرة، واختيار النباتات المناسبة، والحفاظ على حديقة مزدهرة."
+/&gt;
+	</code></pre>
+	</div>
+
+    <p>بضبط سمة الاسم <em>the name attribute</em> على الوصف <code class="br">description</code>، يضمن ذلك أن تُفسّر المتصفحات ومحركات البحث <em>search engines</em> وأدوات الويب <em>web tools</em> الأخرى هذه البيانات الوصفية <em>metadata</em> بشكل صحيح. سمة المحتوى <em>The content attribute</em> هي المكان الذي ستضع فيه وصفك. يُنصح بأن تكون أوصافك قصيرة وموجزة <em>short and concise</em>. هذا لأن محركات البحث <em>search engines</em> غالبًا ما تُقصّر الوصف بناءً على تصميم صفحة النتائج <em>page layout</em>.</p>
+    <p>كما هو الحال مع أنواع أخرى من عناصر التعريف <strong>meta elements</strong>، لن يظهر وصف التعريف <strong>meta description</strong> على صفحة الويب نفسها. أحد الأماكن التي يمكن العثور فيها على وصف الصفحة <em>page description</em> هو مقتطف <em>snippet</em> صفحة نتائج محرك البحث <em>search engine</em>.</p>
+    <h4>فيما يلي بعض الأمثلة على مقتطفات snippets نتائج الصفحات لمجموعات "سوبريدديت" subreddit ومستودعات "چيت هاب" Github الخاصة بـ "فري.كود.كامب" freeCodeCamp.org :</h4>
+
+
+	
+	<div class="seo-code">
+	<pre><code>
+    r\FreeCodeCamp: This is the official subreddit for the freeCodeCamp.org community.
+    code for free together with millions of other people...
+	</code></pre>
+	</div>
+
+    <br />
+
+    <div class="seo-code">
+	<pre><code>
+    Our full-stack web development and machine learning curriculum is completely free and self-
+    paced. We have thousands of interactive coding challenges to help you...
+	</code></pre>
+	</div>
+
+    <p>في الأمثلة، يظهر وصف كل صفحة أسفل روابط الموقع مباشرةً. في غضون ثوانٍ، يمكن للمستخدمين تكوين فكرة عامة <em>general sense</em> عن محتوى الصفحة، ثم النقر على الروابط لمزيد من المعلومات.</p>
+    <p>على الرغم من أن الأوصاف التعريفية <em>meta descriptions</em> لن تؤثر بشكل مباشر على ترتيب الموقع <em>site's ranking</em> في محرك البحث <em>search engine</em>، إلا أن وجود وصف قوي <strong>strong description</strong> قد يؤدي إلى زيادة عدد الزيارات <em>more traffic</em> إلى موقع الويب الخاص بك.</p>
+		<!-- Questions  أسئلة-->
+	<div class="questions">
+				<h4>أسئلة :</h4>
+
+        <h5>ما هو العنصر المستخدم لتعيين وصف description صفحة الويب web page ؟</h5>
+		<p>١. <code class="br">img</code> ❌</p>
+        <p><mark>٢. <code class="br">meta</code> ✅</mark></p>
+		<p>٣. slot ❌</p>
+		<p>٤. <code class="br">figure</code> ❌</p>
+		
+        <br>
+
+        <h5>ماذا تعني كلمة SEO؟</h5>
+        <p>١. Slot Engine Optimization ❌</p>
+		<p>٢. Site Enhancement Outreach ❌</p>
+		<p>٣. Social Engagement Optimization ❌</p>
+        <p><mark>٤. Search Engine Optimization ✅</mark></p>
+		
+		
+
+		<br>
+
+        <h5>أين يظهر وصف الصفحة page's description عادةً؟</h5>
+		<p>١. داخل عنصر الشكل <code class="br">figure</code>. ❌</p>
+		<p>٢. داخل عنصر التذييل <code class="br">footer</code>. ❌</p>
+        <p><mark>٣. في صفحة نتائج محرك البحث. ✅</mark></p>
+        <p>٤. في رسالة تنبيه منبثقة. ❌</p>
+
+		
+
+		
+	</div>
+	
+	</section>
+
+	<section id="2">
+        <h3>ب. ما هي أنواع تراخيص الصور Image Licenses المختلفة، وكيف تعمل؟</h3>
+		<p>يُمكّنك بروتوكول "أوپن چراف" <strong>open graph protocol</strong> من التحكم في كيفية ظهور محتوى موقعك الإلكتروني عبر منصات التواصل الاجتماعي المختلفة <em>Social Media Platforms</em>، مثل "فيسبوك" <em>Facebook</em> و"لينكدإن" <em>LinkedIn</em> وغيرها الكثير. بتعيين خصائص "أوپن چراف" <em>open graph</em> هذه، يمكنك جذب المستخدمين للنقر على محتواك والتفاعل معه. يمكنك تعيين هذه الخصائص من خلال مجموعة من عناصر التعريف <em>meta elements</em> داخل قسم اتش.تي.إم.إل الرئيسي <code class="br">head</code>.</p>
+		<p>أول خاصية <abbr title="Open Graph">الرسم البياني المفتوح (OG)</abbr> المهمة التي يجب تضمينها هي العنوان <code class="br">title</code>.</p>
+	
+		<h4>فيما يلي مثال لتعيين عنوان OG لصفحة freeCodeCamp الرئيسية:</h4>
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta property="og:title" content="freeCodeCamp.org" /&gt;
+	</code></pre>
+		</div>
+
+		<p>بالنسبة لخاصية <code class="br">property</code>، ستحتاج إلى تحديد أنها <code class="br">og:title</code>. أما السمة <code class="br">content</code> فهي المكان الذي تكتب فيه العنوان الذي تريد عرضه في مواقع التواصل الاجتماعي.</p>
+		<p>الخاصية المهمة التالية في <strong>OG</strong> هي <code class="br">type</code>.</p>
+		<h4>فيما يلي مثال على استخدام <code class="br">type</code> OG لصفحة freeCodeCamp الرئيسية:</h4>
+		
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta property="og:type" content="website" /&gt;
+	</code></pre>
+		</div>
+
+		<p>تُستخدم خاصية <code class="br">type</code> لتمثيل نوع المحتوى الذي يتم مشاركته على مواقع التواصل الاجتماعي. تشمل أمثلة هذا المحتوى المقالات والمواقع الإلكترونية ومقاطع الفيديو أو الموسيقى.</p>
+		<p>الخاصية الثالثة المهمة في <strong>OG</strong> هي <code class="br">image</code>.</p>
+		<h4>فيما يلي مثال على تعيين <code class="br">image</code> OG لصفحة freeCodeCamp الرئيسية:</h4>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta
+	property="og:image"
+	content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+/&gt;
+	</code></pre>
+		</div>
+	<p>في هذا المثال، تُشير صورة <strong>OG</strong> إلى شعار freeCodeCamp. يجب أن تكون جميع هذه الصور عالية الجودة وبأبعاد ونسب جيدة. توفر معظم منصات التواصل الاجتماعي معايير لمتطلبات الصور لمساعدتك على ضمان عرض المحتوى الخاص بك بشكل جيد على مواقعها. على سبيل المثال، تذكر صفحة التوثيق في developers.facebook.com أن:</p>
+	<p>«استخدم صورًا لا تقل عن <code class="br">1200×630</code> بكسل للحصول على أفضل عرض على الأجهزة عالية الدقة. كحد أدنى، يجب استخدام صور بحجم <code class="br">600×315</code> بكسل لعرض منشورات الروابط بصور أكبر.»</p>
+	<p>الخاصية الرابعة المهمة في <strong>OG</strong> هي <code class="br">url</code>.</p>
+	<h4>فيما يلي مثال على تعيين <code class="br">url</code> الخاص بـ OG لصفحة freeCodeCamp الرئيسية:</h4>
+
+	<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta
+	property="og:url" content="https://www.freecodecamp.org"
+/&gt;
+	</code></pre>
+		</div>
+	<p>هناك العديد من خصائص <strong>OG</strong> الأخرى التي يمكنك تعيينها، مثل <code class="br">description</code> و<code class="br">audio</code> و<code class="br">video</code> و<code class="br">locale</code>. ومع ذلك، تُعد الخصائص <code class="br">url</code> و<code class="br">image</code> و<code class="br">type</code> و<code class="br">title</code> هي الأهم لإضافتها.</p>
+	<p>فكيف تؤثر خصائص <strong>OG</strong> هذه على تحسين محركات البحث؟ عند مشاركة المحتوى الخاص بك على مواقع التواصل الاجتماعي، يمكن أن تُحسّن خصائص <strong>OG</strong> المصممة جيدًا من مظهر المحتوى في خلاصات المستخدمين، مما قد يؤدي إلى زيادة معدل النقرات ويُشير لمحركات البحث إلى أن المحتوى الخاص بك ذو صلة وجذاب.</p>
+	
+
+	<!-- Questions  أسئلة-->
+	<div class="questions">
+				<h4>أسئلة :</h4>
+		<h5>ما هي استخدامات خصائص open graph؟</h5>
+		<p>١. لتضمين محتوى الوسائط المتعددة التفاعلي مباشرةً في صفحات الويب. ❌</p>
+        <p><mark>٢. لتحديد كيفية ظهور محتوى موقعك الإلكتروني على منصات التواصل الاجتماعي المختلفة. ✅</mark></p>
+		<p>٣. لإنشاء إعلانات منبثقة ديناميكية على مواقع الويب. ❌</p>
+		<p>٤. لتشفير البيانات الحساسة المنقولة بين خوادم الويب ومتصفحات المستخدمين. ❌</p>
+		
+        <br>
+
+        <h5>ماذا تفعل السمة <code class="br">property="og:title"</code> في عنصر <code class="br">meta</code>؟</h5>
+        <p>١. يضبط هذا الخيار تلقائيًا حجم خط ونمط عنوان صفحة الويب بناءً على تفضيلات المستخدم. ❌</p>
+		<p>٢. يُوجِّه المتصفح لعرض رمز تعبيري أو إيموجي مُحدد كعنوان لصفحة الويب. ❌</p>
+		<p>٣. يُشغِّل صفحة الويب ملفًا صوتيًا مُحددًا عند عرض العنوان في علامة تبويب المتصفح. ❌</p>
+        <p><mark>٤. يُحدِّد عنوان محتوى صفحة الويب عند مشاركته على منصات التواصل الاجتماعي. ✅</mark></p>
+		
+		
+
+		<br>
+
+        <h5>ماذا تفعل السمة <code class="br">property="og:type"</code> في عنصر <code class="br">meta</code>؟</h5>
+		<p>١. يُحدد نمط الخط الافتراضي للصفحة.  ❌</p>
+		<p>٢. يُظهر إعلانًا منبثقًا عند تحميل صفحة الويب.  ❌</p>
+        <p><mark>٣. يُحدد نوع المحتوى المُستخدم لصفحة الويب عند مشاركتها على منصات التواصل الاجتماعي. ✅</mark></p>
+        <p>٤. يُغير لون خلفية صفحة الويب بناءً على المنطقة الزمنية للمستخدم. ❌</p>
+
+		
+
+    </section>
+
+    <section id="3">
+        <h3>ج. ما هي ملفات SVGs، ومتى يجب استخدامها؟</h3>
+		<p>يُمكّنك بروتوكول "أوپن چراف" <strong>open graph protocol</strong> من التحكم في كيفية ظهور محتوى موقعك الإلكتروني عبر منصات التواصل الاجتماعي المختلفة <em>Social Media Platforms</em>، مثل "فيسبوك" <em>Facebook</em> و"لينكدإن" <em>LinkedIn</em> وغيرها الكثير. بتعيين خصائص "أوپن چراف" <em>open graph</em> هذه، يمكنك جذب المستخدمين للنقر على محتواك والتفاعل معه. يمكنك تعيين هذه الخصائص من خلال مجموعة من عناصر التعريف <em>meta elements</em> داخل قسم اتش.تي.إم.إل الرئيسي <code class="br">head</code>.</p>
+		<p>أول خاصية <abbr title="Open Graph">الرسم البياني المفتوح (OG)</abbr> المهمة التي يجب تضمينها هي العنوان <code class="br">title</code>.</p>
+	
+		<h4>فيما يلي مثال لتعيين عنوان OG لصفحة freeCodeCamp الرئيسية:</h4>
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta property="og:title" content="freeCodeCamp.org" /&gt;
+	</code></pre>
+		</div>
+
+		<p>بالنسبة لخاصية <code class="br">property</code>، ستحتاج إلى تحديد أنها <code class="br">og:title</code>. أما السمة <code class="br">content</code> فهي المكان الذي تكتب فيه العنوان الذي تريد عرضه في مواقع التواصل الاجتماعي.</p>
+		<p>الخاصية المهمة التالية في <strong>OG</strong> هي <code class="br">type</code>.</p>
+		<h4>فيما يلي مثال على استخدام <code class="br">type</code> OG لصفحة freeCodeCamp الرئيسية:</h4>
+		
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta property="og:type" content="website" /&gt;
+	</code></pre>
+		</div>
+
+		<p>تُستخدم خاصية <code class="br">type</code> لتمثيل نوع المحتوى الذي يتم مشاركته على مواقع التواصل الاجتماعي. تشمل أمثلة هذا المحتوى المقالات والمواقع الإلكترونية ومقاطع الفيديو أو الموسيقى.</p>
+		<p>الخاصية الثالثة المهمة في <strong>OG</strong> هي <code class="br">image</code>.</p>
+		<h4>فيما يلي مثال على تعيين <code class="br">image</code> OG لصفحة freeCodeCamp الرئيسية:</h4>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta
+	property="og:image"
+	content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+/&gt;
+	</code></pre>
+		</div>
+	<p>في هذا المثال، تُشير صورة <strong>OG</strong> إلى شعار freeCodeCamp. يجب أن تكون جميع هذه الصور عالية الجودة وبأبعاد ونسب جيدة. توفر معظم منصات التواصل الاجتماعي معايير لمتطلبات الصور لمساعدتك على ضمان عرض المحتوى الخاص بك بشكل جيد على مواقعها. على سبيل المثال، تذكر صفحة التوثيق في developers.facebook.com أن:</p>
+	<p>«استخدم صورًا لا تقل عن <code class="br">1200×630</code> بكسل للحصول على أفضل عرض على الأجهزة عالية الدقة. كحد أدنى، يجب استخدام صور بحجم <code class="br">600×315</code> بكسل لعرض منشورات الروابط بصور أكبر.»</p>
+	<p>الخاصية الرابعة المهمة في <strong>OG</strong> هي <code class="br">url</code>.</p>
+	<h4>فيما يلي مثال على تعيين <code class="br">url</code> الخاص بـ OG لصفحة freeCodeCamp الرئيسية:</h4>
+
+	<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;meta
+	property="og:url" content="https://www.freecodecamp.org"
+/&gt;
+	</code></pre>
+		</div>
+	<p>هناك العديد من خصائص <strong>OG</strong> الأخرى التي يمكنك تعيينها، مثل <code class="br">description</code> و<code class="br">audio</code> و<code class="br">video</code> و<code class="br">locale</code>. ومع ذلك، تُعد الخصائص <code class="br">url</code> و<code class="br">image</code> و<code class="br">type</code> و<code class="br">title</code> هي الأهم لإضافتها.</p>
+	<p>فكيف تؤثر خصائص <strong>OG</strong> هذه على تحسين محركات البحث؟ عند مشاركة المحتوى الخاص بك على مواقع التواصل الاجتماعي، يمكن أن تُحسّن خصائص <strong>OG</strong> المصممة جيدًا من مظهر المحتوى في خلاصات المستخدمين، مما قد يؤدي إلى زيادة معدل النقرات ويُشير لمحركات البحث إلى أن المحتوى الخاص بك ذو صلة وجذاب.</p>
+	
+
+	<!-- Questions  أسئلة-->
+	<div class="questions">
+				<h4>أسئلة :</h4>
+		<h5>ما هي استخدامات خصائص open graph؟</h5>
+		<p>١. لتضمين محتوى الوسائط المتعددة التفاعلي مباشرةً في صفحات الويب. ❌</p>
+        <p><mark>٢. لتحديد كيفية ظهور محتوى موقعك الإلكتروني على منصات التواصل الاجتماعي المختلفة. ✅</mark></p>
+		<p>٣. لإنشاء إعلانات منبثقة ديناميكية على مواقع الويب. ❌</p>
+		<p>٤. لتشفير البيانات الحساسة المنقولة بين خوادم الويب ومتصفحات المستخدمين. ❌</p>
+		
+        <br>
+
+        <h5>ماذا تفعل السمة <code class="br">property="og:title"</code> في عنصر <code class="br">meta</code>؟</h5>
+        <p>١. يضبط هذا الخيار تلقائيًا حجم خط ونمط عنوان صفحة الويب بناءً على تفضيلات المستخدم. ❌</p>
+		<p>٢. يُوجِّه المتصفح لعرض رمز تعبيري أو إيموجي مُحدد كعنوان لصفحة الويب. ❌</p>
+		<p>٣. يُشغِّل صفحة الويب ملفًا صوتيًا مُحددًا عند عرض العنوان في علامة تبويب المتصفح. ❌</p>
+        <p><mark>٤. يُحدِّد عنوان محتوى صفحة الويب عند مشاركته على منصات التواصل الاجتماعي. ✅</mark></p>
+		
+		
+
+		<br>
+
+        <h5>ماذا تفعل السمة <code class="br">property="og:type"</code> في عنصر <code class="br">meta</code>؟</h5>
+		<p>١. يُحدد نمط الخط الافتراضي للصفحة.  ❌</p>
+		<p>٢. يُظهر إعلانًا منبثقًا عند تحميل صفحة الويب.  ❌</p>
+        <p><mark>٣. يُحدد نوع المحتوى المُستخدم لصفحة الويب عند مشاركتها على منصات التواصل الاجتماعي. ✅</mark></p>
+        <p>٤. يُغير لون خلفية صفحة الويب بناءً على المنطقة الزمنية للمستخدم. ❌</p>
+
+		
+
+    </section>
+
+	<!-- Pages -->
+
+
+</div>
+
+<div class="page-nav">
+	<a class="prev" href="./basic12.html">&#8594; السابق</a>
+	<a class="next" href="#">التالي &#8592;</a>
+</div>
+
+</main>
+
+
+
+</body>
+</html> 
