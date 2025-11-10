@@ -11,7 +11,7 @@ body {
   font-family: "Noto Kufi Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background: linear-gradient(90deg, #cdffd8, #94b9ff);
+  background:linear-gradient(180deg,#071023 0%, #07162a 100%);
 
 }
 
@@ -27,7 +27,7 @@ header .red {
 
 header h1 {
   text-align: center;
-  color: black;
+  color:#e6eef6;
 }
 
 main {
@@ -37,9 +37,9 @@ main {
 }
 
 .navbar {
-  background-color:  whitesmoke;
+  background-color:  #0b1220;
   margin-top: 5vh;
-  border: #364fab 2px solid;
+  border: #7c3aed 2px solid;
   border-radius: 4px;
 }
 
@@ -54,8 +54,8 @@ main {
 
 .navbar .nav-links a {
   text-decoration: none;
-  color: darkblue;
-  font-size: 1.2rem;
+  color: whitesmoke;
+  font-size: 1rem;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -72,31 +72,31 @@ main {
 
 .navbar .nav-links .second-nav .second-links a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: #2a2a72;
+  color: #9aa6b2;
+}
+
+
+
+.navbar .nav-links a:hover {
+  color: #7c3aed;
 }
 
 .navbar .nav-links .second-nav .second-links a:hover {
-  color: #364fab;
+  color: #7c3aed;
 }
 
-.navbar .nav-links a:hover {
-  color: #364fab;
-}
 
-.page-nav {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-}
+
 
 footer {
   text-align: center;
+  color: whitesmoke;
 }
 
 .box {
-  background-color: whitesmoke;
+  background-color: #e6eef6;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -224,9 +224,10 @@ section {
 }
 
 .preview {
-  background-color: white;
+  background-color: rgba(255,255,255,0.04);
+  border: white 2px solid;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px #06b6d4;
   padding: 20px;
   overflow-x: auto;
 }
@@ -234,7 +235,9 @@ section {
 .questions {
   margin:40px 10px;
   padding: 10px;
-  background-color: darkgray;
+  background-color: #9aa6b2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #0b1220;
 }
 .questions h4 {
   text-align: center;
@@ -276,4 +279,16 @@ section {
 .long-link {
   overflow-x: auto;
   
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+
+}
+
+
+.page-nav a {
+  color: #e6eef6;
 }
