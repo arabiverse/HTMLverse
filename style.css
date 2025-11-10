@@ -40,9 +40,9 @@ header {
 
 
 nav {
-  border-top:#364fab  4px solid;
-  border-bottom: #364fab 4px solid;
-  background-color: white;
+  border-top:white  2px solid;
+  border-bottom: white 2px solid;
+  background-color: whitesmoke;
 }
 
 
@@ -69,12 +69,24 @@ nav {
 
 main {
   padding: 20px;
-  background-color: whitesmoke;
   min-height: 80vh;
+  display: block;
+  max-width: 1200px;
+  margin: 10px auto; /* centers horizontally */
+}
+
+.blur-box {
+  border:whitesmoke  2px solid;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent background */
+  backdrop-filter: blur(10px); /* blur strength */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  border-radius: 12px;
+  padding: 20px;
 }
 
 footer {
   text-align: center;
+  border-top:whitesmoke  2px solid;
   
 }
 

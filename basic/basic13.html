@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | العمل مع الصور وملفات SVGs"/>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<title>HTMLverse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="red" href="./index.html">X</a>
+	<h1>أساسيات اتش.تي.إم.إل</h1>
+</header>
+
+
+<main>
+<!-- BASIC 8 -->
+<div class="box">
+	<div class="sub-title">
+		<h2>العمل مع الصور وملفات SVGs</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+	</div>
+
+	<section id="1">
+	<h3>أ. ما هي الطرق الشائعة لتحسين موارد الوسائط Optimize Media Assets ؟</h3>
+	
+	<p>هناك ثلاث أدوات يجب أخذها في الاعتبار عند استخدام الوسائط <strong>media</strong>، مثل الصور، على صفحات الويب الخاصة بك: الحجم <em>size</em>، التنسيق <em>format</em>، والضغط <em>compression</em>.</p>
+	
+	<p>لنتحدث أولًا عن حجم <strong>size</strong> صورك. عند إنشاء موقع ويب <em>website</em>، غالبًا ما تُصمم الصور لعرضها <em>display</em> بحجم مُحدد. على سبيل المثال، قد يكون لديك صورة مُعروضة بدقة 640×480. يمثل 640 العرض <em>width</em> بينما يمثل 480 <em>height</em> "بالبكسل" <em>pixels</em>. عند تحضير صورتك، ستحتاج إلى تغيير حجمها إلى 640×480 لتتناسب مع هذا التصميم. إذا عرضت صورة بدقة 1920×1080 ولكنك تُصممها لتكون أصغر بكثير، فأنت تُلزم المستخدمين <em>users</em> بتنزيل بيانات غير ضرورية <em>unnecessary data</em>. الدقة <em>resolution</em> الأصغر تُؤدي إلى حجم ملف أصغر.</p>
+	
+	<p>الأمر التالي الذي يجب مراعاته هو تنسيق <strong>format</strong> ملفك. من أكثر تنسيقات الملفات شيوعًا PNG وJPG، لكنهما لم يعودا التنسيقين الأمثل لعرض الصور. ما لم تكن بحاجة إلى دعم المتصفحات القديمة، يُنصح باستخدام تنسيق <em>format</em> أكثر تحسينًا <em>more optimized</em>، مثل WEBP أو AVIF.</p>
+
+	<p>أخيرًا، يمكنك استخدام خوارزميات ضغط <strong>compression</strong> على صورك. تُستخدم خوارزمية الضغط <em>A compression algorithm</em> لتقليل حجم <em>size</em> الملفات أو البيانات. تتوفر خيارات مثل pngcrush لضغط صورك محليًا، أو يمكنك استخدام أدوات  ضغط <em>compressed tools</em> عبر الإنترنت. مع ذلك، تجدر الإشارة إلى أن بعض تنسيقات الملفات <em>file formats</em>، مثل JPG، ليست خالية من فقدان البيانات. تعني هذه الصيغة أنه يمكن إعادة بناء البيانات الأصلية بدقة من البيانات المضغوطة <em>compressed data</em>. إذا حاولت ضغط (حاولت ضغط) صورة JPG، فسيؤدي ذلك إلى انخفاض الجودة <em>quality</em>. يجب مراعاة جميع هذه الأمور عند اختيار الصور لصفحات الويب.</p>
+
+
+
+    <!-- Questions  أسئلة-->
+	<div class="questions">
+				<h4>أسئلة :</h4>
+
+        <h5>كيف يُنصح بضبط حجم size صورك؟</h5>
+		<p>١. يجب أن تكون صورك أصغر من حجمها المُعرَّض على الصفحة. ❌</p>
+        <p>٢. يجب أن تكون صورك أكبر من حجمها المُعرَّض على الصفحة. ❌</p>
+		<p><mark>٣. يجب أن يكون حجم صورك بنفس حجمها المُعرَّض على الصفحة. ✅</mark></p>
+		<p>٤. لا يهم، استخدم الحجم الذي تُريده. ❌</p>
+		
+        <br>
+
+        <h5>أي مما يلي ليس نوع صحيح لـ ملف صورة NOT a valid image file type ؟</h5>
+		<p><mark>١. TS ✅</mark></p>
+		<p>٢. PNG ❌</p>
+		<p>٣. JPG ❌</p>
+		<p>٤. WEBP ❌</p>
+
+		<br>
+
+        <h5>ما صيغة format الملف التي لا يجب ضغطها أبدًا؟</h5>
+		<p>١. WEBP  ❌</p>
+		<p>٢. PNG ❌</p>
+        <p><mark>٣. JPG ✅</mark></p>
+        <p>٤. GIF ❌</p>
+
+		
+
+		
+	</div>
+	
+	</section>
+
+	<section id="2">
+        
+
+    </section>
+
+    <section id="3">
+       
+
+    </section>
+
+	<!-- Pages -->
+
+
+</div>
+
+<div class="page-nav">
+	<a class="prev" href="./basic12.html">&#8594; السابق</a>
+	<a class="next" href="#">التالي &#8592;</a>
+</div>
+
+</main>
+
+
+
+</body>
+</html> 
