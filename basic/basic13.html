@@ -33,46 +33,18 @@
 
 	<section id="1">
 	<h3>أ. ما هي الطرق الشائعة لتحسين موارد الوسائط Optimize Media Assets ؟</h3>
-    <p>تحسين محركات البحث <em>SEO - Search Engine Optimization</em> هو عملية تُحسّن صفحات الويب لزيادة ظهورها وترتيبها في نتائج البحث. إحدى طرق تحسين محركات البحث <em>SEO</em> لموقعك هي إضافة وصف موجز <em>short description</em> لصفحة الويب باستخدام عنصر "ميتا" <code class="br">meta</code>.</p>
-    <h4>فيما يلي مثال لاستخدام عنصر "ميتا" <code class="br">meta</code> لتعيين وصف الصفحة page description لموقع البستنة:</h4>
 	
-
-	<h4>الكود :</h4>
-
-	<div class="sourcecode">
-	<pre><span>code <br></span><code>
-&lt;meta
-        name="description"
-        content="اكتشف نصائح وتقنيات الخبراء للبستنة في المساحات الصغيرة، واختيار النباتات المناسبة، والحفاظ على حديقة مزدهرة."
-/&gt;
-	</code></pre>
-	</div>
-
-    <p>بضبط سمة الاسم <em>the name attribute</em> على الوصف <code class="br">description</code>، يضمن ذلك أن تُفسّر المتصفحات ومحركات البحث <em>search engines</em> وأدوات الويب <em>web tools</em> الأخرى هذه البيانات الوصفية <em>metadata</em> بشكل صحيح. سمة المحتوى <em>The content attribute</em> هي المكان الذي ستضع فيه وصفك. يُنصح بأن تكون أوصافك قصيرة وموجزة <em>short and concise</em>. هذا لأن محركات البحث <em>search engines</em> غالبًا ما تُقصّر الوصف بناءً على تصميم صفحة النتائج <em>page layout</em>.</p>
-    <p>كما هو الحال مع أنواع أخرى من عناصر التعريف <strong>meta elements</strong>، لن يظهر وصف التعريف <strong>meta description</strong> على صفحة الويب نفسها. أحد الأماكن التي يمكن العثور فيها على وصف الصفحة <em>page description</em> هو مقتطف <em>snippet</em> صفحة نتائج محرك البحث <em>search engine</em>.</p>
-    <h4>فيما يلي بعض الأمثلة على مقتطفات snippets نتائج الصفحات لمجموعات "سوبريدديت" subreddit ومستودعات "چيت هاب" Github الخاصة بـ "فري.كود.كامب" freeCodeCamp.org :</h4>
-
-
+	<p>هناك ثلاث أدوات يجب أخذها في الاعتبار عند استخدام الوسائط <strong>media</strong>، مثل الصور، على صفحات الويب الخاصة بك: الحجم <em>size</em>، التنسيق <em>format</em>، والضغط <em>compression</em>.</p>
 	
-	<div class="seo-code">
-	<pre><code>
-    r\FreeCodeCamp: This is the official subreddit for the freeCodeCamp.org community.
-    code for free together with millions of other people...
-	</code></pre>
-	</div>
+	<p>لنتحدث أولًا عن حجم <strong>size</strong> صورك. عند إنشاء موقع ويب <em>website</em>، غالبًا ما تُصمم الصور لعرضها <em>display</em> بحجم مُحدد. على سبيل المثال، قد يكون لديك صورة مُعروضة بدقة 640×480. يمثل 640 العرض <em>width</em> بينما يمثل 480 <em>height</em> "بالبكسل" <em>pixels</em>. عند تحضير صورتك، ستحتاج إلى تغيير حجمها إلى 640×480 لتتناسب مع هذا التصميم. إذا عرضت صورة بدقة 1920×1080 ولكنك تُصممها لتكون أصغر بكثير، فأنت تُلزم المستخدمين <em>users</em> بتنزيل بيانات غير ضرورية <em>unnecessary data</em>. الدقة <em>resolution</em> الأصغر تُؤدي إلى حجم ملف أصغر.</p>
+	
+	<p>الأمر التالي الذي يجب مراعاته هو تنسيق <strong>format</strong> ملفك. من أكثر تنسيقات الملفات شيوعًا PNG وJPG، لكنهما لم يعودا التنسيقين الأمثل لعرض الصور. ما لم تكن بحاجة إلى دعم المتصفحات القديمة، يُنصح باستخدام تنسيق <em>format</em> أكثر تحسينًا <em>more optimized</em>، مثل WEBP أو AVIF.</p>
 
-    <br />
+	<p>أخيرًا، يمكنك استخدام خوارزميات ضغط <strong>compression</strong> على صورك. تُستخدم خوارزمية الضغط <em>A compression algorithm</em> لتقليل حجم <em>size</em> الملفات أو البيانات. تتوفر خيارات مثل pngcrush لضغط صورك محليًا، أو يمكنك استخدام أدوات  ضغط <em>compressed tools</em> عبر الإنترنت. مع ذلك، تجدر الإشارة إلى أن بعض تنسيقات الملفات <em>file formats</em>، مثل JPG، ليست خالية من فقدان البيانات. تعني هذه الصيغة أنه يمكن إعادة بناء البيانات الأصلية بدقة من البيانات المضغوطة <em>compressed data</em>. إذا حاولت ضغط (حاولت ضغط) صورة JPG، فسيؤدي ذلك إلى انخفاض الجودة <em>quality</em>. يجب مراعاة جميع هذه الأمور عند اختيار الصور لصفحات الويب.</p>
 
-    <div class="seo-code">
-	<pre><code>
-    Our full-stack web development and machine learning curriculum is completely free and self-
-    paced. We have thousands of interactive coding challenges to help you...
-	</code></pre>
-	</div>
 
-    <p>في الأمثلة، يظهر وصف كل صفحة أسفل روابط الموقع مباشرةً. في غضون ثوانٍ، يمكن للمستخدمين تكوين فكرة عامة <em>general sense</em> عن محتوى الصفحة، ثم النقر على الروابط لمزيد من المعلومات.</p>
-    <p>على الرغم من أن الأوصاف التعريفية <em>meta descriptions</em> لن تؤثر بشكل مباشر على ترتيب الموقع <em>site's ranking</em> في محرك البحث <em>search engine</em>، إلا أن وجود وصف قوي <strong>strong description</strong> قد يؤدي إلى زيادة عدد الزيارات <em>more traffic</em> إلى موقع الويب الخاص بك.</p>
-		<!-- Questions  أسئلة-->
+
+    <!-- Questions  أسئلة-->
 	<div class="questions">
 				<h4>أسئلة :</h4>
 
