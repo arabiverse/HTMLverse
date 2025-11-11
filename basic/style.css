@@ -128,7 +128,7 @@ section {
 }
 
 
-.sourcecode,.errorcode, .rules, .sourcecode-css {
+.sourcecode,.errorcode, .rules, .sourcecode-css, .en-dir {
     direction: ltr;
 }
 

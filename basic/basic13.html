@@ -131,7 +131,120 @@
     </section>
 
     <section id="3">
+		<h3>ج. ما هي ملفات SVGs، ومتى يجب استخدامها؟</h3>
+
+		<p>أولاً، عليك فهم آلية عمل الصور. تُصنف صيغ الصور الشائعة <em>Common image formats</em>، مثل PNG وJPG، كصيغ نقطية <strong>raster formats</strong>. هذا يعني أساسًا أنها تعتمد على "البكسل" <strong>pixel-based</strong>، حيث تتبع البيانات <strong>data</strong> قيمة اللون في كل "بكسل" <strong>pixel</strong>.</p>
        
+		<p>من عيوب الصور النقطية أنها لا تُحسّن من جودة الصورة <em>do not upscale well</em>. إذا حاولتَ تكبير صورة PNG، فربما لاحظتَ أنها أصبحت مشوّشة <strong>pixelated</strong> أو ضبابية <strong>blurry</strong>.</p>
+
+		<p><strong>SVG</strong> هو نوع مختلف من الصور. SVG هو اختصار لـ <em>Scalable Vector Graphic</em> "رسومات متجهة قابلة للتحجيم". يتتبع الرسم المتجه <em>A vector graphic</em> البيانات بناءً على مسارات <strong>paths</strong> ومعادلات <strong>equations</strong> لرسم النقاط <em>points</em> والخطوط <em>lines</em> والمنحنيات <em>curves</em>. هذا يعني في الواقع أنه يمكن تحجيم الرسم المتجه vector graphic، مثل SVG، إلى أي حجم دون التأثير على الجودة <em>quality</em>.</p>
+
+		<p>تتميز ملفات SVG بميزة تخزين البيانات بتنسيق <strong>XML</strong>. هذا يعني أنه يمكنك استخدامها مباشرةً في الكود الخاص بك كملفات اتش.تي.إم.إل HTML خام باستخدام عنصر <code class="br">svg</code>. كما يمكنك تغيير لون الصورة برمجيًا <em>programmatically</em>.</p>
+
+		<p>لتغيير الوجه المبتسم إلى اللون الأحمر، قم بتغيير <code class="br">"fill="yellow</code> إلى <code class="br">"fill="red</code></p>
+
+
+		<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" /&gt;
+  &lt;circle cx="35" cy="40" r="5" fill="black" /&gt;
+  &lt;circle cx="65" cy="40" r="5" fill="black" /&gt;
+  &lt;path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" /&gt;
+&lt;/svg&gt;
+	</code></pre>
+	</div>
+
+	<h4>قبل التغيير :</h4>
+	<div class="preview" role="presentation">
+		<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" />
+			<circle cx="35" cy="40" r="5" fill="black" />
+			<circle cx="65" cy="40" r="5" fill="black" />
+			<path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" />
+		</svg>
+	</div>
+
+		<h4>بعد التغيير :</h4>
+	<div class="preview" role="presentation">
+		<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="red" />
+			<circle cx="35" cy="40" r="5" fill="black" />
+			<circle cx="65" cy="40" r="5" fill="black" />
+			<path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" />
+		</svg>
+	</div>
+
+	<h4>وفيما يلي العناصر الأساسية للمثال :</h4>
+	<ul>
+		<li>عنصر <code class="br">svg</code> هو الحاوية <em>container</em> للرسم بأكمله. فهو يُهيئ المساحة <em>space</em> التي تظهر فيها جميع الأشكال <em>shapes</em>. كل ما تريد رسمه باستخدام SVG، مثل الدوائر <em>circles</em> والخطوط <em>lines</em> والمسارات <em>paths</em>، يوضع داخل عنصر <code class="br">svg</code>.</li>
+
+		<li>يُستخدم عنصر الدائرة <code class="br">circle</code> لرسم الوجه والعينين. تُشكّل دائرة كبيرة الوجه الأصفر، ودائرتان صغيرتان تُشكّلان العينين.</li>
+
+		<li>يُستخدم عنصر المسار <code class="br">path</code> لرسم الابتسامة، ويُنشئ خطًا منحنيًا <em>curved line</em> للفم.</li>
+
+		<li>يحتوي كل عنصر <strong>SVG</strong> على سمات <em>attributes</em> تتحكم في مظهره وموقعه داخل منطقة الرسم <em>drawing area</em>.</li>
+	</ul>
+
+	<h4>إليك بعض الأمثلة الإضافية. لتغيير لون أيٍّ من الأمثلة، حدّث قيمة سمة التعبئة <code class="br">fill</code> إلى أي لون مُسمّى، مثل الأحمر <code class="br">red</code>، والأخضر <code class="br">green</code>، والأزرق <code class="br">blue</code> ، والأصفر <code class="br">yellow</code>، إلخ.</h4>
+
+	<h4>الكود :</h4>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+&lt;!-- Star Icon --&gt;
+&lt;svg width="50" height="50" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"/&gt;
+&lt;/svg&gt;
+
+&lt;!-- Heart Icon --&gt;
+&lt;svg width="50" height="50" viewBox="0 0 24 24" fill="crimson" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 6 4 4 6.5 4C8 4 9.5 4.8 10.5 6.09C11.5 4.8 13 4 14.5 4C17 4 19 6 19 8.5C19 12.28 15.6 15.36 10.45 20.04L12 21.35Z"/&gt;
+&lt;/svg&gt;
+
+&lt;!-- Checkmark Icon --&gt;
+&lt;svg width="50" height="50" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"/&gt;
+&lt;/svg&gt;
+	</code></pre>
+	</div>
+
+	<p>متى ترغب باستخدام ملفات <strong>SVG</strong> ؟ تُعدّ الأيقونات <strong>icons</strong> من أفضل الاستخدامات. إذا كنت ترغب في إنشاء نقاط تعداد نقطية مخصصة، أو إضافة أيقونات إلى روابطك <em>links</em> لتمثيل منصات التواصل الاجتماعي، فإن استخدام ملفات SVG هو الخيار الأمثل. تستخدم <strong>Font Awesome</strong>، إحدى أشهر مكتبات الأيقونات، صور VG لأيقوناتها. كما تُعد ملفات VG رائعة لشعارات <strong>logos</strong> صفحات الويب، نظرًا لدقتها في القياس. تتيح لك هذه الملفات تكييف تصميمك <em>layout</em> مع أي تصميم متجاوب <strong>responsive</strong> تحتاجه. في المرة القادمة التي تمتلك فيها ملف SVG محليًا، حاول فتحه باستخدام محرر نصوص text editor والتعديل على الكود <em>playing with the code</em>.</p>
+
+
+	<!-- Questions  أسئلة-->
+	<div class="questions">
+
+		<h4>أسئلة :</h4>
+
+        <h5>ما هي الصورة النقطية raster image ؟</h5>
+		<p>١. صورة تخزن المسارات paths والخطوط lines والنقاط points والمنحنيات curves. ❌</p>
+		<p><mark>٢. صورة تخزن بيانات الألوان لكل بكسل pixel. ✅</mark></p>
+		<p>٣. جميع الصور صور نقطية raster images. ❌</p>
+        <p>٤. صورة قابلة للتحجيم بسهولة easily scalable. ❌</p>
+		
+        <br>
+
+        <h5>ما هي الصورة المتجهة vector image ؟</h5>
+		<p><mark>١. صورة تخزن المسارات paths والخطوط lines والنقاط points والمنحنيات curves. ✅</mark></p>
+		<p>٢. صورة تخزن بيانات الألوان لكل بكسل pixel. ❌</p>
+		<p>٣. جميع الصور متجهة vector images ❌</p>
+        <p>٤. صورة يصعب تحجيمها not easily scalable. ❌</p>
+
+		<br>
+
+        <h5>كيف يخزن SVG البيانات data ؟</h5>
+		<p>١. كبكسلات As pixels. ❌</p>
+		<p>٢. كنظام ثنائي As binary. ❌</p>
+		<p>٣. كنظام سداسي عشري As hexadecimal. ❌</p>
+		<p><mark>٤. كنظام XML. ✅</mark></p>
+
+		
+
+		
+	</div>
 
     </section>
 
