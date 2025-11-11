@@ -107,8 +107,8 @@ footer {
 }
 
 .box .sub-title {
-color: #364fab;
-border-bottom: #364fab 2px solid;
+color: darkblue;
+border-bottom: darkblue 2px solid;
 }
 
 .box .sub-title .hint {
@@ -165,7 +165,8 @@ section {
   height: 10px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background: linear-gradient(90deg, #ff5f56, #ffbd2e, #27c93f);
+  /* background: linear-gradient(90deg, #ff5f56, #ffbd2e, #27c93f); */
+  background-color: green;
   position: absolute;
   top: 0;
   left: 0;
@@ -209,14 +210,17 @@ section {
 
 
 .errorcode pre {
-    background: #2d1e1e;     /* dark background */
+  background: #2d1e1e;     /* dark background */
   color: #ff6c6b;          /* light text */
   padding: 1em;
   border-radius: 8px;
   overflow-x: auto;
   font-family: "Fira Code", monospace;
   font-size: 1rem;
+  position: relative;
 }
+
+
 
 .errorcode pre span {
     color: red;
@@ -226,12 +230,15 @@ section {
 
 .preview {
   background-color: rgba(255,255,255,0.04);
-  border: white 2px solid;
+  border: white 4px solid;
   border-radius: 8px;
-  box-shadow: 0 2px 4px white;
+  box-shadow: 0 4px 8px #9aa6b2;
   padding: 20px;
   overflow-x: auto;
 }
+
+
+
 
 .questions {
   margin:40px 10px;
