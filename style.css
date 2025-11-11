@@ -13,7 +13,8 @@ body {
   font-family: "Noto Kufi Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background: linear-gradient(90deg, #cdffd8, #94b9ff);
+  background:linear-gradient(180deg,#071023 0%, #07162a 100%);
+  color: #e6eef6;
 
 }
 
@@ -28,6 +29,11 @@ header {
   padding-right: 20px;
 }
 
+.open-source a {
+  color: #9aa6b2;
+  text-decoration: none;
+}
+
 .opens {
   display: flex;
   align-items: center;
@@ -40,9 +46,9 @@ header {
 
 
 nav {
-  border-top:white  2px solid;
-  border-bottom: white 2px solid;
-  background-color: whitesmoke;
+  border-top:#e6eef6  1px solid;
+  border-bottom: #e6eef6 1px solid;
+  background-color: #9aa6b2;
 }
 
 
@@ -57,14 +63,14 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color:#364fab;
+  color:black;
   font-weight: bold;
   transition: color 0.3s;
   font-size: 1.3rem;
 }
 
 .nav-links a:hover {
-  color: black;
+  color: #e6eef6;
 }
 
 main {
@@ -75,11 +81,14 @@ main {
   margin: 10px auto; /* centers horizontally */
 }
 
+main a {
+  color: #7c3aed;
+}
+
 .blur-box {
-  border:whitesmoke  2px solid;
-  background: rgba(255, 255, 255, 0.2); /* semi-transparent background */
-  backdrop-filter: blur(10px); /* blur strength */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  border:#7c3aed  2px solid;
+  background: #0b1220; /* semi-transparent background */
+  box-shadow: 0 1px 2px white;
   border-radius: 12px;
   padding: 20px;
 }
