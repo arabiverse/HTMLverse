@@ -300,3 +300,11 @@ section {
 .page-nav a {
   color: #e6eef6;
 }
+
+.long-code {
+  display: block;
+  background-color: white;
+  direction: ltr;
+  overflow-x: auto;
+  color: #071023;
+}
