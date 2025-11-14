@@ -28,15 +28,117 @@
 	<div class="sub-title">
 		<h2>١٥. العمل مع عنصر iframe</h2>
 		<span class="hint">نظري</span>
-        <p>قريباً</p>
+        <p></p>
 	</div>
 
 	<section id="1">
 	    <h3>أ. ما هي العناصر المُستبدلة Replaced Elements، وما هي بعض الأمثلة عليها؟</h3>
+		<p>العنصر المُستبدل <strong>A replaced element</strong> هو عنصر يُحدَّد محتواه بواسطة مورد خارجي <em>external resource</em> وليس بواسطة <em>CSS</em> نفسه. يُستخدم CSS,، أو أوراق الأنماط المتتالية <em>cascading stylesheets</em>، لإضافة أنماط <em>styles</em> إلى صفحات الويب. من الأمثلة الشائعة على العناصر المُستبدلة <em>replaced elements</em> عناصر الصورة والإطار الداخلي <strong>iframe</strong> والفيديو.</p>
+		<p>باستخدام العناصر المُستبدلة <em>replaced elements</em>، يمكنك التحكم في موضع <em>position</em> أو تخطيط عنصر ما. ولكن لا يمكن لـ CSS تعديل محتوى هذا العنصر مباشرةً <em>directly</em>. قد يكون شرح ذلك أسهل مع بعض الأمثلة.</p>
+		<h4>خذ بعين الاعتبار عنصر الصورة، الذي يقوم بتضمين صورة على صفحتك على الويب:</h4>
+		
+		<div class="sourcecode">
+			<pre><code>
+&lt;img src="مثال-عنوان-رابط-صورة" alt="النص الوصفي هنا"&gt;	
+			</code></pre>
+		</div>
 
+		<p>يُستبدل العنصر نفسه بالعنصر الخارجي: الصورة. يمكن لـ CSS التحكم في أمور مثل موضع الصورة <em>positioning of the image</em>، أو تطبيق مُرشِّح <em>filter</em> عليها، ولكن لا يمكنك تعديل <em>modify</em> الصورة نفسها. مثال أكثر فعالية هو عنصر <code class="br">iframe</code>، الذي يُضمِّن موقعًا خارجيًا <em>an external site</em> على صفحتك الإلكترونية <em>on your web page</em>.</p>
+		<h4>هذا مثال على استخدام عنصر <code class="br">iframe</code> لفيديو يوتيوب شهير على قناة freeCodeCamp. لمشاهدة فيديوهات مختلفة، غيّر قيمة السمة <code class="br">src</code> إلى الفيديو الذي تختاره.</h4>
+		<h5>ملاحظة: لا تقلق بشأن السمات الإضافية المذكورة في المثال التفاعلي، مثل <code class="br">referrerpolicy</code> و<code class="br">allowfullscreen</code>. ستتعلم المزيد حول العمل مع عناصر iframe في ورشة عمل workshop مستقبلية.</h5>
 	
+		<h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;iframe width="400" height="200" src="https://www.youtube.com/watch?v=u43gJJrVa1I&source_ve_path=MTc4NDI0" title="Professional Cloud Architect Certification Course – Pass the Exam! (YouTube video)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
 
-	
+		</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<iframe width="400" height="200" src="https://www.youtube.com/embed/u43gJJrVa1I?si=BoDW_puFsy8OEr_Z" title="Professional Cloud Architect Certification Course – Pass the Exam! (YouTube video)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>	
+	</div>
+
+
+	<h4>من الأمثلة الشائعة الأخرى لاستخدام عنصر <code class="br">iframe</code> تضمين الخرائط في الصفحة. إليك مثال على خريطة مُضمَّنة.</h4>
+
+			<h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;iframe
+  title="Map of the Royal Observatory, Greenwich, London"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"&gt;
+&lt;/iframe&gt;
+		</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<h5>حاول التفاعل مع الخريطة map نفسها عن طريق التكبير/التصغير zooming in/out.</h5>
+	<div class="preview" role="presentation">
+		<iframe
+		title="Map of the Royal Observatory, Greenwich, London"
+		width="300"
+		height="200"
+		src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+		</iframe>	
+	</div>
+
+	<p>يُستبدل العنصر نفسه بالكائن الخارجي: الموقع. يُمكن لـ CSS تغيير موضع الموقع المُضمّن <em>the positioning of the embedded site</em>، ولكن لا يُمكنك تعديل محتوياته <em>contents</em>. للتوضيح، إذا كان الموقع المُضمّن يحتوي على عنصر <code class="br">h1</code>، فلن تتمكن CSS من تنسيقه. لا يُمكنك تغيير حجم <em>size</em> الخط أو لونه <em>color,</em>، وما إلى ذلك.</p>
+	<br>
+	<p>هناك عناصر أخرى مُستبدلة، مثل الفيديو <code class="br">video</code> والتضمين <code class="br">embed</code>. وبعضها يتصرف كعناصر مُستبدلة في ظروف محددة <em>specific circumstances</em>.</p>
+	<h4>فيما يلي مثال لعنصر إدخال <code class="br">input</code> مع تعيين سمة النوع <code class="br">type</code> إلى صورة <code class="br">image</code>:</h4>
+
+	<div class="sourcecode"> 
+		<pre>
+			<code>
+&lt;input type="image" alt=النص الوصفي هنا" src="مثال-عنوان-رابط-صورة"&gt;
+			</code>
+		</pre>
+	</div>
+
+	<p>يعتبر هذا النوع من الإدخال <code class="br">input</code> بمثابة عنصر بديل <em>replaced element</em>، ولكن أنواع الإدخال <code class="br">input</code> الأخرى مثل النص <code class="br">text</code> أو البريد الإلكتروني <code class="br">email</code> ليست عناصر بديلة <em>not replaced elements</em>.</p>
+
+
+
+		<!-- Questions  أسئلة-->
+	<div class="questions">
+
+		<h4>أسئلة :</h4>
+
+        <h5>ما الذي يمكنك تصميمه في العنصر المستبدل replaced element ؟</h5>
+		<p>١. حجم الخط The font size. ❌</p>
+		<p><mark>٢. التصميم أو الموقع The layout or positioning. ✅</mark></p>
+		<p>٣. لون النص The color of specific text. ❌</p>
+        <p>٤. كل شيء Everything. ❌</p>
+		
+        <br>
+
+        <h5>ما هو العنصر الذي تم استبداله؟</h5>
+		<p><mark>١. كائن خارجي An external object. ✅</mark></p>
+		<p>٢. عنصر آخر Another element. ❌</p>
+		<p>٣. بعض رموز CSS. ❌</p>
+        <p>٤. تجميع Assembly. ❌</p>
+
+		<br>
+
+        <h5>أي مما يلي هو العنصر المستبدل a replaced element ؟</h5>
+		<p>١. <code class="br">h1</code> ❌</p>
+		<p>٢. <code class="br">p</code> ❌</p>
+		<p><mark>٣. <code class="br">iframe</code> ✅</mark></p>
+		<p>٤. <code class="br">a</code> ❌</p>
+		
+
+		
+
+		
+	</div>
+
+
+
+
 	</section>
 
 	<section id="2">
