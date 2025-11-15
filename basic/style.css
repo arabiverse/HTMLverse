@@ -128,7 +128,7 @@ section {
 }
 
 
-.sourcecode,.errorcode, .rules, .sourcecode-css, .en-dir {
+.sourcecode,.errorcode, .rules, .sourcecode-css, .en-dir, .example-code {
     direction: ltr;
 }
 
@@ -136,6 +136,25 @@ section {
     color: green;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+.example-code pre span {
+  color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.example-code pre  {
+  background-color: #9aa6b2;
+  color: black;
+  padding: 2px;
+  overflow-x: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  line-height: 1.6;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  border: 1px solid white;
 }
 
 
