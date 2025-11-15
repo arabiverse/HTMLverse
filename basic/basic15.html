@@ -23,7 +23,7 @@
 
 
 <main>
-<!-- BASIC 3 -->
+<!-- BASIC 15 -->
 <div class="box">
 	<div class="sub-title">
 		<h2>١٥. العمل مع عنصر iframe</h2>
@@ -63,7 +63,7 @@
 
 	<h4>من الأمثلة الشائعة الأخرى لاستخدام عنصر <code class="br">iframe</code> تضمين الخرائط في الصفحة. إليك مثال على خريطة مُضمَّنة.</h4>
 
-			<h4>الكود :</h4>
+	<h4>الكود :</h4>
 	<div class="sourcecode">
 		<pre><span>code <br></span><code>
 &lt;iframe
@@ -143,7 +143,125 @@
 
 	<section id="2">
 		<h3>ب. كيف تُضمّن مقاطع فيديو في صفحتك باستخدام عنصر "ايفرام" iframe ؟</h3>
+		<p>في درس سابق، تعرّفت لأول مرة على عنصر <code class="br">iframe</code>. في هذا الدرس، ستتعلم المزيد عن كيفية التعامل معه. يرمز هذا العنصر إلى "إطار مضمّن". وهو عنصر مضمّن يُستخدم لتضمين محتوى اتش.تي.إم.إل  HTML content آخر مباشرةً داخل صفحة  اتش.تي.إم.إل HTML page. يمكن أن يكون هذا المحتوى فيديو video، أو خريطة map، أو عنصر اتش.تي.إم.إل HTML element آخر، أو حتى صفحات ويب أخرى other web pages.</p>
+		<h4>فيما يلي مثال على تضمين دورة freeCodeCamp الشهيرة من يوتيوب YouTube :</h4>
 
+		<h4>الكود :</h4>
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;iframe
+	width="400"
+  	height="400"
+	src="https://www.youtube.com/embed/PkZNo7MFNFg?si=-UBVIUNM3csdeiWF"
+	title="Learn JavaScript - Full Course for Beginners (YouTube video)"
+	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	referrerpolicy="strict-origin-when-cross-origin"
+	allowfullscreen &gt;
+&lt;/iframe&gt;
+			</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<iframe
+		width="400"
+		height="400"
+		src="https://www.youtube.com/embed/PkZNo7MFNFg?si=-UBVIUNM3csdeiWF"
+		title="Learn JavaScript - Full Course for Beginners (YouTube video)"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen
+		></iframe>
+	</div>
+
+
+	<p>تُحدد سمة <code class="br">src</code> عنوان <strong>URL</strong> للصفحة التي تُريد تضمينها. تُحدد سمة <code class="br">width</code> عرض الإطار المُضمّن <code class="br">iframe</code> . تُحدد سمة <code class="br">height</code> ارتفاع الإطار المُضمّن <code class="br">iframe</code>. تتيح سمة <code class="br">allowfullscreen</code>  للمستخدم عرض الإطار المُضمّن <code class="br">iframe</code> في وضع ملء الشاشة full screen mode. يُنصح أيضًا بتحديد سمة <code class="br">title</code> للإطار المُضمّن <code class="br">iframe</code>، نظرًا لأهميتها في سهولة الوصول <em>accessibility</em>.</p>
+
+	<p>لاحظ أنه يمكن تحميل الفيديو من أي مكان. ليس بالضرورة أن يكون من خدمات فيديو <em>video services</em> مثل يوتيوب <em>YouTube</em> و"فيميو" <em>Vimeo</em>.</p>
+
+	<p>لا تنسَ أنه يمكنك أيضًا تضمين خريطة map، أو صفحة ويب web page أخرى، أو شفرة اتش.تي.إم.إل HTML مباشرة داخل عنصر <code class="br">iframe</code></p>
+
+	<h4>فيما يلي مثال لخريطة مضمنة embedded map :</h4>
+
+				<h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gtخريطة مضمنة من Openstreetmap.org مع عنصر iframe&lt;/h1&gt;
+
+&lt;iframe
+  width="425"
+  height="350"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=3.006134033203125%2C6.150112578753815%2C3.6357879638671875%2C6.749850810550778&amp;layer=mapnik"
+  title="Map of Lagos area, Nigeria"
+  style="border: 1px solid black"
+&gt;
+&lt;/iframe&gt;
+&lt;br /&gt;
+&lt;small&gt;
+  &lt;a href="https://www.openstreetmap.org/#map=11/6.4501/3.3210"&gt;
+    عرض أكبر للخريطة
+  &lt;/a&gt;
+&lt;/small&gt;
+		</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>خريطة مضمنة من Openstreetmap.org مع عنصر iframe</h1>
+
+		<iframe
+		width="425"
+		height="350"
+		src="https://www.openstreetmap.org/export/embed.html?bbox=3.006134033203125%2C6.150112578753815%2C3.6357879638671875%2C6.749850810550778&amp;layer=mapnik"
+		title="Map of Lagos area, Nigeria"
+		style="border: 1px solid black"
+		>
+		</iframe>
+		<br />
+		<small>
+		<a href="https://www.openstreetmap.org/#map=11/6.4501/3.3210">
+			عرض أكبر للخريطة
+		</a>
+		</small>	
+	</div>
+
+	<p>إذا كنت تريد تضمين اتش.تي.إم.إل HTML مباشرًا داخل عنصر <code class="br">iframe</code>، فيجب عليك استخدام سمة <code class="br">srcdoc</code> بدلاً من <code class="br">src</code>.</p>
+
+
+	<!-- Questions  أسئلة-->
+	<div class="questions">
+
+		<h4>أسئلة :</h4>
+
+		<h5>ماذا يعني iframe ؟</h5>
+		<p>١. إطار دولي International frame. ❌</p>
+		<p>٢. نموذج مضمّن Inline form. ❌</p>
+		<p><mark>٣. إطار مضمّن Inline frame. ✅</mark></p>
+		<p>٤. عنصر نموذج مضمّن Inline form element. ❌</p>
+
+
+		<br>
+
+        <h5>ما هي سمة عنصر <code class="br">iframe</code> التي تحدد موقع ما تريد تضمينه؟</h5>
+		<p><mark>١. <code class="br">src</code> ✅</mark></p>
+		<p>٢. <code class="br">url</code> ❌</p>
+		<p>٢. <code class="br">frameborder</code> ❌</p>
+		<p>٤. <code class="br">cross-origin</code> ❌</p>
+
+		<br>
+
+        <h5>ما هي سمة عنصر <code class="br">iframe</code> التي تستخدمها بدلاً من <code class="br">src</code> إذا كنت تريد تضمين HTML مباشرًا؟</h5>
+		<p>١. <code class="br">html</code> ❌</p>
+		<p>٢. <code class="br">document</code> ❌</p>
+		<p>٣. <code class="br">srcweb</code> ❌</p>
+		<p><mark>٤. <code class="br">srcdoc</code> ✅</mark></p>
+		
+	
+
+		
+
+		
+	</div>
 
 
 	</section>
