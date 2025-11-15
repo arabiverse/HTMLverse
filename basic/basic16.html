@@ -22,21 +22,284 @@
 
 
 <main>
-<!-- BASIC 3 -->
+<!-- BASIC 16 -->
 <div class="box">
 	<div class="sub-title">
         <h2>١٦. إنشاء عرض فيديو باستخدام iframe</h2>
 		
 		<span class="hint">ورشة عمل</span>
-        <p>قريباً</p>
+        <p>في هذه الورشة، ستستخدم عنصر <code class="br">iframe</code> لعرض فيديو.</p>
 	</div>
 
 	<section>
+		<h3>الخطوة الأولى :</h3>
 
+		<p>ابدأ بإنشاء عنصر <code class="br">h1</code> باستخدام النص "إطار iframe لعرض الفيديو".</p>
+
+        <h4>الكود :</h4>
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+	<h1>
+		إطار iframe لعرض الفيديو
+    </h1>
+	</div>
+
+    <br>
+    <h3>الخطوة الثانية :</h3>
+    
+	<p>الآن، أنشئ عنصر <code class="br">iframe</code>. لا تضع أي شيء فيه بعد.</p>
+
+    <h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+		
+&lt;iframe&gt;
+&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>
+		إطار iframe لعرض الفيديو
+    	</h1>
+		<iframe>
+		</iframe>
+	</div>
+
+    <br>
+    <h3>الخطوة الثالثة :</h3>
+ 
+	<p>في الدرس الأول عن عنصر <code class="br">iframe</code>، تعلمت أنه عنصر مُستبدل تمامًا مثل <code class="br">img</code>. هذا يعني أنه يمكنه أيضًا استخدام خاصيتي العرض <code class="br">width</code> والارتفاع <code class="br">height</code> لتحديد طوله وعرضه.</p>
+
+	<p>اضبط عرض <code class="br">width</code> عنصر <code class="br">iframe</code> على <strong>560</strong> وارتفاع <code class="br">height</code> <strong>315</strong>.</p>
+
+
+    <h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+		
+&lt;iframe width="560" height="315"&gt;
+&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>
+		إطار iframe لعرض الفيديو
+    	</h1>
+		<iframe width="560" height="315">
+		</iframe>
+	</div>
+
+
+    <br>
+    <h3>الخطوة الرابعة :</h3>
+    <p>يأخذ عنصر <code class="br">iframe</code> أيضًا سمة <code class="br">src</code> بقيمة تشير إلى عنوان <strong>URL</strong> أو مسار <em>path</em> المورد المراد عرضه.</p>
+
+	<p>
+		أضف سمة المصدر <code class="br">src</code> التالية :
+<code class="br">https://www.youtube.com/embed/I0_951_MPE0</code>
+إلى عنصر <code class="br">iframe</code>.
+	</p>
+
+	<p>في هذه المرحلة، سيظهر الفيديو على الصفحة، ولكن هناك بعض السمات الإضافية <em>more attributes</em> التي تحتاج إلى إضافتها.</p>
+
+            <h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+		
+&lt;iframe 
+	width="560" 
+	height="315"
+	src="https://www.youtube.com/embed/I0_951_MPE0"
+	&gt;
+&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>
+		إطار iframe لعرض الفيديو
+    	</h1>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/I0_951_MPE0">
+		</iframe>
+	</div>
+
+    <br>
+    <h3>الخطوة الخامسة :</h3>
+
+	<p>إحدى السمات هي "السماح" <code class="br">allow</code>. وهي أشبه بقائمة أذونات <em>permission list</em> تُعلم المتصفح بالميزات <strong>features</strong> المسموح للإطار المضمن <code class="br">iframe</code> باستخدامها.</p>
+	<p>إليك مثال عنص <code class="br">iframe</code> مع سمة <code class="br">allow</code> :</p>
+
+		<div class="example-code">
+		<pre><span>Example Code<br></span><code>
+&lt;iframe
+  allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture web-share"
+&gt;&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<p>أضف سمة "السماح" <code class="br">allow</code> مع قيم "مقياس التسارع" <code class="br">accelerometer</code> و"التشغيل التلقائي" <code class="br">autoplay</code> و"كتابة الحافظة" <code class="br">clipboard-write</code>.</p>
+	
+	<p>يتيح مقياس التسارع <code class="br">accelerometer</code> للإطار المضمن <code class="br">iframe</code> استخدام مستشعرات الحركة <em>motion sensors</em> لاكتشاف أمور مثل إمالة الجهاز ودورانه <em>device tilting and rotation</em>. يتيح التشغيل التلقائي <code class="br">autoplay</code> بدء تشغيل الفيديو تلقائيًا <em>automatically</em>، بينما يتيح الكتابة بالحافظة <code class="br">clipboard-write</code> للإطار المضمن <code class="br">iframe</code> كتابة البيانات <em>data</em> إلى حافظة المستخدم <em>user’s clipboard</em>.</p>
+
+ 
+
+ <h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+		
+&lt;iframe 
+	width="560" 
+	height="315"
+	src="https://www.youtube.com/embed/I0_951_MPE0"
+	allow="accelerometer autoplay clipboard-write"
+	&gt;
+&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>
+		إطار iframe لعرض الفيديو
+    	</h1>
+		<iframe width="560" height="315" 
+		src="https://www.youtube.com/embed/I0_951_MPE0"
+		allow="accelerometer autoplay clipboard-write"
+		>
+		</iframe>
+	</div>
 	
 
-	
-	</section>
+    <br>
+    <h3>الخطوة السادسة :</h3>
+	<p>أضف "الوسائط المشفرة" <code class="br">encrypted-media</code>، و"الجيروسكوب" <code class="br">gyroscope</code>، و"مشاركة الويب" <code class="br">web-share</code> إلى القيم <em>values</em> الموجودة في سمة <em>attribute</em> "السماح" <code class="br">allow</code>.</p>
+	<p>ستتيح هذه الإضافات الثلاثة استخدام ملحقات الوسائط المشفرة encrypted media extensions لحماية الفيديو، والسماح للإطار المضمّن iframe بالظهور في وضع "صورة داخل صورة" picture-in-picture mode عند الحاجة، ومشاركة محتوى الإطار المضمّن iframe عبر مربعات حوار المشاركة الأصلية للجهاز the device's native share dialogs.</p>
+
+
+	 <h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+		
+&lt;iframe 
+	width="560" 
+	height="315"
+	src="https://www.youtube.com/embed/I0_951_MPE0"
+	allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+	&gt;
+&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>
+		إطار iframe لعرض الفيديو
+    	</h1>
+		<iframe width="560" height="315" 
+		src="https://www.youtube.com/embed/I0_951_MPE0"
+		allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+		>
+		</iframe>
+	</div>
+
+
+	<br>
+	<h3>الخطوة السادسة :</h3>
+
+	<p>السمة التالية التي ستضيفها هي <code class="br">referrerpolicy</code>. وهي القاعدة <strong>rule</strong> التي تحدد مقدار التفاصيل التي تشاركها عند اتصال صفحتك بصفحة أخرى.</p>
+
+	<p>أضف سمة <code class="br">referrerpolicy</code> واضبطها على <code class="br">strict-origin-when-cross-origin</code>. تُشارك هذه السمة العنوان الكامل <em>full address</em> على نفس الموقع، واسم الموقع فقط على المواقع الأخرى، ولا شيء على المواقع غير الآمنة <em>insecure sites</em>.</p>
+
+
+		 <h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+		
+&lt;iframe 
+	width="560" 
+	height="315"
+	src="https://www.youtube.com/embed/I0_951_MPE0"
+	allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+	referrerpolicy="strict-origin-when-cross-origin"
+	&gt;
+&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>
+		إطار iframe لعرض الفيديو
+    	</h1>
+		<iframe width="560" height="315" 
+		src="https://www.youtube.com/embed/I0_951_MPE0"
+		allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		>
+		</iframe>
+	</div>
+
+
+
+
+	<br>
+	<h3>الخطوة الأخيرة :</h3>
+	<p>أخيرًا وليس آخرًا، السمة التي ستضيفها هي <code class="br">allowfullscreen</code>. وكما يوحي اسمها، فهي تسمح بمشاهدة الفيديو في وضع ملء الشاشة <em>full screen mode</em>.</p>
+    
+
+			 <h4>الكود :</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;h1&gt;إطار iframe لعرض الفيديو&lt;/h1&gt;
+		
+&lt;iframe 
+	width="560" 
+	height="315"
+	src="https://www.youtube.com/embed/I0_951_MPE0"
+	allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+	referrerpolicy="strict-origin-when-cross-origin"
+	allowfullscreen
+	&gt;
+&lt;/iframe&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<h1>
+		إطار iframe لعرض الفيديو
+    	</h1>
+		<iframe width="560" height="315" 
+		src="https://www.youtube.com/embed/I0_951_MPE0"
+		allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen
+		>
+		</iframe>
+	</div>
+
+	<h5>وبهذا انتهت الورشة!</h5>
+
+
+
+    </section>
 
 
 </div>
