@@ -23,19 +23,69 @@
 
 
 <main>
-<!-- BASIC 3 -->
+<!-- BASIC 18 -->
 <div class="box">
 	<div class="sub-title">
 		<h2>١٨. العمل مع الروابط</h2>
 		<span class="hint">نظري</span>
-        <p>قريباً</p>
+        <p></p>
 	</div>
 
 	<section id="1">
         <h3>أ. ما هي أنواع سمات "الهدف" Target المختلفة، وكيف تعمل؟</h3>
-	
+		<p>ربما لاحظتَ سمة "الهدف" <code class="br">target</code> في عناصر المرساة <em>anchor</em> أو الروابط <em>links</em>. تُرشد هذه السمة المهمة المتصفح إلى مكان فتح عنوان <strong>URL</strong> لعنصر المرساة <em>anchor</em>.</p>
+		
+		<h4>انقر على الرابط وسيتم توجيهك إلى الصفحة الرئيسية لـ HTMLverse في علامة تبويب جديدة بالمتصفح new browser tab .</h4>
 
-	
+		<h4>الكود :</h4>
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;a href="https://arabiverse.github.io/HTMLverse/" target="_blank"&gt;زيارة HTMLverse&lt;/a&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<a href="https://arabiverse.github.io/HTMLverse/" target="_blank">زيارة HTMLverse</a>
+	</div>
+
+	<p>هناك أربع قيم <em>values</em> محتملة مهمة لهذه الخاصية. يُرجى ملاحظة أن كل قيمة تسبقها شرطة سفلية <em>underscore</em>.</p>
+	<p>القيمة الأولى هي <code class="br">self_</code>، وهي القيمة الافتراضية. يؤدي هذا إلى فتح الرابط <em>link</em> في سياق التصفح الحالي. في معظم الحالات، يكون هذا هو علامة التبويب أو النافذة الحالية <em>the current tab or window</em> .</p>
+	<p>القيمة الثانية هي <code class="br">blank_</code>، والتي تفتح الرابط <em>link</em> في سياق تصفح جديد. عادةً، يُفتح هذا في علامة تبويب جديدة. ولكن قد يُهيئ بعض المستخدمين متصفحاتهم لفتح نافذة جديدة <em>new window instead</em>.</p>
+	<p>القيمة الثالثة هي <code class="br">parent_</code>، والتي تفتح الرابط <em>link</em> في الإطار الرئيسي للسياق الحالي. على سبيل المثال، إذا كان موقعك يحتوي على إطار <code class="br">iframe</code>، فستُفتح قيمة <code class="br">parent_</code> في هذا الإطار <code class="br">iframe</code> في علامة tab/window موقعك، وليس في الإطار المُضمّن embedded frame.</p>
+	<p>القيمة الرابعة هي <code class="br">top_</code>، والتي تفتح الرابط <em>link</em> في أعلى سياق تصفح <em>top-most browsing context</em> فكّر في "العنصر الرئيسي للعنصر الرئيسي" <em>the parent of the parent</em>. هذا مشابه <code class="br">parent_</code>، لكن الرابط <em>link</em> سيفتح دائمًا في tab/window تبويب المتصفح الكاملة، حتى مع الإطارات المضمنة المتداخلة <em>nested embedded frames</em>.</p>
+	<p>هناك قيمة خامسة، تُسمى <code class="br">unfencedTop_</code>، تُستخدم حاليًا لواجهة برمجة تطبيقات  <strong>FencedFrame</strong> <abbr title="Application Programming Interface">API</abbr> التجريبية. في وقت هذا الدرس، ربما لن تجد سببًا لاستخدامها بعد.</p>
+	<p>يُعد اختيار القيمة "المستهدفة" <code class="br">target</code> المناسبة للتحكم <em>control</em> في وصول المستخدمين إلى موقعك الإلكتروني أمرًا بالغ الأهمية عند إنشاء موقع ويب.</p>
+
+	<div class="questions">
+
+		<h4>أسئلة :</h4>
+
+		<h5>كم عدد قيم "الهدف" <code class="br">target</code> الحالية المتاحة للاختيار من بينها؟</h5>
+		<p>١. 2 ❌</p>
+		<p><mark>٢. 4 ✅</mark></p>
+		<p>٣. 3 ❌</p>
+		<p>٤. 1 ❌</p>
+
+
+		<br>
+
+		<h5>أين سيُفتح رابط ذو قيمة <code class="br">"target="_blank</code>؟</h5>
+		<p><mark>١. في نافذة أو علامة تبويب جديدة. ✅</mark></p>
+		<p>٢. في نفس النافذة أو علامة التبويب. ❌</p>
+		<p>٢. على شاشتك الثانية. ❌</p>
+		<p>٤. على جهاز Camperchan's . ❌</p>
+
+		<br>
+
+		<h5>ما هو السلوك الافتراضي عند عدم تعيين "هدف" <code class="br">target</code>؟</h5>
+		<p>١. يُفتح في نافذة أو علامة تبويب جديدة. ❌</p>
+		<p>٢. يُفتح في السياق الرئيسي. ❌</p>
+		<p><mark>٣. يُفتح في نفس النافذة أو علامة التبويب. ✅</mark></p>
+		<p>٤. لا يُفتح. ❌</p>
+		
+	</div>
+
 	</section>
 
 	<section id="2">
