@@ -29,14 +29,159 @@
         <h2>١٧. إنشاء صفحة تجميع فيديو</h2>
 		
 		<span class="hint">مختبر</span>
-        <p>قريباً</p>
+        <p>الهدف: استيفاء قصص المستخدم أدناه والحصول على جميع الاختبارات اللازمة لإكمال المختبر</p>
 	</div>
 
 	<section>
+	<h3>قصص المستخدم :</h3>
 
-	
+	<h4>١. يجب أن يكون لديك عنصر رئيسي <code class="br">main</code> باعتباره الطفل <em>child</em> الوحيد لعنصر الجسم <code class="br">body</code>.</h4>
+	<h4>٢. يجب أن يكون لديك عنصر <code class="br">h1</code> بموضوع <em>topic</em> صفحتك.</h4>
+	<h4>٣. يجب أن تُقدّم <em>introducing</em> فقرة <strong>paragraph</strong> موضوع صفحتك أسفل عنصر <code class="br">h1</code>.</h4>
+	<h4>٤. يجب أن يكون لديك ثلاثة أقسام <code class="br">section</code> أسفل فقرتك الأولى.</h4>
+	<h4>٥. يجب أن يحتوي كل قسم <code class="br">section</code> على عنصر <code class="br">h2</code>، وفقرة <code class="br">p</code>، وعنصر <code class="br">iframe</code>، بهذا الترتيب.</h4>
+	<h4>٦. يجب أن تحتوي عناصر <code class="br">iframe</code> الثلاثة على سمة <code class="br">src</code> مُعيّنة لفيديو صالح <em>valid video</em>.</h4>
+	<h4>٧. يجب أن يحتوي كل عنصر <code class="br">iframe</code> على سمة عنوان <code class="br">title</code> لوصف المحتوى المُضمّن <em>embedded content</em>، وسمة ارتفاع <code class="br">height</code> وسمة عرض <code class="br">width</code> لضبط حجم العنصر على الحجم المناسب <em>proper size</em>.</h4>
 
-	
+
+    
+
+
+
+
+	<h3>الحل :</h3>
+
+	<div class="sourcecode">
+	<pre><span>code <br></span><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ar" dir="rtl"&gt;
+
+&lt;head&gt;
+
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;صفحة تجميع فيديو&lt;/title&gt;
+  &lt;meta name="description" content="إنشاء صفحة تجميع فيديو"/&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;main&gt;
+  		&lt;h1&gt;صفحة تجميع فيديو&lt;/h1&gt;
+		&lt;p&gt;إنشاء صفحة تجميع فيديو&lt;/p&gt;
+
+		&lt;section&gt;
+			&lt;h2&gt;الفيديو الأول&lt;/h2&gt;
+			&lt;p&gt;وصف الفيديو الأول&lt;/p&gt;
+
+			&lt;iframe
+				title="video1"
+				width="300" 
+				height="250"
+				src="https://www.youtube.com/embed/I0_951_MPE0"
+				allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			&gt;	
+			&lt;/iframe&gt;
+		&lt;/section&gt;
+
+		&lt;section&gt;
+			&lt;h2&gt;الفيديو الثاني&lt;/h2&gt;
+			&lt;p&gt;وصف الفيديو الثاني&lt;/p&gt;
+
+			&lt;iframe
+				title="video2"
+				width="300" 
+				height="250"
+				src="https://www.youtube.com/embed/dQhMwK4W-DI"
+				allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			&gt;
+			&lt;/iframe&gt;
+		&lt;/section&gt;
+
+		&lt;section&gt;
+			&lt;h2&gt;الفيديو الثالث&lt;/h2&gt;
+			&lt;p&gt;وصف الفيديو الثالث&lt;/p&gt;
+
+			&lt;iframe
+				title="video3"
+				width="300" 
+				height="250"
+				src="https://www.youtube.com/embed/YX17u97k1TU"
+				allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			&gt;	
+			&lt;/iframe&gt;
+		&lt;/section&gt;
+	&lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+	</code></pre>
+	</div>
+
+	<h3>معاينة :</h3>
+	<div class="preview" role="presentation">
+		
+        <h1>صفحة تجميع فيديو</h1>
+        <p>إنشاء صفحة تجميع فيديو</p>
+
+        <section>
+            <h2>الفيديو الأول</h2>
+            <p>وصف الفيديو الأول</p>
+
+            <iframe
+				title="video1"
+				width="300" 
+				height="250"
+				src="https://www.youtube.com/embed/I0_951_MPE0"
+				allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+				>
+			</iframe>
+        </section>
+
+        <section>
+            <h2>الفيديو الثاني</h2>
+            <p>وصف الفيديو الثاني</p>
+
+            <iframe
+			title="video2"
+				width="300" 
+				height="250"
+				src="https://www.youtube.com/embed/dQhMwK4W-DI"
+				allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			>
+
+			</iframe>
+        </section>
+
+        <section>
+            <h2>الفيديو الثالث</h2>
+            <p>وصف الفيديو الثالث</p>
+
+            <iframe
+			title="video3"
+				width="300" 
+				height="250"
+				src="https://www.youtube.com/embed/YX17u97k1TU"
+				allow="accelerometer autoplay clipboard-write encrypted-media gyroscope web-share"
+				referrerpolicy="strict-origin-when-cross-origin"
+				allowfullscreen
+			>
+			</iframe>
+        </section>
+
+
+
+	</div>
 	</section>
 
 
