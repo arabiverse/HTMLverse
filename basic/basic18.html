@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | العمل مع الروابط"/>
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/basic18.css">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | الأساسيات</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -247,12 +248,197 @@ my-app/
 
 		
 		
-		</div>
+	</div>
 
 	</section>
 
 	<section id="4">
         <h3>د. ما هي حالات الارتباط Link States المختلفة، وأهميتها؟</h3>
+		<p>ربما لاحظتَ أن رابطًا <strong>a link</strong> على صفحة ويب <em>web page</em> أصبح بنفسجيًا بعد النقر عليه. هذا لأن حالة الرابط <em>the state of the link</em> قد تغيرت <em>has changed</em>، مما أدى إلى تطبيق تصميم مختلف. هناك خمس حالات مختلفة يمكن أن يظهر فيها الرابط <em>a link</em>.</p>
+		<p>الحالة الافتراضية <strong>The  default state</strong> الأولى هي <code class="br">link:</code>. تُمثل هذه الحالة رابطًا <em>a link</em> لم يقم المستخدم بزيارته أو النقر عليه أو التفاعل معه بعد. يمكنك اعتبار هذه الحالة بمثابة الأنماط الأساسية <em>the base styles</em> لجميع الروابط في صفحتك، بينما تُبنى الحالات الأخرى عليها.</p>
+		<h4>ألقِ نظرة على الرابط the link في نافذة المعاينة. يجب أن يكون لونه أزرقًا افتراضيًا، وهو يمثل الحالة الافتراضية. عند النقر عليه، سيتحول إلى اللون الأرجواني.</h4>
+
+				<h4>الكود :</h4>
+		<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;a href="https://arabiverse.github.io/HTMLverse/" target="_blank"&gt;زيارة HTMLverse&lt;/a&gt;
+	</code></pre>
+		</div>
+
+	<h4>معاينة :</h4>
+	<div class="preview" role="presentation">
+		<a href="https://arabiverse.github.io/HTMLverse/" target="_blank">زيارة HTMLverse</a>
+	</div>
+	<br>
+
+	<p>الحالة الثانية هي <code class="br">visited:</code>، وتُطبّق عندما يكون المستخدم قد زار الصفحة المرتبطة بها. افتراضيًا، يُحوّل هذا الرابط <em>the link</em> إلى اللون الأرجواني، ولكن يمكنك استخدام <strong>CSS</strong> لتقديم مؤشر بصري <em>visual indication</em> مختلف للمستخدم. هذا مفيد لإعلام المستخدم بأنه قد قرأ جزءًا <em>portion</em> من مستنداتك، أو أن الموقع موثوق به لأنه استخدمه سابقًا.</p>
+	<h4>انقر Click على الرابط the link في نافذة المعاينة، وسترى أن لون الرابط الذي زرته يتغير إلى اللون البني.</h4>
+	<h5>ملاحظة: تم توفير بعض أكواد CSS لهذا المثال التفاعلي لتتمكن من رؤية التغييرات في أنماط الروابط the link styles. لا تقلق بشأن محاولة فهم أكواد CSS، فستتعلم معناها في الوحدات المستقبلية.</h5>
+
+	<h4>الكود :</h4>
+	<h4>اتش.تي.إم.إل (HTML):</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;head&gt;
+    &lt;link href="styles.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;a href="https://arabiverse.github.io/HTMLverse/" target="_blank"&gt;زيارة HTMLverse&lt;/a&gt;
+&lt;/body&gt;
+		</code></pre>
+	</div>
+
+		<h4>سي.اس.اس CSS :</h4>
+	<div class="sourcecode-css">
+		<pre><span>code <br></span><code>
+a:visited {
+  color: brown;
+}
+		</code></pre>
+	</div>
+	<h4>معاينة :</h4>
+	<div class="preview basic18" role="presentation">
+		<a href="https://arabiverse.github.io/HTMLverse/" target="_blank">زيارة HTMLverse</a>
+	</div>
+	<br>
+
+	<p>الحالة الثالثة هي <code class="br">hover:</code>. تُطبّق هذه الحالة عند تحريك <em>hovering</em> المستخدم مؤشر الماوس <em>cursor</em> فوق رابط. تُساعد هذه الحالة على زيادة الانتباه للرابط، لضمان نية المستخدم النقر عليه.</p>
+	<h4>جرّب تمرير hovering مؤشر الماوس mouse فوق الرابط. ستلاحظ تغير اللون إلى الأحمر.</h4>
+
+		<h4>الكود :</h4>
+	<h4>اتش.تي.إم.إل (HTML):</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;head&gt;
+    &lt;link href="styles.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;a href="https://arabiverse.github.io/HTMLverse/" target="_blank"&gt;زيارة HTMLverse&lt;/a&gt;
+&lt;/body&gt;
+		</code></pre>
+	</div>
+
+		<h4>سي.اس.اس CSS :</h4>
+	<div class="sourcecode-css">
+		<pre><span>code <br></span><code>
+a:hover {
+  color: red;
+}
+		</code></pre>
+	</div>
+	<h4>معاينة :</h4>
+	<div class="preview basic18-2" role="presentation">
+		<a href="https://arabiverse.github.io/HTMLverse/" target="_blank">زيارة HTMLverse</a>
+	</div>
+
+	<br>
+
+	<p>ثم لدينا <code class="br">focus:</code>. تنطبق هذه الحالة عند التركيز <em>focus</em> على رابط.</p>
+	<h4>انقر على أي جزء من المساحة البيضاء <em>whitespace</em> في نافذة المعاينة، ثم اضغط على مفتاح <code class="br">tab</code> بلوحة المفاتيح <em>keyboard</em>. سيتغير لون الرابط إلى الأخضر.</h4>
+
+			<h4>الكود :</h4>
+	<h4>اتش.تي.إم.إل (HTML):</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;head&gt;
+    &lt;link href="styles.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;a href="https://arabiverse.github.io/HTMLverse/" target="_blank"&gt;زيارة HTMLverse&lt;/a&gt;
+&lt;/body&gt;
+		</code></pre>
+	</div>
+
+		<h4>سي.اس.اس CSS :</h4>
+	<div class="sourcecode-css">
+		<pre><span>code <br></span><code>
+a:focus {
+  color: green;
+}
+		</code></pre>
+	</div>
+	<h4>معاينة :</h4>
+	<div class="preview basic18-3" role="presentation">
+		<a href="https://arabiverse.github.io/HTMLverse/" target="_blank">زيارة HTMLverse</a>
+	</div>
+
+	<br>
+
+	<p>وأخيرًا، لدينا <code class="br">active:</code>. تنطبق هذه الحالة على الروابط التي يُفعّلها المستخدم. عادةً ما يعني هذا النقر على الرابط بزر الفأرة الرئيسي بالزر الأيسر، في معظم الحالات. تُفيد هذه الحالة في إعلام المستخدم بأن العنصر الذي نقر عليه تفاعلي <em>interactive</em>.</p>
+	<h4>انقر Click على الرابط. سترى الرابط يتحول إلى اللون الأسود. يحدث هذا بسرعة، لذا قد تحتاج إلى النقر عليه عدة مرات لرؤية تغير اللون.</h4>
+
+				<h4>الكود :</h4>
+	<h4>اتش.تي.إم.إل (HTML):</h4>
+	<div class="sourcecode">
+		<pre><span>code <br></span><code>
+&lt;head&gt;
+    &lt;link href="styles.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+	&lt;a href="https://arabiverse.github.io/HTMLverse/" target="_blank"&gt;زيارة HTMLverse&lt;/a&gt;
+&lt;/body&gt;
+		</code></pre>
+	</div>
+
+		<h4>سي.اس.اس CSS :</h4>
+	<div class="sourcecode-css">
+		<pre><span>code <br></span><code>
+a:active {
+  color: black;
+}
+		</code></pre>
+	</div>
+	<h4>معاينة :</h4>
+	<div class="preview basic18-4" role="presentation">
+		<a href="https://arabiverse.github.io/HTMLverse/" target="_blank">زيارة HTMLverse</a>
+	</div>
+
+	<br>
+
+	<p>عندما تستخدم هذه الحالات <strong>States</strong> لتصميم <em>to style</em> الروابط <em>links</em> الخاصة بك، هناك ترتيب محدد يجب عليك كتابة <em>CSS</em> به: الرابط <code class="br">link</code>، الزيارة <code class="br">visited</code>، التمرير <code class="br">hover</code>، التركيز <code class="br">focus</code>، ثم النشاط <code class="br">active</code>.</p>
+	<p>يجب أن تعرف الآن كيفية إضفاء لمسة شخصية <em>personal flair</em> على روابط صفحتك، مع توفير المعلومات المهمة التي يحتاجها المستخدم حول حالة <em>about the state</em> كل رابط <em>of each link</em>.</p>
+
+
+	<div class="questions">
+
+		<h4>أسئلة :</h4>
+
+		<h5>ما هي الحالة الافتراضية للرابط the default state of a link ؟</h5>
+
+		<p><mark>١. <code class="br">link:</code> ✅</mark></p>
+		<p>٢. <code class="br">visited:</code> ❌</p>
+		<p>٣. <code class="br">hover:</code> ❌</p>
+		<p>٤. <code class="br">active:</code> ❌</p>
+
+		<br>
+
+		<h5>ما هي الحالة التي تنطبق عند نقر clicking المستخدم على الرابط؟</h5>
+
+		<p>١. <code class="br">link:</code> ❌</p>
+		<p>٢. <code class="br">visited:</code> ❌</p>
+		<p>٣. <code class="br">hover:</code> ❌</p>
+		<p><mark>٤. <code class="br">active:</code> ✅</mark></p>
+		
+
+		<br>
+
+		<h5>بأي ترتيب يجب تنسيق روابطك؟</h5>
+		<p>١. <code class="br">visited</code>، ثم <code class="br">link</code>، ثم <code class="br">active</code>، ثم <code class="br">hover</code>. ❌</p>
+		<p>٢. <code class="br">link</code>، ثم <code class="br">active</code>، ثم <code class="br">hover</code>، ثم <code class="br">visited</code>. ❌</p>
+		<p>٣. <code class="br">hover</code>، ثم <code class="br">active</code>، ثم <code class="br">link</code>، ثم <code class="br">visited</code>. ❌</p>
+		<p><mark>٤. <code class="br">link</code>، ثم <code class="br">visited</code>، ثم <code class="br">hover</code>، ثم <code class="br">active</code>. ✅</mark></p>
+
+
+
+		
+		
+	</div>
+
+
 
 
 	</section>

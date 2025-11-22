@@ -1,0 +1,15 @@
+.basic18 a:visited {
+  color: brown;
+}
+
+.basic18-2 a:hover {
+  color: red;
+}
+
+.basic18-3 a:focus {
+    color: green;
+}
+
+.basic18-4 a:active {
+  color: black;
+}
