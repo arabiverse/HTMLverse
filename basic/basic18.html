@@ -89,13 +89,111 @@
 	</section>
 
 	<section id="2">
-        <h3>ب. ما الفرق بين المسارات المطلقة Absolute والنسبية Relative ؟</h3>
+        <h3>ب. ما الفرق بين المسارات المطلقة Absolute paths والنسبية Relative paths ؟</h3>
+		<p>المسار <strong>A path</strong> هو سلسلة نصية <em>string</em> تحدد موقع ملف أو مجلد في نظام الملفات <em>file system</em> . في تطوير الويب، تتيح المسارات <em>paths</em> للمطورين ربط موارد مثل الصور، وأوراق الأنماط <em>stylesheets</em>، والبرامج النصية <em>scripts</em>، وصفحات الويب الأخرى. هناك مسارات مطلقة Absolute ونسبية Relative، وكلاهما أساسي <em>essential</em> لتحديد مواقع الملفات داخل نظام الملفات. دعونا نلقي نظرة على المسارين لتحديد أيهما نستخدم ومتى.</p>
+		<p>المسار المطلق <strong>An absolute path</strong> هو رابط كامل لمورد <em>resource</em>. يبدأ من الدليل الجذر <em>root directory</em>، ويتضمن جميع الأدلة الأخرى <em>other directory</em>، وأخيرًا اسم الملف <em>filename</em> وامتداده <em>extension</em>. يشير "الدليل الجذر" root directory إلى الدليل الأعلى <em>the top-level directory</em> أو المجلد الأعلى مستوى في التسلسل الهرمي <em>hierarchy</em>.</p>
+		<p>يتضمن المسار المطلق <em>absolute path</em> أيضًا البروتوكول <strong>protocol</strong> - والذي قد يكون <code class="br">http</code> أو <code class="br">https</code> و الملف <code class="br">file</code> واسم النطاق domain name إذا كان المورد موجودًا على الويب <em>web</em>.</p>
+
+		<h4>إليك مثال على مسار مطلق absolute path يرتبط بشعار HTMLverse:</h4>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;a href="https://arabiverse.github.io/HTMLverse/favicon.png"&gt;HTMLverse شعار&lt;/a&gt;
+			</code></pre>
+		</div>
+
+		<p>في هذا المثال، البروتوكول هو <code class="br">https</code>، واسم النطاق هو <code class="br">arabiverse.github.io</code>، واسم الملف هو <code class="br">favicon.png</code>.</p>
+		<p>الآن، ماذا لو كان المورد <em>resource</em> الذي تريد ربطه باستخدام مسار مطلق <em>absolute path</em> موجودًا على جهازك المحلي <strong>local machine</strong> ؟</p>
+
+		<h4>إليك كيفية ربط ملف <code class="br">about.html</code> بمسار مطلق absolute path:</h4>
+
+		<div class="sourcecode">
+			<pre><span>code <br></span><code>
+&lt;p&gt;
+  اقرأ المزيد عن
+  &lt;a href="/Users/user/Desktop/fCC/script-code/absolute-vs-relative-paths/pages/about.html"&gt;
+  صفحة "حول"
+  &lt;/a&gt;
+&lt;/p&gt;
+			</code></pre>
+		</div>
+
+		<p>يبدو الأمر هكذا لأننا ندخل إلى مجلد باسم "المستخدمون" <code class="br">Users</code>، ثم إلى مجلد باسم "المستخدم" <code class="br">user</code>، ثم إلى مجلد باسم "سطح المكتب" <code class="br">Desktop</code>، ثم إلى مجلد باسم "اف.سي.سي" <code class="br">fCC</code>، ثم إلى مجلد باسم "رمز البرنامج النصي" <code class="br">script-code</code>، ثم إلى مجلد باسم "المسارات المطلقة مقابل النسبية" <code class="br">absolute-vs-relative-paths</code>، ثم إلى مجلد باسم "الصفحات" <code class="br">pages</code>، لنحصل أخيرًا على ملف <code class="br">about.html</code>.</p>
+
+		<h4>هكذا يبدو عنوان URL المطلق في شريط عناوين المتصفح browser address bar:</h4>
+
+		<div class="sourcecode">
+			<pre><code>
+file:///Users/user/Desktop/fCC/script-code/absolute-vs-relative-paths/pages/about.html
+			</code></pre>
+		</div>
+
+		<p>يتضمن عنوان <strong>URL</strong> البروتوكول <code class="br">//:file</code>. كما يتضمن المسار، الذي يبدو كالتالي: <code class="long-code br">/Users/user/Desktop/fCC/script-code/absolute-vs-relative-paths/pages/</code>، ويمثل سلسلة المجلدات المؤدية إلى الملف. وأخيرًا، يتضمن أيضًا ملف <code class="br">about.html</code>، وهو اسم الملف <em>filename</em> وامتداده <em>extension</em>.</p>
+
+		<p>الآن، لنلقِ نظرة على المسار النسبي <strong>Relative path</strong>. يُحدد المسار النسبي <em>Relative path</em> موقع الملف بالنسبة لمجلد الملف الحالي. لا يتضمن البروتوكول <em>protocol</em> أو اسم النطاق <em>domain name</em>، مما يجعله أقصر <em>shorter</em> وأكثر مرونة <em>more flexible</em> للروابط الداخلية <em>internal links</em> ضمن الموقع نفسه.</p>
+
+		<h4>إليك مثال على ربط صفحة <code class="br">about.html</code> بصفحة <code class="br">contact.html</code>، وكلاهما في نفس المجلد:</h4>
+
+		<div class="sourcecode">
+			<pre><code>
+&lt;p&gt;
+  اقرأ المزيد عن
+  &lt;a href="about.html"&gt;
+  صفحة "حول"
+  &lt;/a&gt;
+&lt;/p&gt;
+			</code></pre>
+		</div>
+
+		<p>تخيّل أنك في صفحة <code class="br">contact.html</code>، ولأن صفحة <code class="br">about.html</code> موجودة في نفس المكان، ستحصل ببساطة على اسم الملف <em>filename</em>. هذا مثال على استخدام مسار ملف نسبي <em>relative file path</em>.</p>
+
+		<p>إذًا، أيهما يجب استخدامه ومتى: مسار مطلق Absolute path أم مسار نسبي Relative path؟ إليك القواعد <strong>The rules</strong> التي يجب اتباعها:</p>
+
+		<ul>
+			<li>استخدم المسارات المطلقة <strong>Absolute paths</strong> عند الربط بمورد مُستضاف <em>resource hosted</em> على موقع ويب خارجي <em>external website</em>.</li>
+			<li>استخدم المسارات المطلقة <strong>Absolute paths</strong> عندما تحتاج إلى أن يعمل رابط الصفحة أو المورد بشكل متسق <em>consistently</em> بغض النظر عن موقع المستند <em>document location</em> داخل الموقع.</li>
+			<li>استخدم المسارات النسبية <strong>Relative paths</strong> عند ربط الموارد <em>resources</em> داخل الموقع الإلكتروني نفسه.</li>
+			<li>استخدم المسارات النسبية <strong>Relative paths</strong> للحفاظ على شيفرتك <em>your code</em> أكثر تنظيمًا <em>cleaner</em> وسهولة في الصيانة <em>easier to maintain</em> أثناء التطوير <em>during development</em>.</li>
+			<li>استخدم المسارات النسبية <strong>Relative paths</strong> أثناء الاختبار المحلي <em>during local testing</em> لضمان عمل الروابط دون اتصال بالإنترنت.</li>
+		</ul>
+
+		<div class="questions">
+
+		<h4>أسئلة :</h4>
+
+		<h5>ماهما نوعا المسارات types of paths ؟</h5>
+
+		<p>١. المسارات الحاسمة والمطلقة Resolute and absolute paths . ❌</p>
+		<p>٢. المسارات المطلقة والنهائية Absolute and ultimate paths . ❌</p>
+		<p>٣. المسارات النسبية والفريدة Relative and unique paths. ❌</p>
+		<p><mark>٤. المسارات المطلقة والنسبية Absolute and relative paths . ✅</mark></p>
+
+		<br>
+
+		<h5>كيف يمكنك الربط بمورد resource متوفر فقط available only على الإنترنت on the internet ؟</h5>
+		<p><mark>١. المسار المطلق Absolute path. ✅</mark></p>
+		<p>٢. المسار النسبي Relative path. ❌</p>
+		<p>٢. المساران النسبي والمطلق Both relative and absolute paths. ❌</p>
+		<p>٤. لا شيء مما سبق. ❌</p>
+
+		<br>
+
+		<h5>ما البروتوكول protocol المستخدم للمسار المطلق absolute path على جهاز محلي local machine ؟</h5>
+		<p>١. <code class="br">//:http</code> ❌</p>
+		<p>٢. <code class="br">//:https</code> ❌</p>
+		<p><mark>٣. <code class="br">//:file</code> ✅</mark></p>
+		<p>٤. <code class="br">localhost</code> ❌</p>
+
+
+		
+		
+	</div>
 
 
 	</section>
 
-    	<section id="3">
-        <h3>ج. ما الفرق بين الخطوط المائلة Slashes، والنقطة المفردة Single Dot، والنقطة المزدوجة Double Dot في بناء جملة المسار Path Syntax ؟</h3>
+    <section id="3">
+    <h3>ج. ما الفرق بين الخطوط المائلة Slashes، والنقطة المفردة Single Dot، والنقطة المزدوجة Double Dot في بناء جملة المسار Path Syntax ؟</h3>
 	
 
 	
