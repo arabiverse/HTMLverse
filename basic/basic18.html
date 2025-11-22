@@ -187,7 +187,7 @@ file:///Users/user/Desktop/fCC/script-code/absolute-vs-relative-paths/pages/abou
 
 		
 		
-	</div>
+		</div>
 
 
 	</section>
@@ -195,8 +195,60 @@ file:///Users/user/Desktop/fCC/script-code/absolute-vs-relative-paths/pages/abou
     <section id="3">
     <h3>ج. ما الفرق بين الخطوط المائلة Slashes، والنقطة المفردة Single Dot، والنقطة المزدوجة Double Dot في بناء جملة المسار Path Syntax ؟</h3>
 	
+	<p>ربما سبق لك أن رأيت روابط مثل <code class="br">public/logo.png/</code>، أو <code class="br">script.js/.</code>، أو <code class="br">styles.css/..</code>. ولكن ماذا تعني هذه الأنواع الخاصة <em>special types</em> من الروابط؟ تُسمى مسارات الملفات <em>file paths</em> . هناك ثلاثة قواعد أساسية يجب معرفتها. أولها الشرطة المائلة <strong>The slash</strong> ، والتي يمكن أن تكون شرطة مائلة للخلف Backslash (<code class="br">\</code>) أو شرطة مائلة للأمام Forward slash (<code class="br">/</code>) حسب نظام التشغيل. ثانيها النقطة المفردة <strong>The single dot</strong> (<code class="br">.</code>). وأخيرًا، لدينا النقطتان <strong>The double dot</strong> (<code class="br">..</code>).</p>
+	<p>تُعرف الشرطة المائلة <strong>The slash</strong> باسم "فاصل المسار" <em>path separator</em>. تُستخدم للإشارة إلى فاصل في النص بين أسماء المجلدات أو الملفات. بهذه الطريقة، يعرف جهاز الكمبيوتر أن <code class="br">/naomis-files</code> يُشير إلى مجلد <em>directory</em> يحمل الاسم نفسه، بينما يُشير <code class="br">/naomis/files</code> إلى مجلد ملفات في مجلد <code class="br">naomis</code>.</p>
+	<p>تشير نقطة واحدة <strong>A single dot</strong> إلى المجلد الحالي <em>the current directory</em>، ونقطتان <strong>Two dots</strong> إلى المجلد الرئيسي <em>the parent directory</em>. عادةً ما تُستخدم نقطة واحدة لضمان تمييز المسار كمسار نسبي <em>relative path</em>. تذكر أنك تعلمت في درس سابق عن المسارات النسبية Relative paths مقابل <em>versus</em> المسارات المطلقة Absolute paths.</p>
+	<p>مع ذلك، يُعد استخدام النقطتين <strong>Double dots</strong> أكثر شيوعًا <em>common</em> للوصول إلى الملفات خارج <em>outside</em> مجلد العمل الحالي <em>the current working directory</em>.</p>
 
-	
+	<h4>على سبيل المثال، بالنظر إلى شجرة الملفات file tree التالية:</h4>
+
+		<div class="sourcecode">
+			<pre><code>
+my-app/
+├─ public/
+│  ├─ favicon.ico
+│  ├─ index.html
+├─ src/
+│  ├─ index.css
+│  ├─ index.js
+			</code></pre>
+		</div>
+	<p>إذا كان ملف <code class="br">public/index.html</code> يتطلب تحميل ملف <code class="br">favicon.ico</code>، فاستخدم مسارًا نسبيًا <em>relative path</em> بنقطة واحدة a single dot للوصول إلى المجلد الحالي <em>the current directory</em>: <code class="br">favicon.ico/.</code>. أما إذا كان ملف <code class="br">public/index.html</code> يتطلب تحميل ملف <code class="br">index.css</code>، فاستخدم مسارًا نسبيًا <em>relative path</em> بنقطتين double dots للانتقال إلى مجلد <code class="br">my-app</code> الرئيسي أولًا، ثم إلى مجلد <code class="br">src</code>، وأخيرًا إلى ملفك: <code class="br">src/index.css/..</code>.</p>
+
+
+	<div class="questions">
+
+		<h4>أسئلة :</h4>
+
+		<h5>أي خيار هو مسار مطلق Absolute path ؟</h5>
+
+		<p><mark>١. <code class="br">public/styles.css/</code> ✅</mark></p>
+		<p>٢. <code class="br">script.js/.</code> ❌</p>
+		<p>٣. <code class="br">src/nav.html/..</code> ❌</p>
+		<p>٤. <code class="br">https://freecodecamp.org</code> ❌</p>
+
+		<br>
+
+		<h5>أي خيار هو مسار نسبي Relative path للمجلد الحالي to the current directory ؟</h5>
+		<p>١. <code class="br">public/styles.css/</code> ❌</p>
+		<p><mark>٢. <code class="br">script.js/.</code> ✅</mark></p>
+		<p>٣. <code class="br">src/nav.html/..</code> ❌</p>
+		<p>٤. <code class="br">https://freecodecamp.org</code> ❌</p>
+
+		<br>
+
+		<h5>أي خيار هو مسار نسبي Relative path للمجلد الرئيسي to the parent directory ؟</h5>
+		<p>١. <code class="br">public/styles.css/</code> ❌</p>
+		<p>٢. <code class="br">script.js/.</code> ❌</p>
+		<p><mark>٣. <code class="br">src/nav.html/..</code> ✅</mark></p>
+		<p>٤. <code class="br">https://freecodecamp.org</code> ❌</p>
+
+
+
+		
+		
+		</div>
+
 	</section>
 
 	<section id="4">
