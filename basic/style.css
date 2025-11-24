@@ -328,3 +328,43 @@ section {
   overflow-x: auto;
   color: #071023;
 }
+
+.code-block {
+  background: #0c0c25;
+  padding: 20px;
+  border-radius: 6px;
+  font-family: "Fira Code", monospace;
+  color: #ffffff;
+  direction: ltr;
+  overflow-x: auto;
+  font-size: 1rem;
+  min-width: 100%;
+}
+
+.code-block pre {
+  overflow-x: auto;
+ 
+}
+
+.code-block * {
+  display: inline;
+}
+
+.code-block code {
+  color: #fff;
+  
+}
+
+
+
+.code-block code .tag {
+  color: #ff6b6b;
+}
+
+.code-block code .attr {
+  color: #feca57;
+}
+
+.code-block code .value {
+  color: yellowgreen;
+}
