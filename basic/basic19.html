@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="أساسيات لغة ترميز النص الفائق اتش.تي.إم.إل | مراجعة أساسيات اتش.تي.إم.إل"/>
     <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/basic19.css">
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<title>HTMLverse | الأساسيات</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,14 +30,742 @@
         <h2>١٩. مراجعة أساسيات اتش.تي.إم.إل</h2>
 		
 		<span class="hint">مراجعة</span>
-        <p>قريباً</p>
+       
+		<ul class="basic19-nav">
+			<li><a href="#1">أساسيات اتش.تي.إل.إل</a></li>
+			<li><a href="#2">عناصر اتش.تي.إم.إل</a></li>
+			<li><a href="#3">المعرفات والتجميع</a></li>
+			<li><a href="#4">الأحرف الخاصة والربط</a></li>
+			<li><a href="#5">القالب والترميز</a></li>
+			<li><a href="#6">تحسين محركات البحث والمشاركة الاجتماعية</a></li>
+			<li><a href="#7">عناصر الوسائط وتحسينها</a></li>
+			<li><a href="#8">تكامل الوسائط المتعددة</a></li>
+			<li><a href="#9">أنواع السمات المستهدفة</a></li>
+			<li><a href="#10">المسارات المطلقة مقابل المسارات النسبية</a></li>
+			<li><a href="#11">حالات الارتباط</a></li>
+		</ul>
+		
 	</div>
 
-	<section>
+	<section id="1">
+		<h3>أساسيات اتش.تي.إل.إل HTML Basics</h3>
+		<ul>
+			<li><strong>دور اتش.تي.إم.إل HTML</strong> : يمثل اتش.تي.إم.إل HTML المحتوى وبنية صفحة الويب.</li>
+			<li><strong>عناصر اتش.تي.إم.إل HTML</strong> : العناصر <em>Elements</em> هي اللبنات الأساسية لمستند اتش.تي.إم.إل HTML . فهي تمثل العناوين <em>headings</em> والفقرات <em>paragraphs</em> والروابط <em>links</em> والصور <em>images</em> وغيرها. تتكون معظم عناصر اتش.تي.إم.إل HTML من وسم افتتاحي (<code class="br">&lt;elementName&gt;</code>) ووسم إغلاق (<code class="br">&lt;elementName/&gt;</code>).</li>
+		</ul>
+
+		<h4>هنا هو بناء الجملة الأساسي:</h4>
+
+		<div class="code-block">
+			<code>
+				<span class="tag">&lt;elementName&gt;</span>
+				المحتوى يذهب هنا
+				<span class="tag">&lt;/elementName&gt;</span>
+			</code>
+		</div>
+
+		<ul>
+			<li><strong>العناصر الفارغة Void Elements</strong>: لا يمكن للعناصر الفارغة أن تحتوي على أي محتوى، بل تحتوي فقط على وسم بداية. من الأمثلة على ذلك عناصر <code class="br">img</code> و <code class="br">meta</code>.</li>
+		</ul>
+		
+		<div class="code-block">
+			<code>
+				<span class="tag">&lt;img&gt;</span>
+				<br> <br>
+				<span class="tag">&lt;meta&gt;</span>
+			</code>
+		</div>
+
+		<h4>من الشائع رؤية بعض قواعد البيانات التي تتضمن شرطة مائلة للأمام (<code class="br">/</code>) داخل عنصر الفراغ void element. كلا الشرطين مقبولان:</h4>
+		
+		<div class="code-block">
+			<code>
+				<span class="tag">&lt;img&gt;</span>
+				<br> <br>
+				<span class="tag">&lt;img/&gt;</span>
+			</code>
+		</div>
+
+		<ul>
+			<li><strong>السمات Attributes</strong>: السمة هي قيمة تُوضع داخل وسم فتح عنصر اتش.تي.إم.إل HTML . تُوفر السمات معلومات إضافية حول العنصر أو تُحدد كيفية عمله. إليك الصيغة الأساسية للسمة:</li>
+		</ul>
+
+		<div class="code-block">
+			<code>
+				<span class="tag">&lt;element</span>
+				<span class="attr"> attribute = </span>
+				<span class="value">"value"</span>
+				<span class="tag">&gt;&lt;/element&gt;</span>
+			</code>
+		</div>
+
+		<p><strong>السمة المنطقية A boolean attribute</strong> هي سمة قد تكون موجودة أو غير موجودة في وسم اتش.تي.إم.إل HTML tag . إذا كانت موجودة، تكون قيمتها صحيحة <strong>true</strong>، وإلا تكون خاطئة <strong>false</strong>. من أمثلة السمات المنطقية: مُعطّل <code class="br">disabled</code>، وقراءة فقط <code class="br">readonly</code>، ومطلوب <code class="br">required</code>.</p>
+
+		<ul>
+			<li><strong>التعليقات Comments</strong>: تُستخدم التعليقات في البرمجة لترك ملاحظات لك وللمطورين الآخرين في الكود <em>code</em>. إليك صيغة التعليق في اتش.تي.إم.إل HTML :</li>
+		</ul>
+
+				<div class="code-block">
+			<code>
+				<span class="value">&lt;!--  HTML comment  هذا تعليق اتش.تي.إم.إل --&gt;</span>
+			</code>
+		</div>
 
 	
+	</section>
 
+	<section id="2">
+		<h3>عناصر اتش.تي.إم.إل HTML الشائعة</h3>
+		<ul>
+			<li><strong>عناصر العناوين Heading Elements</strong>: يوجد ستة عناصر عناوين في اتش.تي.إم.إل HTML . تُستخدم عناصر العناوين من <code class="br">h1</code> إلى <code class="br">h6</code> للدلالة على أهمية المحتوى أسفلها. كلما قلّ العدد، زادت الأهمية، لذا فإن عناصر <code class="br">h2</code> أقل أهمية من عناصر <code class="br">h1</code>.</li>
+		</ul>
+
+		<div class="code-block">
+			<code>
+				<span class="tag">&lt;h1&gt;</span>
+				العنصر الأكثر أهمية في العنوان
+				<span class="tag">&lt;/h1&gt;</span>
+				<br>
+				<span class="tag">&lt;h2&gt;</span>
+				العنصر الثاني الأكثر أهمية
+				<span class="tag">&lt;/h2&gt;</span>
+				<br>
+				<span class="tag">&lt;h3&gt;</span>
+				ثالث أهم عنصر عنوان
+				<span class="tag">&lt;/h3&gt;</span>
+				<br>
+				<span class="tag">&lt;h4&gt;</span>
+				رابع أهم عنصر عنوان
+				<span class="tag">&lt;/h4&gt;</span>
+				<br>
+				<span class="tag">&lt;h5&gt;</span>
+				خامس أهم عنصر عنوان
+				<span class="tag">&lt;/h5&gt;</span>
+				<br>
+				<span class="tag">&lt;h6&gt;</span>
+				أقل عنصر عنوان أهمية
+				<span class="tag">&lt;/h6&gt;</span>
+			</code>
+		</div>
+
+		<ul>
+			<li><strong>عناصر الفقرة Paragraph Elements</strong>: تُستخدم للفقرات في صفحات الويب.</li>
+		</ul>
+
+		<div class="code-block">
+			<code>
+				<span class="tag">&lt;p&gt;</span>
+				هذا هو عنصر الفقرة.
+				<span class="tag">&lt;/p&gt;</span>
+			</code>
+		</div>
+
+		<ul>
+			<li><strong>عناصر <code class="br">img</code></strong> : يُستخدم عنصر <code class="br">img</code> لإضافة الصور إلى صفحة الويب. وتُستخدم السمة <code class="br">src</code> لتحديد موقع الصورة. بالنسبة لعناصر الصور، يُنصح بإضافة سمة <code class="br">alt</code>. إليك مثال لعنصر <code class="br">img</code> مع السمتين <code class="br">src</code> و <code class="br">alt</code>:</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<p><span class="tag">&lt;img </span><span class="attr">src=</span><span class="value">"https://arabiverse.github.io/HTMLverse/assets/HTMLverseLogo.png"</span><span class="attr"> alt=</span><span class="value">"شعار عالم اتش.تي.إم.إل"</span><span class="tag">&gt;</span></p>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>عنصر <code class="br">body</code></strong>: يُستخدم هذا العنصر لتمثيل محتوى مستند اتش.تي.إم.إل HTML .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre>
+			<code>
+<span class="tag">&lt;body&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>تطبيق صور القطط<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>هذا عنصر فقرة.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>  
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>عناصر <code class="br">section</code></strong>: يُستخدم هذا العنصر لتقسيم المحتوى إلى أقسام أصغر.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre>
+			<code>
+<span class="tag">&lt;section&gt;</span>
+  <span class="tag">&lt;h2&gt;</span>نبذة عني<span class="tag">&lt;/h2&gt;</span>
+  <span class="tag">&lt;p&gt;</span>مرحبًا، أنا شهاب، مطورة ويب.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/section&gt;</span>  
+			</code></pre>
+		</div>
+
+
+		<ul>
+			<li><strong>عناصر <code class="br">div</code></strong>: هذا العنصر هو عنصر اتش.تي.إم.إل عام <em>a generic HTML</em> لا يحمل أي معنى دلالي. يُستخدم كحاوية عامة <em>a generic container</em> لعناصر اتش.تي.إم.إل HTML أخرى.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre>
+			<code>
+<span class="tag">&lt;div&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>أنا عنوان<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>أنا فقرة<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>  
+			</code></pre>
+		</div>
+
+
+		<ul>
+			<li><strong>عناصر المرساة (<code class="br">a</code>)</strong>: تُستخدم هذه العناصر لإضافة روابط إلى صفحة الويب. تُستخدم سمة <code class="br">href</code> لتحديد مكان الرابط <em>the link</em> عند نقر المستخدم عليه.</li>
+		</ul>
+		<div class="code-block">
+			<pre><code>
+<p><span class="tag">&lt;a </span><span class="attr">href=</span><span class="value">"https://arabiverse.github.io/HTMLverse/assets/HTMLverseLogo.png"</span><span class="tag">&gt;</span>شعار عالم اتش.تي.إم.إل<span class="tag">&lt;/a&gt;</span></p>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>عناصر القائمة غير المرتبة (<code class="br">ul</code>) والمرتبة (<code class="br">ol</code>)</strong>: لإنشاء قائمة نقطية <em>a bulleted list</em> ، استخدم عنصر <code class="br">ul</code> مع عنصر <code class="br">li</code> واحد أو أكثر مُدمج داخله كما يلي:</li>
+		</ul>
+
+		<div class="code-block">
+			<pre>
+			<code>
+<span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>علاج البراغيث<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>الرعد<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>قطط أخرى<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>  
+			</code></pre>
+		</div>
+
+		<p>لإنشاء قائمة مرتبة <em>an ordered list</em> من العناصر يجب عليك استخدام العنصر <code class="br">ol</code>:</p>
+
+		<div class="code-block">
+			<pre>
+			<code>
+<span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span>علاج البراغيث<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>الرعد<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>قطط أخرى<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>  
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>عنصر التوكيد (<code class="br">em</code>)</strong>: يستخدم للتركيز على جزء من النص.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre>
+			<code>
+<span class="tag">&lt;p&gt;</span>اللازانيا<span class="tag">&lt;em&gt;</span>تحب<span class="tag">&lt;/em&gt;</span>القطط<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+
+		<ul>
+			<li><strong>عنصر الأهمية القوية (<code class="br">strong</code>)</strong>: يُستخدم هذا العنصر لتسليط الضوء على النص، للإشارة إلى الشعور بالإلحاح والجدية.</li>
+		</ul>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;strong&gt;</span>مهم:<span class="tag">&lt;/strong&gt;</span>قبل المتابعة، تأكد من ارتداء نظارات السلامة الخاصة بك. 
+<span class="tag">&lt;/p&gt;</span>  
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>عناصر <code class="br">figure</code> و <code class="br">figcaption</code> </strong>: يُستخدم عنصر <code class="br">figure</code> لتجميع محتوى مثل الصور والرسوم البيانية. يُستخدم عنصر <code class="br">figcaption</code> لتمثيل عنوان لهذا المحتوى داخل عنصر الشكل.</li>
+		</ul>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;figure&gt;</span>
+	<span class="tag">&lt;img </span><span class="attr">src=</span><span class="value">"https://arabiverse.github.io/HTMLverse/basic/assets/cats.jpg"</span><span class="attr"> alt=</span><span class="value">"قطتان صغيرتان مخططان نائمَتان معًا على الأريكة"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;figcaption&gt;</span>القطط الأخرى. <span class="tag">&lt;strong&gt;</span>تكره<span class="tag">&lt;/strong&gt;</span> القطط<span class="tag">&lt;/figcaption&gt;</span>
+<span class="tag">&lt;/figure&gt;</span>  
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>العنصر الرئيسي <code class="br">main</code></strong>: يستخدم هذا العنصر لتمثيل المحتوى الرئيسي لصفحة الويب.</li>
+			<li><strong>عنصر التذييل <code class="br">footer</code></strong>: يقع هذا العنصر أسفل مستند اتش.تي.إم.إل HTML ، ويحتوي عادةً على معلومات حقوق النشر <em>copyright</em> وروابط صفحات مهمة أخرى.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;footer&gt;</span>
+	<span class="tag">&lt;p&gt;</span>
+	لا حقوق التأليف والنشر<span class="tag">&lt;a </span><span class="attr">href=</span><span class="value">"https://arabiverse.github.io/HTMLverse/"</span><span class="tag">&gt;</span> عالم اتش.تي.إم.إل<span class="tag">&lt;/a&gt;</span>
+	<span class="tag">&lt;/p&gt;</span>  
+<span class="tag">&lt;/footer&gt;</span>  
+			</code></pre>
+		</div>
+
+		
+	</section>
+
+
+	<section id="3">
+		<h3>المعرفات والتجميع</h3>
+		<ul>
+			<li><strong>المُعرِّفات IDs</strong>: المُعرِّفات عناصر فريدة لعناصر اتش.تي.إم.إل <em>HTML elements</em> . يجب استخدام أسماء المعرفات مرة واحدة فقط لكل مستند  اتش.تي.إم.إل <em>HTML document</em> .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;h1 </span><span class="attr">id=</span><span class="value">"title"</span><span class="tag">&gt;</span>صفحة مراجعة الفيلم<span class="tag">&lt;/h1&gt;</span>
+			</code></pre>
+		</div>
+		<h4>لا يمكن أن تحتوي أسماء المعرفات ID names على مسافات. إذا كان اسم المعرف ID name يحتوي على عدة كلمات، يمكنك استخدام الشرطات dashes بينها كما يلي:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;div </span><span class="attr">id=</span><span class="value">"red-box"</span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>الفئات Classes</strong>: تُستخدم الفئات لتجميع <em>group</em> العناصر لأغراض التصميم <em>styling</em> والسلوك <em>behavior</em> .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;div </span><span class="attr">class=</span><span class="value">"box"</span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+			</code></pre>
+		</div>
+
+		<h4>بخلاف المعرفات IDs، يمكنك إعادة استخدام اسم الفئة نفسه same class name في مستند اتش.تي.إم.إل HTML document . يمكن أن تحتوي قيمة value الفئة <code class="br">class</code> أيضًا على مسافات كما يلي:</h4>
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;div </span><span class="attr">class=</span><span class="value">"box red-box"</span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;div </span><span class="attr">class=</span><span class="value">"box blue-box"</span><span class="tag">&gt;</span><span class="tag">&lt;/div&gt;</span>
+			</code></pre>
+		</div>
+
+
+	</section>
+
+	<section id="4">
+		<h3>الأحرف الخاصة Special Characters والربط Linking</h3>
+		<ul>
+			<li><strong>كيانات اتش.تي.إم.إل HTML entities</strong> : كيان اتش.تي.إم.إل <em>An HTML entity</em> ، أو مرجع الأحرف <em>character reference</em>، هو مجموعة من الأحرف تُستخدم لتمثيل حرف محجوز <em>a reserved character</em> في اتش.تي.إم.إل HTML. من الأمثلة على ذلك رمز العطف <em>the ampersand symbol</em> (<code class="br">&amp;amp;</code>) ورمز أصغر من <em>the less than symbol</em> (<code class="br">&amp;lt;</code>).</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span> <span class="attr">&amp;amp;</span>img /<span class="attr">&amp;gt;</span> هذا عنصر <span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>عنصر الرابط <code class="br">link</code></strong>: يُستخدم هذا العنصر للربط بموارد خارجية <em>external resources</em> مثل أوراق الأنماط <em>stylesheets</em> وأيقونات المواقع <em>site icons</em> .</li>
+			<h4>فيما يلي البنية الأساسية لاستخدام عنصر الرابط <code class="br">link</code> لملف CSS خارجي:</h4>
+		</ul>
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;link </span><span class="attr">rel=</span><span class="value">"stylesheet" </span><span class="attr">href=</span><span class="value">"./styles.css" </span><span class="tag">/&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>تُستخدم سمة <code class="br">rel</code> لتحديد العلاقة بين المورد المرتبط <em>linked resource</em> ومستند اتش.تي.إم.إل <em>HTML document</em> . وتُستخدم سمة <code class="br">href</code> لتحديد موقع رابط <strong>URL</strong> للمورد الخارجي <em>external resource</em>.</p>
+		<ul>
+			<li><strong>عنصر النص البرمجي <code class="br">script</code></strong>: يُستخدم هذا العنصر لتضمين <em>to embed</em> الكود القابل للتنفيذ <em>executable code</em> .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;body&gt;</span>
+	<span class="tag">&lt;script&gt;</span>
+		<span class="attr">alert</span><span>(<span class="value">مرحبا في عالم اتش.تي.إم.إل</span>);</span>
+	<span class="tag">&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>على الرغم من إمكانية كتابة جميع أكواد "جافا سكريبت" <em>JavaScript code</em> داخل وسوم النصوص البرمجية <code class="br">script</code> tags، إلا أنه من الأفضل ربطها بملف "جافا سكريبت" خارجي <em>external JavaScript file</em>.</p>
+		<h4>فيما يلي مثال على استخدام عنصر النص البرمجي <code class="br">script</code> للربط بملف "جافا سكريبت" خارجي:</h4>
+		
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;script </span><span class="attr">src=</span><span class="value">"path-to-javascript-file.js"<span class="tag">&gt;&lt;/script&gt;</span>
+			</code></pre>
+		</div>
+		<p>تُستخدم سمة <code class="br">src</code> هنا لتحديد موقع ملف "جافا سكريبت" الخارجي.</p>
 	
+	
+	</section>
+
+	<section id="5">
+		<h3>القالب Boilerplate والترميز Encoding</h3>
+		<ul>
+			<li><strong>قالب اتش.تي.إم.إل HTML boilerplate</strong>: هذا قالب يتضمن البنية الأساسية <em>basic structure</em> والعناصر الأساسية <em>essential elements</em> التي يحتاجها كل مستند اتش.تي.إم.إل <em>HTML document</em> .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="value">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html </span><span class="attr">lang=</span><span class="value">"ar" </span><span class="attr">dir=</span><span class="value">"rtl"</span><span class="tag">&gt;</span>
+	<span class="tag">&lt;head&gt;</span>
+		<span class="tag">&lt;meta <span class="attr">charset=</span><span class="value">"utf-8"</span> /&gt;</span>
+		<span class="tag">&lt;title&gt;</span>عالم اتش.تي.إم.إل<span class="tag">&lt;/title&gt;</span>
+		<span class="tag">&lt;link <span class="attr">rel=</span><span class="value">"stylesheet" </span><span class="attr">href=</span><span class="value">"./styles.css"</span> /&gt;</span>
+	<span class="tag">&lt;/head&gt;</span>
+	<span class="tag">&lt;body&gt;</span>
+		<span class="value">&lt;!-- العناوين والفقرات والصور وما إلى ذلك تدخل هنا --&gt;</span>
+	<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+			</code></pre>
+		</div>
+
+
+		<ul>
+			<li><code class="br">DOCTYPE</code>: يُستخدم هذا لإخبار المتصفحات <em>browsers</em> بإصدار اتش.تي.إم.إل <em>HTML version</em> الذي تستخدمه.</li>
+			<li><strong>عنصر <code class="br">html</code></strong>: يُمثل هذا العنصر العنصر الأعلى مستوى أو جذر <em>root</em> مستند اتش.تي.إم.إل <em>HTML document</em> . لتحديد لغة المستند، استخدم سمة <code class="br">lang</code>. وان كنت تبني مشروعا بالعربيه أضف سمة <code class="br">dir</code> وضع القيمة <code class="br">rtl</code>، يعني من اليمين إلى اليسار <em>Right To Left</em> .</li>
+			<li><strong>عنصر <code class="br">head</code></strong>: يحتوي قسم <code class="br">head</code> على بيانات تعريفية <em>meta data</em> مهمة، وهي معلومات أساسية ضرورية للمتصفحات ومحركات البحث <em>search engines</em> .</li>
+			<li><strong>عناصر <code class="br">meta</code></strong>: تُمثل هذه العناصر البيانات الوصفية <em>metadata</em> لموقعك. تتضمن هذه العناصر تفاصيل حول أمور مثل ترميز الأحرف <em>character encoding</em>، وكيفية معاينة روابط صفحتك على مواقع مثل تويتر، وغيرها.</li>
+			<li><strong>عنصر <code class="br">title</code></strong>: يُستخدم هذا العنصر لضبط النص الذي يظهر في علامة تبويب <em>browser tab</em> أو نافذة المتصفح <em>browser window</em> .</li>
+			<li><strong>ترميز الأحرف UTF-8</strong>: أو UCS 8 تنسيق تحويل <em>Transform Format</em>، هو ترميز أحرف موحد يُستخدم على نطاق واسع على الإنترنت. ترميز الأحرف <em>Character encoding</em> هو الطريقة التي تستخدمها أجهزة الكمبيوتر لتخزين <em>store</em> الأحرف كبيانات <em>data</em> . تُستخدم سمة <code class="br">charset</code> داخل عنصر <code class="br">meta</code> لتعيين ترميز الأحرف إلى UTF-8. </li>
+		</ul>
+
+	</section>
+
+	<section id="6">
+		<h3>تحسين محركات البحث SEO والمشاركة الاجتماعية Social Sharing</h3>
+		<ul>
+			<li><strong>تحسين محركات البحث SEO</strong>: هو عملية تهدف إلى تحسين صفحات الويب لزيادة ظهورها <em>more visible</em> وتحسين ترتيبها <em>rank higher</em> في محركات البحث <em>search engines</em> .</li>
+			<li><strong>عنصر التعريف Meta (<code class="br">description</code>)</strong>: يستخدم لتقديم وصف قصير <em>short description</em> لصفحة الويب والتأثير <em>impacting</em> على تحسين محركات البحث SEO .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;meta</span>
+	<span class="attr">name=</span><span class="value">"description"</span>
+	<span class="attr">content=</span><span class="value">"اكتشف نصائح الخبراء وتقنياتهم في البستنة في المساحات الصغيرة، واختيار النباتات المناسبة، والحفاظ على حديقة مزدهرة."</span>
+<span class="tag">/&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>وسوم Open Graph</strong>: يُمكّنك بروتوكول open graph من التحكم في كيفية ظهور محتوى موقعك الإلكتروني عبر منصات التواصل الاجتماعي <em>social media</em> المختلفة، مثل فيسبوك <em>Facebook</em> ولينكدإن <em>LinkedIn</em> وغيرها الكثير.</li>
+		</ul>
+
+		<p>من خلال ضبط خصائص <em>open graph</em> هذه، يمكنك جذب المستخدمين للنقر والتفاعل مع محتواك. يمكنك ضبط هذه الخصائص من خلال مجموعة من عناصر التعريف <code class="br">meta</code> داخل قسم اتش.تي.إم.إل الرئيسي HTML <code class="br">head</code> section .</p>
+
+		<ul>
+			<li><strong>الخاصية <code class="br">og:title</code></strong>: تُستخدم لتعيين عنوان المنشورات <em>media posts</em> التي تعرض <em>that displays</em> على مواقع التواصل الاجتماعي.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;meta <span class="attr">content=</span><span class="value">"HTMLverse.org"</span> <span class="attr">property=</span><span class="value">"og:title"</span> /&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>خاصية <code class="br">og:type</code></strong>: تُستخدم خاصية <code class="br">type</code> لتمثيل نوع المحتوى <em>the type of content</em> المُشارك على منصات التواصل الاجتماعي. من أمثلة هذا المحتوى المقالات <em>articles</em>، ومواقع الويب <em>websites</em>، ومقاطع الفيديو <em>videos</em>، والموسيقى <em>music</em> .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;meta <span class="attr">property=</span><span class="value">"og:type"</span> <span class="attr">content=</span><span class="value">"website"</span> /&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>الخاصية <code class="br">og:image</code></strong>: تُستخدم لتعيين الصورة المعروضة في منشورات مواقع التواصل الاجتماعي.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;meta 
+	<span class="attr">content=</span><span class="value">"https://arabiverse.github.io/HTMLverse/assets/HTMLverseCover.png"</span> 
+	<span class="attr">property=</span><span class="value">"og:image"</span>
+/&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>الخاصية <code class="br">og:url</code></strong>: تُستخدم لتحديد عنوان URL الذي سينقر عليه المستخدمون لمنشورات مواقع التواصل الاجتماعي.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;meta <span class="attr">property=</span><span class="value">"og:url"</span> <span class="attr">content=</span><span class="value">"https://arabiverse.github.io/HTMLverse/"</span> /&gt;</span>
+			</code></pre>
+		</div>
+
+
+	</section>
+
+	<section id="7">
+		<h3>عناصر الوسائط Media Elements وتحسينها Optimization</h3>
+		<ul>
+			<li><strong>العناصر المُستبدلة Replaced elements</strong>: العنصر المُستبدل <em>A replaced element</em> هو عنصر يُحدَّد محتواه بواسطة مورد خارجي <em>external resource</em> وليس بواسطة CSS نفسه. مثال على ذلك عنصر <code class="br">iframe</code> . "اي.فرام" <code class="br">iframe</code> اختصار لـ <em>inline frame</em> "إطار مضمّن". وهو عنصر مضمّن يُستخدم لتضمين محتوى اتش.تي.إم.إل <em>HTML content</em> آخر مباشرةً داخل صفحة اتش.تي.إم.إل <em>HTML page</em>.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;iframe <span class="attr">src=</span><span class="value">"https://www.example.com"</span> <span class="attr">title=</span><span class="value">"موقع المثال"</span>&gt;&lt;/iframe&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>يمكنك تضمين سمة <code class="br">allowfullscreen</code> التي تسمح للمستخدم بعرض <em>display</em> الإطار المضمن <em>the iframe</em> في وضع ملء الشاشة <em>full screen mode</em> .</p>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;iframe</span>
+	<span class="attr">src=</span><span class="value">"video-url"</span>
+	<span class="attr">width=</span><span class="value">"width-value"</span>
+	<span class="attr">height=</span><span class="value">"height-value"</span>
+	<span class="attr">allowfullscreen</span>
+<span class="tag">&gt;&lt;/iframe&gt;</span>
+			</code></pre>
+		</div>
+
+		<h4>لتضمين فيديو داخل إطار مضمّن <code class="br">iframe</code>، يمكنك نسخه مباشرةً من خدمات الفيديو الشهيرة مثل "يوتيوب" <em>Youtube</em> و"فيميو" <em>Vimeo</em>، أو تعريفه بنفسك باستخدام سمة <code class="br">src</code> التي تشير إلى عنوان URL الخاص بالفيديو. إليك مثال على تضمين دورة تدريبية شهيرة من <em>freeCodeCamp</em> من "يوتيوب" <em>YouTube</em>:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;h1&gt;</span>iframe فيديو "يوتيوب" من "فري.كود.كامب" مُضمّن بعنصر <span class="tag">&lt;/h1&gt;</span>
+
+<span class="tag">&lt;iframe</span>
+	<span class="attr">width=</span><span class="value">"560"</span>
+	<span class="attr">height=</span><span class="value">"315"</span>
+	<span class="attr">src=</span><span class="value">"https://www.youtube.com/embed/PkZNo7MFNFg?si=-UBVIUNM3csdeiWF"</span>
+	<span class="attr">title=</span><span class="value">"مشغل فيديو يوتيوب"</span>
+	<span class="attr">allow=</span><span class="value">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span>
+	<span class="attr">referrerpolicy=</span><span class="value">"strict-origin-when-cross-origin"</span>
+	<span class="attr">allowfullscreen</span>
+<span class="tag">&gt;&lt;/iframe&gt;</span>
+			</code></pre>
+		</div>
+
+		<h4>هناك عناصر بديلة <em>replaced elements</em> أخرى، مثل <code class="br">video</code> و<code class="br">embed</code>. وتتصرف بعض العناصر كعناصر بديلة <em>replaced elements</em> في ظروف محددة <em>under specific circumstances</em> . إليك مثال لعنصر إدخال <code class="br">input</code> مع ضبط سمة <code class="br">type</code> على <code class="br">image</code>:</h4>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;input <span class="attr">type=</span><span class="value">"image"</span> <span class="attr">alt=</span><span class="value">"يظهر النص الوصفي هنا"</span> <span class="attr">src=</span><span class="value">"مثال-على-رابط-صورة"</span>&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>تحسين الوسائط Optimizing media</strong>: هناك ثلاث أدوات يجب مراعاتها عند استخدام الوسائط <em>media</em>، مثل الصور <em>images</em>، على صفحات الويب: الحجم <em>size</em>، والتنسيق <em>format</em>، والضغط <em>compression</em>. تُستخدم خوارزمية ضغط <em>A compression algorithm</em> لتقليل حجم الملفات أو البيانات.</li>
+			<li><strong>تنسيقات الصور Image formats</strong>: يُعدّ PNG وJPG من أكثر تنسيقات الملفات شيوعًا، لكنهما لم يعودا التنسيقين الأمثل لعرض الصور. ما لم تكن بحاجة إلى دعم المتصفحات القديمة، يُنصح باستخدام تنسيق أكثر تحسينًا، مثل WEBP أو AVIF.</li>
+			<li><strong>تراخيص الصور Image licenses</strong>: الصور التي تقع ضمن نطاق الملكية العامة <em>the public domain</em> لا تخضع لحقوق الطبع والنشر <em>no copyright</em>، وهي مجانية الاستخدام دون أي قيود. تُعتبر الصور المرخصة خصيصًا بموجب رخصة المشاع الإبداعي 0 <em>the Creative Commons 0 license</em> ملكًا عامًا. قد تُنشر بعض الصور بموجب ترخيص مُتساهل <em>a permissive license</em>، مثل رخصة المشاع الإبداعي <em>Creative Commons license</em>، أو رخصة <em>the BSD license</em> التي يستخدمها موقع <em>freeCodeCamp</em>.</li>
+			<li><strong>رسومات SVG</strong>: رسومات متجهية قابلة للتطوير <em>Scalable Vector Graphics</em>، تتتبع البيانات بناءً على مسارات <em>paths</em> ومعادلات <em>equations</em> لرسم النقاط <em>points</em> والخطوط <em>lines</em> والمنحنيات <em>curves</em> . هذا يعني أنه يمكن تغيير حجم الرسومات المتجهة، مثل رسومات SVG ، إلى أي حجم دون التأثير <em>without impacting</em> على الجودة <em>the quality</em>.</li>
+		</ul>
+
+
+
+	</section>
+
+	<section id="8">
+		<h3>تكامل الوسائط المتعددة Multimedia Integration</h3>
+		<ul>
+			<li><strong>عناصر <code class="br">audio</code> و <code class="br">video</code></strong>: تتيح لك عناصر <code class="br">audio</code> و <code class="br">video</code> إضافة محتوى صوتي وفيديو إلى مستندات اتش.تي.إم.إل <em>HTML documents</em> . يدعم عنصر <code class="br">audio</code> تنسيقات الصوت الشائعة <em>popular audio formats</em> مثل mp3 و wav و ogg ، بينما يدعم عنصر <code class="br">video</code> تنسيقات mp4 و ogg و webm .</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;audio <span class="attr">src=</span><span class="value">"CrystalizeThatInnerChild.mp3"</span>&gt;</span><span class="tag">&lt;/audio&gt;</span>
+			</code></pre>
+		</div>
+
+		<h4>إذا كنت ترغب في رؤية مشغل الصوت <em>the audio player</em> في الصفحة، يمكنك إضافة عنصر <code class="br">audio</code> باستخدام سمة <code class="br">controls</code>:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;audio <span class="attr">src=</span><span class="value">"CrystalizeThatInnerChild.mp3"</span> <span class="attr">controls</span>&gt;</span><span class="tag">&lt;/audio&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>تُمكّن سمة <code class="br">controls</code> المستخدمين من إدارة تشغيل الصوت، بما في ذلك ضبط مستوى الصوت، وإيقاف التشغيل مؤقتًا أو استئنافه. سمة <code class="br">controls</code> هي سمة منطقية <em>a boolean attribute</em> يُمكن إضافتها إلى أي عنصر لتمكين عناصر التحكم المدمجة في التشغيل. في حال حذفها، لن تظهر أي عناصر تحكم.</p>
+
+		<ul>
+			<li><strong>خاصية <code class="br">loop</code></strong>: خاصية <code class="br">loop</code> هي خاصية منطقية تُعيد تشغيل الصوت باستمرار.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;audio 
+	<span class="attr">src=</span><span class="value">"https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"</span> 
+	<span class="attr">loop</span>
+	<span class="attr">controls</span>
+&gt;</span><span class="tag">&lt;/audio&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>السمة <code class="br">muted</code></strong>: عند وجودها في عنصر <code class="br">audio</code>، ستبدأ السمة المنطقية <code class="br">muted</code> تشغيل الصوت في حالة كتم <em>in a muted state</em> .</li>
+		</ul>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;audio 
+	<span class="attr">src=</span><span class="value">"https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"</span> 
+	<span class="attr">loop</span>
+	<span class="attr">controls</span>
+	<span class="attr">muted</span>
+&gt;</span><span class="tag">&lt;/audio&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>عنصر <code class="br">source</code></strong>: فيما يتعلق بأنواع ملفات الصوت <em>audio file types</em>، تختلف المتصفحات في دعمها للأنواع المختلفة. لتحقيق ذلك، يمكنك استخدام عناصر <code class="br">source</code> داخل عنصر <code class="br">audio</code>، وسيختار المتصفح أول مصدر يفهمه.</li>
+			<h4>فيما يلي مثال لاستخدام عناصر <code class="br">source</code> متعددة لعنصر <code class="br">audio</code>:</h4>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;audio <span class="attr">controls</span>&gt;</span>
+	<span class="tag">&lt;source <span class="attr">src=</span><span class="value">"audio.ogg"</span> <span class="attr">type=</span><span class="value">"audio/ogg"</span> /&gt;</span>
+	<span class="tag">&lt;source <span class="attr">src=</span><span class="value">"audio.wav"</span> <span class="attr">type=</span><span class="value">"audio/wav"</span> /&gt;</span>
+	<span class="tag">&lt;source <span class="attr">src=</span><span class="value">"audio.mp3"</span> <span class="attr">type=</span><span class="value">"audio/mpeg"</span> /&gt;</span>
+<span class="tag">&lt;/audio&gt;</span>
+			</code></pre>
+		</div>
+
+		<p>جميع السمات التي تعلمناها حتى الآن مدعومة أيضًا في عنصر <code class="br">video</code>.</p>
+		<h4>فيما يلي مثال لاستخدام عنصر <code class="br">video</code> مع سمات <code class="br">loop</code> و <code class="br">controls</code> و <code class="br">muted</code>:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;video 
+	<span class="attr">src=</span><span class="value">"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"</span> 
+	<span class="attr">loop</span>
+	<span class="attr">controls</span>
+	<span class="attr">muted</span>
+&gt;</span><span class="tag">&lt;/video&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>سمة <code class="br">poster</code></strong>: لعرض صورة أثناء تنزيل الفيديو، يمكنك استخدام سمة <code class="br">poster</code>. هذه السمة غير متاحة لعناصر <code class="br">audio</code>، وهي خاصة بعنصر <code class="br">video</code>.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;video 
+	<span class="attr">src=</span><span class="value">"https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"</span> 
+	<span class="attr">loop</span>
+	<span class="attr">controls</span>
+	<span class="attr">muted</span>
+	<span class="attr">poster=</span><span class="value">"https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"</span> 
+	<span class="attr">width=</span><span class="value">"620"</span> 
+&gt;</span><span class="tag">&lt;/video&gt;</span>
+			</code></pre>
+		</div>
+
+
+	</section>
+
+	<section id="9">
+		<h3>أنواع السمات المستهدفة Target attribute types</h3>
+		<ul>
+			<li><strong>السمة <code class="br">target</code></strong>: تُخبر هذه السمة المتصفح بمكان فتح رابط URL لعنصر المرساة <em>anchor</em> . هناك أربع قيم محتملة مهمة لهذه السمة: <code class="br">self_</code>، و <code class="br">blank_</code>، و <code class="br">parent_</code>، و <code class="br">top_</code>. هناك قيمة خامسة تُسمى <code class="br">unfencedTop_</code>، وهي مستخدمة حاليًا لواجهة برمجة تطبيقات <em>FencedFrame API</em> التجريبية. ربما لن تجد سببًا لاستخدامها بعد.</li>
+			<li><strong>قيمة <code class="br">self_</code></strong>: هذه هي القيمة الافتراضية لخاصية <code class="br">target</code>. يؤدي هذا إلى فتح الرابط في سياق التصفح الحالي. في معظم الحالات، تكون هذه هي علامة التبويب <em>current tab</em> أو النافذة الحالية <em>current window</em>.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;a</span> <span class="attr">href=</span><span class="value">"https://arabiverse.github.io/HTMLverse/"</span> <span class="attr">target=</span><span class="value">"_self"</span><span class="tag">&gt;</span>زيارة عالم اتش.تي.إم.إل<span class="tag">&lt;/a&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>قيمة <code class="br">blank_</code></strong>: تفتح الرابط في سياق تصفح جديد <em>in a new browsing context</em>. عادةً، يُفتح في علامة تبويب جديدة <em>new tab</em>. ولكن قد يُهيئ بعض المستخدمين متصفحاتهم لفتح نافذة جديدة <em>new window instead</em>.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;a</span> <span class="attr">href=</span><span class="value">"https://arabiverse.github.io/HTMLverse/"</span> <span class="attr">target=</span><span class="value">"_blank"</span><span class="tag">&gt;</span>زيارة عالم اتش.تي.إم.إل<span class="tag">&lt;/a&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>قيمة <code class="br">parent_</code></strong>: تفتح هذه القيمة الرابط في الإطار الرئيسي للسياق الحالي <em>in the parent of the current context</em> . على سبيل المثال، إذا كان موقعك يحتوي على إطار مضمّن <em>iframe</em>، فسيتم فتح قيمة <code class="br">parent_</code> في هذا الإطار في نافذة/علامة تبويب موقعك <em>your website's tab/window</em> ، وليس في الإطار المضمّن <em>not in the embedded frame</em>.</li>
+		</ul>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;a</span> <span class="attr">href=</span><span class="value">"https://arabiverse.github.io/HTMLverse/"</span> <span class="attr">target=</span><span class="value">"_parent"</span><span class="tag">&gt;</span>زيارة عالم اتش.تي.إم.إل<span class="tag">&lt;/a&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>قيمة <code class="br">top_</code></strong>: تفتح هذه القيمة الرابط في أعلى سياق تصفح <em>in the top-most browsing context</em> - فكّر في "العنصر الرئيسي للعنصر الرئيسي" <em>the parent of the parent</em>. تشبه هذه القيمة قيمة <code class="br">parent_</code>، ولكن الرابط سيُفتح دائمًا في نافذة/علامة تبويب المتصفح الكاملة <em>open in the full browser tab/window</em>، حتى مع الإطارات المضمنة المتداخلة <em>even for nested embedded frames</em>.</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;a</span> <span class="attr">href=</span><span class="value">"https://arabiverse.github.io/HTMLverse/"</span> <span class="attr">target=</span><span class="value">"_top"</span><span class="tag">&gt;</span>زيارة عالم اتش.تي.إم.إل<span class="tag">&lt;/a&gt;</span>
+			</code></pre>
+		</div>
+	
+	</section>
+
+	<section id="10">
+		<h3>المسارات المطلقة مقابل المسارات النسبية Absolute vs. Relative Paths</h3>
+		<ul>
+			<li><strong>تعريف Path</strong>: المسار <em>A path</em> هو سلسلة نصية <em>a string</em> تحدد موقع ملف أو مجلد في نظام الملفات <em>file system</em>. في تطوير الويب <em>In web development</em>، تتيح المسارات <em>paths</em> للمطورين ربط موارد مثل الصور <em>images</em>، وأوراق الأنماط <em>stylesheets</em>، والبرامج النصية <em>scripts</em>، وصفحات الويب الأخرى <em>and other web pages</em>.</li>
+			<li><strong>بناء الجملة لـ Path</strong>: هناك ثلاثة بناء جملة رئيسية <em>three key syntaxes</em> يجب معرفتها. أولها الشرطة المائلة <em>the slash</em>، والتي يمكن أن تكون شرطة مائلة للخلف <em>a backslash</em> - (<code class="br">\</code>) أو شرطة مائلة للأمام <em>a forward slash</em> - (<code class="br">/</code>) حسب نظام التشغيل. ثانيها النقطة المفردة<em>the single dot</em> - (<code class="br">.</code>). وأخيرًا، لدينا النقطتان <em>the double dot</em> - (<code class="br">..</code>). تُعرف الشرطة المائلة <em>The slash</em> باسم "فاصل المسار" <em>path separator</em>، وتُستخدم للإشارة إلى فاصل في النص بين أسماء المجلدات أو الملفات. تشير النقطة المفردة إلى الدليل الحالي <em>current directory</em>، وتشير النقطتان إلى الدليل الرئيسي <em>the parent directory</em>.</li>
+		</ul>
+
+		
+		<div class="code-block">
+			<pre><code>
+public/index.html
+./favicon.ico
+../src/index.css
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>المسار المطلق Absolute Path</strong>: المسار المطلق <em>An absolute path</em> هو رابط كامل <em>a complete link</em> لمورد. يبدأ من الدليل الجذر <em>the root directory</em>، ويتضمن جميع الأدلة الأخرى <em>includes every other directory</em>، وأخيرًا اسم الملف وامتداده <em>the filename and extension</em>. يشير "الدليل الجذر" <em>The root directory</em> إلى الدليل أو المجلد الأعلى مستوى في التسلسل الهرمي <em>to the top-level directory or folder in a hierarchy</em>. يتضمن المسار المطلق <em>An absolute path</em> أيضًا البروتوكول <em>the protocol</em> - والذي قد يكون <code class="br">http</code> أو <code class="br">https</code>، بالإضافة إلى اسم الملف <code class="br">file</code> واسم النطاق <em>the domain name</em> إذا كان المورد موجودًا على الويب.</li>
+		</ul>
+
+				<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;a <span class="attr">href=</span><span class="value">"https://arabiverse.github.io/HTMLverse/favicon.png"</span>&gt;</span>
+	عرض شعار عالم اتش.تي.إم.إل
+<span class="tag">&lt;/a&gt;</span>
+			</code></pre>
+		</div>
+
+		<ul>
+			<li><strong>المسار النسبي Relative Path</strong>: يُحدد المسار النسبي <em>A relative path</em> موقع الملف بالنسبة لمجلد الملف الحالي <em>to the directory of the current file</em>. لا يتضمن هذا المسار البروتوكول <em>the protocol</em> أو اسم النطاق <em>the domain name</em>، مما يجعله أقصر وأكثر مرونة <em>more flexible</em> للروابط الداخلية <em>for internal links</em> ضمن الموقع نفسه. إليك مثال على ربط صفحة <code class="br">about.html</code> من صفحة <code class="br">contact.html</code>، وكلاهما في المجلد نفسه:</li>
+		</ul>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+	اقرأ المزيد على
+	<span class="tag">&lt;a <span class="attr">href=</span><span class="value">"about.html"</span>&gt;</span>صفحة حول<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+
+
+	</section>
+
+	<section id="11">
+		<h3>حالات الارتباط Link states</h3>
+		<ul>
+			<li><code class="br">link:</code>: هذه هي الحالة الافتراضية <em>the default state</em>. تُمثل هذه الحالة رابطًا <em>a link</em> لم يقم المستخدم بزيارته <em>not visited</em> أو النقر عليه <em>not clicked</em> أو التفاعل معه بعد <em>not interacted with ye</em>. يمكنك اعتبار هذه الحالة بمثابة الأنماط الأساسية <em>the base styles</em> لجميع الروابط <em>all links</em> في صفحتك. أما الحالات الأخرى فتُبنى عليها <em>The other states build on top of it</em>.</li>
+			<li><code class="br">visited:</code>: ينطبق هذا عندما يكون المستخدم قد زار الصفحة <em>when a user has already visited the page</em> المرتبطة بها. افتراضيًا <em>By default</em>، يُحوّل هذا الرابط إلى اللون الأرجواني، ولكن يمكنك استخدام CSS لتوفير مؤشر بصري مختلف <em>to provide a different visual indication</em> للمستخدم to the user.</li>
+			<li><code class="br">hover:</code>: تنطبق هذه الحالة <em>This state applies</em> عند تحريك المستخدم مؤشر الماوس فوق رابط <em>when a user is hovering their cursor over a link</em> . تُفيد هذه الحالة في زيادة الانتباه للرابط <em>providing extra attention to a link</em>، لضمان نية المستخدم النقر عليه <em>to ensure a user actually intends to click it</em>.</li>
+			<li><code class="br">focus:</code>: تنطبق هذه الحالة عندما نركز على الرابط <em>This state applies when we focus on a link</em>.</li>
+			<li><code class="br">active:</code>: تنطبق هذه الحالة على الروابط التي يُفعّلها المستخدم <em>This state applies to links that are being activated by the user</em>. عادةً ما يعني ذلك النقر على الرابط بزر الفأرة الرئيسي بالزر الأيسر <em>This typically means clicking on the link with the primary mouse button by left clicking</em>، في معظم الحالات <em>in most cases</em> .</li>
+		</ul>
 	</section>
 
 
