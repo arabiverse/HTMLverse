@@ -368,3 +368,17 @@ section {
 .code-block code .value {
   color: yellowgreen;
 }
+
+.help-code {
+  display: block;
+  direction: ltr;
+  overflow-x: auto;
+}
+
+
+form {
+  margin-right: 10px;
+  border: white solid 2px;
+  border-radius: 2%;
+  padding: 4px;
+}
