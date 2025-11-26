@@ -5,18 +5,18 @@
 >
   <url>
     <loc>https://arabiverse.github.io/HTMLverse/</loc>
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Example subpages (add your real ones) -->
-  <url>
+  <!-- <url>
     <loc>https://arabiverse.github.io/HTMLverse/</loc>
     <lastmod>2025-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+  </url> -->
 
   <!-- <url>
     <loc>https://arabiverse.github.io/HTMLverse/about.html</loc>

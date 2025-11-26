@@ -1,0 +1,16 @@
+{
+  "name": "HTMLverse",
+  "short_name": "HTMLverse",
+  "description": "A free and open-source Arabic learning platform for HTML.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "icons": [
+    {
+      "src": "/assets/HTMLverse500.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
