@@ -87,6 +87,113 @@
 
     <section id="2">
 		<h3>ب. لماذا من المهم وجود تسلسل هيكلي جيد Good Structural Hierarchy ؟</h3>
+		<p>أهم جانب في إنشاء تسلسل هيكلي <strong>Structural Hierarchy</strong> هو الاستخدام الأمثل لعناصر العناوين <em>Heading elements</em>. تُرقّم عناصر العناوين بالترتيب <code class="br">h1</code>، ثم <code class="br">h2</code>، ثم <code class="br">h3</code>، وهكذا. تُمثّل هذه الأرقام مستوى عنوان <em>The heading level</em> كل عنصر.</p>
+		<p>كما هو الحال في المستندات النصية <em>text document</em>، لا يُنصح باستخدام مستويات العناوين <em>heading levels</em> بترتيب غير صحيح <em>in the incorrect order</em>. عنصر <code class="br">h1</code> هو عنوانك الرئيسي <em>your top-level heading</em>. نادرًا ما تجد أكثر من عنصر واحد في الصفحة، وعادةً ما يأتي قبل كل المحتوى.</p>
+		<p>عنصر <code class="br">h2</code> هو عنوانك الفرعي <em>your subheading</em>. يجب أن يأتي دائمًا بعد <code class="br">h1</code>، وقد يأتي بعد نص تمهيدي <em>introductory text</em>. بخلاف عنصر <code class="br">h1</code>، يمكنك إضافة عدة عناصر <code class="br">h2</code> على صفحتك. ستستخدم هذا غالبًا لتحديد أقسام المحتوى المختلفة <em>to delineate different sections of content</em>.</p>
+		<p>باتباع هذا النمط <em>the pattern</em>، يجب أن يأتي عنصر <code class="br">h3</code> دائمًا بعد عنصر <code class="br">h2</code>. أي أنه لا يجب عليك الانتقال مباشرةً من <code class="br">h1</code> إلى <code class="br">h2</code>. مع ذلك، يمكنك استخدام عدة عناصر عناوين <em>multiple heading elements</em> في نفس المستوى <em>at the same level</em>.</p>
+
+		<h4>على سبيل المثال، هذا الكود <em>code</em> صحيح:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;section&gt;</span>
+	<span class="tag">&lt;h1&gt;</span>عالم "اتش.تي.إم.إل"<span class="tag">&lt;/h1&gt;</span>
+	<span class="tag">&lt;h2&gt;</span>تعلم تطوير الواجهة الأمامية<span class="tag">&lt;/h2&gt;</span>
+	<span class="tag">&lt;h2&gt;</span>تعلم تطوير الواجهة الخلفية<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;/section&gt;</span>
+			</code></pre>
+		</div>
+		<br>
+
+		<h4>لكن هذا الكود <em>code</em> غير صحيح، لأن <code class="br">h3</code> يسبق <code class="br">h2</code>:</h4>
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;section&gt;</span>
+	<span class="tag">&lt;h1&gt;</span>عالم اتش.تي.إم.إل<span class="tag">&lt;/h1&gt;</span>
+	<span class="tag">&lt;h3&gt;</span>مقدمة في اتش.تي.إم.إل<span class="tag">&lt;/h3&gt;</span>
+	<span class="tag">&lt;h2&gt;</span>تعلم تطوير الواجهة الأمامية<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;/section&gt;</span>
+			</code></pre>
+		</div>
+		<div class="preview" role="presentation">
+			<h1>عالم اتش.تي.إم.إل</h1>
+			<h3>مقدمة في اتش.تي.إم.إل</h3>
+			<h2>تعلم تطوير الواجهة الأمامية</h2>
+		</div>
+		<br>
+
+		<h4>انقل عنصر <code class="br">h2</code> فوق <code class="br">h3</code> ليصبح دلاليًا بشكل صحيح <em>Semantically correct</em> :</h4>
+				<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;section&gt;</span>
+	<span class="tag">&lt;h1&gt;</span>عالم اتش.تي.إم.إل<span class="tag">&lt;/h1&gt;</span>
+	<span class="tag">&lt;h2&gt;</span>مقدمة في اتش.تي.إم.إل<span class="tag">&lt;/h2&gt;</span>
+	<span class="tag">&lt;h3&gt;</span>تعلم تطوير الواجهة الأمامية<span class="tag">&lt;/h3&gt;</span>
+<span class="tag">&lt;/section&gt;</span>
+			</code></pre>
+		</div>
+		<div class="preview" role="presentation">
+			<h1>عالم اتش.تي.إم.إل</h1>
+			<h2>مقدمة في اتش.تي.إم.إل</h2>
+			<h3>تعلم تطوير الواجهة الأمامية</h3>
+		</div>
+		<br>
+
+		<h4>قد يكون من المغري <em>be tempting</em> استخدام عنصر عنوان محدد <em>a specific heading element</em> نظرًا لأسلوبه، مثل <code class="br">h1</code> للنصوص الكبيرة <em>large text</em>:</h4>
+						<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;article&gt;</span>
+	<span class="tag">&lt;article&gt;</span>
+		إليكم بعض
+		<span class="tag">&lt;h1&gt;</span>نص كبير<span class="tag">&lt;/h1&gt;</span>
+	<span class="tag">&lt;/article&gt;</span>
+<span class="tag">&lt;/article&gt;</span>
+			</code></pre>
+		</div>
+		<div class="preview" role="presentation">
+			<article>
+				<p>
+					إليكم بعض
+					<h1>نص كبير</h1>
+				</p>
+			</article>
+		</div>
+		<p>بدلاً من ذلك، عليك اختيار العنصر المناسب <strong>The appropriate element</strong> لهيكل مستندك <em>for your document structure</em> واستخدام <strong>CSS</strong> لتحقيق التصميم <em>the styling</em> الذي تريده.</p>
+
+		<p>يُعد استخدام التسلسل الهرمي الصحيح <strong>The right hierarchy</strong> أمرًا بالغ الأهمية <strong>Important</strong> لسهولة الوصول <strong>For Accessibility</strong>. تعتمد التقنيات المساعدة <em>Assistive technologies</em>، مثل قارئات الشاشة <em>screen readers</em>، على بنية صفحة الويب لتحديد كيفية تحليلها <em>to parse</em> وإظهارها <em>announce</em> للمستخدم <em>to the user</em>. قد يُوحي استخدام عنصر <code class="br">h3</code> بعد عنصر <code class="br">h1</code> لمستخدم قارئ الشاشة <em>screen reader user</em> بأنه قد تجاوز محتوى مهمًا عن طريق الخطأ، نظرًا لعدم وجود عنصر <code class="br">h2</code>.</p>
+
+		<p>البنية السليمة <strong>Proper structure</strong> مهمة أيضًا لتحسين محركات البحث <strong>SEO</strong>. تستخدم محركات البحث <em>Search engines</em> الأتمتة <em>Automation</em> لتحليل <em>to parse</em> محتوى صفحتك الإلكترونية <em>The content of your web page</em> وتحديد متى وأين يجب أن تظهر في النتائج <em>show up in results</em>. إذا كانت بنيتك <em>your structure</em> غير صحيحة <em>is malformed</em>، فقد لا تتمكن محركات البحث <em>search engines</em> من ترتيبك جيدًا في نتائج البحث ذات الصلة <em>in the relevant search results</em>.</p>
+
+		<p>أخيرًا، بناءً <em>depending</em> على مدى خطأ بنيتك <em>your structure</em>، قد لا يكون "اتش.تي.إم.إل" <em>HTML</em> صالحًا تقنيًا <em>technically valid</em>. عند حدوث ذلك، يجب على متصفح الويب <em>web browser</em> تخمين <em>guess</em> ما كنت تنوي فعله بدقة. وقد لا يكون ما يخمنه هو ما تريده على الإطلاق <em>at all</em>.</p>
+
+		<p>كما تعلمتم اليوم، هناك العديد من الأسباب <em>many reasons</em> لاستخدام هيكلية هرمية مناسبة <strong>The Proper Structural Hierarchy</strong> لصفحتكم. ضعوا ذلك في اعتباركم <em>Keep this in mind</em> عند بناء مشاريع جديدة <em>as you build new projects</em>.</p>
+
+
+			<!-- Questions  أسئلة -->
+	<div class="questions">
+		<h4>أسئلة :</h4>
+		<h5>لماذا يُعدّ التسلسل الهرمي الهيكلي <em>Structural Hierarchy</em> مهمًا؟</h5>
+		<p>١. إمكانية الوصول <em>Accessibility</em>.</p>
+		<p>٢. تحسين محركات البحث <em>SEO</em>.</p>
+		<p>٣. حتى تفهم المتصفحات <em>browsers</em> ما نعنيه.</p>
+		<p><mark> ٤. جميع ما سبق. ✅</p>
+
+		<br>
+		<h5>أي عنصر عنوان <em>heading element</em> يجب أن يسبق عنصر <code class="br">h3</code>؟</h5>
+		<p> ١. <code class="br">h5</code> ❌</p>
+		<p><mark> ٢. <code class="br">h2</code> ✅</mark></p>
+		<p> ٣. <code class="br">h6</code> ❌</p>
+		<p> ٤. <code class="br">h4</code> ❌</p>
+
+		<br>
+		<h5>كيف يمكنك إنشاء نص أكبر <em>larger text</em> على صفحتك؟</h5>
+		<p> ١. استخدم أي عنصر تريده، ونسّقه باستخدام <em>CSS</em>. ❌</p>
+		<p> ٢. استخدم عنصر <code class="br">h1</code> لأنه يحتوي على نص كبير. ❌</p>
+		<p> ٣. استخدم عنصر <code class="br">span</code>. ❌</p>
+		<p><mark> ٤. استخدم العنصر الهيكلي الصحيح <em>The correct structural element</em>، ونسّقه باستخدام <em>CSS</em>. ✅</p>
+	</div>
+
+
 	</section>
 
     <section id="3">
