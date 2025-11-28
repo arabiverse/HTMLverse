@@ -31,16 +31,97 @@
 	<div class="sub-title">
         <h2>٢. فهم العناصر الدلالية الدقيقة</h2>
 		<span class="hint">نظري</span>
-        <p>قريبا</p>
+        <p></p>
 	</div>
 
 	<section id="1">
+		<h3>أ. متى يجب استخدام عنصر التأكيد The Emphasis Element بدلًا من عنصر النص الاصطلاحي The Idiomatic Text Element ؟</h3>
+		
+		<p>ترتبط هذه العناصر ارتباطًا وثيقًا بمفاهيم <em>The concepts</em> "اتش.تي.إم.إل" العرضية <em>Presentational HTML</em> والدلالية <em>Semantic HTML</em>. استُخدم عنصر النص الاصطلاحي <strong>The idiomatic text</strong> ، <code class="br">i</code> ، في الأصل "لأغراض العرض" <em>for presentational purposes</em> لعرض النص بخط مائل <em>italics</em>. أما الآن، فيُستخدم بكثرة لإبراز أسلوب <em>mood</em> أو حالة بديلة <em>alternative voice</em>، أو مصطلحات اصطلاحية <em>idiomatic terms</em> من لغة أخرى، أو مصطلحات تقنية <em>technical terms</em>، أو أفكار <em>thoughts</em>.</p>
+		
+		<h4>فيما يلي مثال من مواصفات "اتش.تي.إم.إل" الرسمية The Official HTML، باستخدام عنصر <code class="br">i</code> لإظهار عبارة اصطلاحية <em>an idiomatic phrase</em> باللغة الإنجليزية:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<sapn class="tag">&lt;p&gt;</sapn>.في الهواء<span class="tag">&lt;i<span class="attr"> lang=</span><span class="value">"en"</span>&gt;</span> I don't know what <span class="tag">&lt;/i&gt;</span>هناك شيء معين<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>هناك شيء معين<i lang="en"> I don't know what </i>في الهواء.</p>
+		</div>
+
+		<p>تُستخدم سمة اللغة <code class="br">lang</code> داخل وسم <code class="br">&lt;i&gt;</code> المفتوح لتحديد لغة المحتوى. في هذه الحالة، اللغة هي الانجليزية. لا يُشير عنصر <code class="br">i</code> إلى أهمية النص، بل يُظهر فقط اختلافه <em>somehow different</em> عن النص المحيط به <em>from the surrounding text</em>.</p>
+		
+		<p>إذا كنتَ بحاجةٍ إلى التأكيد <em>to emphasize</em> على أهمية النص، يمكنكَ استخدام عنصرٍ دلاليٍّ مشابه <em>a similar semantic element</em> يُسمى عنصر التوكيد <strong>The Emphasis Element</strong> ، <code class="br">em</code> . يُنصح عادةً بهذا العنصر إذا كنتَ بحاجةٍ إلى توفير سياقٍ أوسع. يُنصح باستخدامه لأجزاء النص التي تتطلب توكيدًا خاصًا <em>special emphasis</em> مقارنةً بالنص المحيط. عادةً ما يقتصر استخدامه على بضع كلماتٍ فقط، لأنه قد يُغيّر معنى الجملة.</p>
+		
+
+		<h4>هذا مثال لعنصر التأكيد <em>The emphasis element</em> داخل الفقرة:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+	<span class="tag">&lt;em&gt;</span>.أحلامك<span class="tag">&lt;/em&gt;</span> لا تتخلى أبدًا عن
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>
+				لا تتخلى أبدًا عن <em>أحلامك</em>.
+			</p>
+		</div>
+
+		<p>يمكنك رؤية جملة <code class="br">لا تتخلى أبدًا عن أحلامك</code>. لاحظ أن كلمة <code class="br">أحلامك</code> مُشدّد عليها، لأنها داخل هذا العنصر. في المتصفح، سترى كلمة <code class="br">أحلامك</code> مكتوبة بخط مائل <em>italicized</em> لإعلام القراء بأهمية هذه الكلمة في الجملة.</p>
+
+		<p>حتى لو كان يبدو الأمر نفسه عندما كان النص داخل عنصر النص الاصطلاحي <em>The idiomatic text element</em>، فإن عنصر التأكيد الدلالي <em>The semantic emphasis element</em> ينقل معناه وأهميته خلف الكواليس <i>the scenes</i>.</p>
+
+		<p>من المهم معرفة أن هذه العناصر لا تُستخدم لأغراض العرض <em>presentational purposes</em> فقط. إذا كنتَ بحاجة لعرض النص بخط مائل <em>italics</em>، ولكن ليس للنص غرض <em>purpose</em> أو نمط <em>style</em> أو معنى خاص <em>a special meaning</em> في الفقرة، فعليك استخدام <strong>CSS</strong>.</p>
+
+
+		<div class="questions">
+		<h4>أسئلة :</h4>
+		
+		<h5>ما هو عنصر "اتش.تي.إم.إل" HTML element المُستخدم لتمييز <em>to differentiate</em> النص عن محتواه المحيط دون إظهار أهمية مُحددة؟</h5>
+		<p>١. <code class="br">em</code> ❌</p>
+		<p>٢. <code class="br">strong</code> ❌</p>
+		<p><mark>٣. <code class="br">i</code> ✅</mark></p>
+		<p>٤. <code class="br">mark</code> ❌</p>
+		
+
+		<br>
+
+		<h5>متى يُنصح باستخدام <strong>CSS</strong> بدلاً من عنصري <code class="br">i</code> أو <code class="br">em</code> ؟</h5>
+		<p> ١. عندما يكون للنص غرض <em>a purpose</em> أو معنى خاص <em>a special meaning</em> في الفقرة. ❌</p>
+		<p><mark> ٢. عندما تريد عرض النص بخط مائل <em>italics</em> لأغراض العرض <em>presentational purposes</em> فقط. ✅</mark></p>
+		<p> ٣. عندما يكون النص تعبيرًا اصطلاحيًا <em>an idiomatic expression</em>. ❌</p>
+		<p> ٤.عندما يحتاج النص إلى التأكيد عليه <em>be emphasized</em> لأهميته. ❌</p>
+		
+
+		<br>
+
+
+		<h5>ما هو الفرق الرئيسي بين <code class="br">i</code> و <code class="br">em</code> ؟</h5>
+		<p> ١. لا يوجد فرق، كلاهما يُبرز <em>emphasize</em> النص. ❌</p>
+		<p><mark>٢. يشير  <code class="br">i</code> إلى اختلاف النص عن المحتوى المحيط به، بينما يُبرز  <code class="br">em</code> النص المهم.  ✅</mark></p>
+		<p>٣. يُشير  <code class="br">i</code> إلى التأكيد، بينما يُشير  <code class="br">em</code> إلى التصميم.  ❌</p>
+		<p>٤. يُبرز كلاهما النص بنفس الطريقة، لكن  <code class="br">em</code> يُبرز أهمية أكبر.  ❌</p>
+		
+
+	
+
+		
+	
+	</div>
+
 	</section>
 
     <section id="2">
+		<h3>ب. متى يجب استخدام عنصر التشديد القوي The Strong Element بدلًا من عنصر لفت الانتباه The Bring Attention To Element ؟</h3>
 	</section>
 
     <section id="3">
+		<h3>ج. ما هي قوائم الوصف Description Lists، ومتى يجب استخدامها؟</h3>
 	</section>
    
 
