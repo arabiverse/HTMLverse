@@ -78,7 +78,7 @@
 
 		<p>من المهم معرفة أن هذه العناصر لا تُستخدم لأغراض العرض <em>presentational purposes</em> فقط. إذا كنتَ بحاجة لعرض النص بخط مائل <em>italics</em>، ولكن ليس للنص غرض <em>purpose</em> أو نمط <em>style</em> أو معنى خاص <em>a special meaning</em> في الفقرة، فعليك استخدام <strong>CSS</strong>.</p>
 
-
+		<!-- QUESTIONS -->
 		<div class="questions">
 		<h4>أسئلة :</h4>
 		
@@ -112,13 +112,114 @@
 
 		
 	
-	</div>
+		</div>
 
 	</section>
+
+
+
 
     <section id="2">
 		<h3>ب. متى يجب استخدام عنصر التشديد القوي The Strong Element بدلًا من عنصر لفت الانتباه The Bring Attention To Element ؟</h3>
+		
+		<p>يُستخدم عنصر "لفت الانتباه إلى" <em>bring attention to</em> , <code class="br">b</code> عادةً لتسليط الضوء على الكلمات الرئيسية في الملخصات، أو أسماء المنتجات في المراجعات. عادةً ما تعرض المتصفحات <em>browsers</em> هذا النص بخط عريض <strong>boldface</strong>.</p>
+	
+		<h4>فيما يلي مثال لاستخدام عنصر <code class="br">b</code> لتسليط الضوء على أسماء المنتجات في هذه المراجعة:</h4>
+	
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+	،لجودة الصوت<span class="tag"> &lt;b&gt;</span>SuperSound 3000<span class="tag">&lt;/b&gt; </span>لقد قمنا باختبار العديد من المنتجات، بما في ذلك 
+	،للشحن السريع<span class="tag"> &lt;b&gt;</span>QuickCharge Pro<span class="tag">&lt;/b&gt;</span>
+	.للتنظيف<span class="tag"> &lt;b&gt;</span>EcoClean Vacuum<span class="tag">&lt;/b&gt; </span>ومكنسة
+	.لم يلبِّ التوقعات<span class="tag"> &lt;b&gt;</span>EcoClean Vacuum<span class="tag">&lt;/b&gt; </span>لقد حقق الجهازان الأولان أداءً جيدًا، ولكن جهاز
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>
+				لقد قمنا باختبار العديد من المنتجات، بما في ذلك <b>SuperSound 3000</b> لجودة الصوت،
+				<b>QuickCharge Pro</b> للشحن السريع،
+				ومكنسة <b>EcoClean Vacuum</b> للتنظيف.
+				لقد حقق الجهازان الأولان أداءً جيدًا، ولكن جهاز <b>EcoClean Vacuum</b> لم يلبِّ التوقعات.
+			</p>
+		</div>
+
+		<p>يعرض المتصفح <i>browser</i> هذه الأجزاء من النص بخط عريض <b>bold text</b>. هذا التركيز البصري <em>This visual emphasis</em> يجذب انتباه القراء إلى أسماء المنتجات.</p>
+		
+		<p>إذا كنت بحاجة إلى التأكيد <em>to emphasize</em> على أهمية النص، فيجب عليك استخدام العنصر <code class="br">strong</code> بدلاً من عنصر <code class="br">b</code>.</p>
+		
+		<p><code class="br">strong</code> هو عنصر "اتش.تي.إم.إل" دلالي <em>a semantic HTML element</em> يسلط الضوء على النص الذي يعتبر بالغ الأهمية <b>Crucial</b> أو عاجلاً <b>Urgent</b>.</p>
+		
+		<h4>هذا مثال حيث يتم استخدام العنصر <code class="br">strong</code> لوضع علامة على تحذير مهم للغاية بشأن ردود الفعل التحسسية المحتملة <i>The potential allergic reactions</i> التي قد يعاني منها العملاء <i>Customers</i> تجاه منتج ما:</h4>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+	.قد يسبب هذا المنتج ردود فعل تحسسية <span class="tag">&lt;strong&gt;</span>:تحذير<span class="tag">&lt;/strong&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>
+				<strong>تحذير:</strong> قد يسبب هذا المنتج ردود فعل تحسسية.
+			</p>
+		</div>
+
+		<p>العنصر <code class="br">strong</code> ينقل هذا الشعور بالإلحاح.</p>
+
+		<p>كلاهما متشابهان بصريًا <i>Visually</i>، لأنهما يُعرَضان بخط عريض <b>bold</b> افتراضيًا <i>by default</i>. لكن معانيهما مختلفة تمامًا. فبينما يلفت عنصر "لفت الانتباه" <em>bring attention to</em> الانتباه إلى النص فقط، دون الإشارة إلى مستوى أهميته، فإن العنصر <code class="br">strong</code> يفعل أكثر من ذلك. فهو ينقل شعورًا بالأهمية أو الإلحاح. وهذا هو الفرق الرئيسي بينهما.</p>
+
+		<p>ولكي تختار بينهما، عليك أن تأخذ بعين الاعتبار غرض النص <em>The purpose of the text</em> وأهميته <em>Its importance</em> ضمن المحتوى المحيط به.</p>
+
+
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+		<h4>أسئلة :</h4>
+			
+		<h5>ما هو عنصر "اتش.تي.إم.إل" HTML element المستخدم لجذب الانتباه إلى جزء معين من النص دون الإشارة إلى أهمية محددة؟</h5>
+
+		<p>١. <code class="br">strong</code> ❌</p>
+		<p>٢. <code class="br">mark</code> ❌</p>
+		<p>٣. <code class="br">em</code> ❌</p>
+		<p><mark>٤. <code class="br">b</code> ✅</mark></p>
+
+		<br>
+
+		<h5>ما هو عنصر "اتش.تي.إم.إل" HTML element المستخدم للإشارة إلى نص ذي أهمية خاصة specially important أو مُلحّ urgent ؟</h5>
+
+		<p><mark>١. <code class="br">strong</code> ✅</mark></p>
+		<p>٢. <code class="br">b</code> ❌</p>
+		<p>٣. <code class="br">em</code> ❌</p>
+		<p>٤. <code class="br">mark</code> ❌</p>
+		
+
+		<br>
+
+
+		<h5>ما هو الفرق الرئيسي بين <code class="br">b</code> و <code class="br">strong</code> ؟</h5>
+
+		<p>١. لا يوجد فرق ء كلاهما يجعل النص غامقًا <b>bold</b>. ❌</p>
+		<p><mark>٢. <code class="br">b</code> للتأكيد البصري، بينما  <code class="br">strong</code> للتأكيد على الأهمية. ✅</mark></p>
+		<p>٣. <code class="br">strong</code> للتنسيق، بينما <code class="br">b</code>  للتأكيد على الأهمية. ❌</p>
+		<p>٤. يُستخدم كلاهما لأغراض العرض <i>presentational purposes</i> فقط. ❌</p>
+		
+	
+
+		
+	
+		</div>
+
+
+
 	</section>
+
+
+
 
     <section id="3">
 		<h3>ج. ما هي قوائم الوصف Description Lists، ومتى يجب استخدامها؟</h3>
