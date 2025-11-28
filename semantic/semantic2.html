@@ -31,16 +31,309 @@
 	<div class="sub-title">
         <h2>٢. فهم العناصر الدلالية الدقيقة</h2>
 		<span class="hint">نظري</span>
-        <p>قريبا</p>
+        <p></p>
 	</div>
 
 	<section id="1">
+		<h3>أ. متى يجب استخدام عنصر التأكيد The Emphasis Element بدلًا من عنصر النص الاصطلاحي The Idiomatic Text Element ؟</h3>
+		
+		<p>ترتبط هذه العناصر ارتباطًا وثيقًا بمفاهيم <em>The concepts</em> "اتش.تي.إم.إل" العرضية <em>Presentational HTML</em> والدلالية <em>Semantic HTML</em>. استُخدم عنصر النص الاصطلاحي <strong>The idiomatic text</strong> ، <code class="br">i</code> ، في الأصل "لأغراض العرض" <em>for presentational purposes</em> لعرض النص بخط مائل <em>italics</em>. أما الآن، فيُستخدم بكثرة لإبراز أسلوب <em>mood</em> أو حالة بديلة <em>alternative voice</em>، أو مصطلحات اصطلاحية <em>idiomatic terms</em> من لغة أخرى، أو مصطلحات تقنية <em>technical terms</em>، أو أفكار <em>thoughts</em>.</p>
+		
+		<h4>فيما يلي مثال من مواصفات "اتش.تي.إم.إل" الرسمية The Official HTML، باستخدام عنصر <code class="br">i</code> لإظهار عبارة اصطلاحية <em>an idiomatic phrase</em> باللغة الإنجليزية:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<sapn class="tag">&lt;p&gt;</sapn>.في الهواء<span class="tag">&lt;i<span class="attr"> lang=</span><span class="value">"en"</span>&gt;</span> I don't know what <span class="tag">&lt;/i&gt;</span>هناك شيء معين<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>هناك شيء معين<i lang="en"> I don't know what </i>في الهواء.</p>
+		</div>
+
+		<p>تُستخدم سمة اللغة <code class="br">lang</code> داخل وسم <code class="br">&lt;i&gt;</code> المفتوح لتحديد لغة المحتوى. في هذه الحالة، اللغة هي الانجليزية. لا يُشير عنصر <code class="br">i</code> إلى أهمية النص، بل يُظهر فقط اختلافه <em>somehow different</em> عن النص المحيط به <em>from the surrounding text</em>.</p>
+		
+		<p>إذا كنتَ بحاجةٍ إلى التأكيد <em>to emphasize</em> على أهمية النص، يمكنكَ استخدام عنصرٍ دلاليٍّ مشابه <em>a similar semantic element</em> يُسمى عنصر التوكيد <strong>The Emphasis Element</strong> ، <code class="br">em</code> . يُنصح عادةً بهذا العنصر إذا كنتَ بحاجةٍ إلى توفير سياقٍ أوسع. يُنصح باستخدامه لأجزاء النص التي تتطلب توكيدًا خاصًا <em>special emphasis</em> مقارنةً بالنص المحيط. عادةً ما يقتصر استخدامه على بضع كلماتٍ فقط، لأنه قد يُغيّر معنى الجملة.</p>
+		
+
+		<h4>هذا مثال لعنصر التأكيد <em>The emphasis element</em> داخل الفقرة:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+	<span class="tag">&lt;em&gt;</span>.أحلامك<span class="tag">&lt;/em&gt;</span> لا تتخلى أبدًا عن
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>
+				لا تتخلى أبدًا عن <em>أحلامك</em>.
+			</p>
+		</div>
+
+		<p>يمكنك رؤية جملة <code class="br">لا تتخلى أبدًا عن أحلامك</code>. لاحظ أن كلمة <code class="br">أحلامك</code> مُشدّد عليها، لأنها داخل هذا العنصر. في المتصفح، سترى كلمة <code class="br">أحلامك</code> مكتوبة بخط مائل <em>italicized</em> لإعلام القراء بأهمية هذه الكلمة في الجملة.</p>
+
+		<p>حتى لو كان يبدو الأمر نفسه عندما كان النص داخل عنصر النص الاصطلاحي <em>The idiomatic text element</em>، فإن عنصر التأكيد الدلالي <em>The semantic emphasis element</em> ينقل معناه وأهميته خلف الكواليس <i>the scenes</i>.</p>
+
+		<p>من المهم معرفة أن هذه العناصر لا تُستخدم لأغراض العرض <em>presentational purposes</em> فقط. إذا كنتَ بحاجة لعرض النص بخط مائل <em>italics</em>، ولكن ليس للنص غرض <em>purpose</em> أو نمط <em>style</em> أو معنى خاص <em>a special meaning</em> في الفقرة، فعليك استخدام <strong>CSS</strong>.</p>
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+		<h4>أسئلة :</h4>
+		
+		<h5>ما هو عنصر "اتش.تي.إم.إل" HTML element المُستخدم لتمييز <em>to differentiate</em> النص عن محتواه المحيط دون إظهار أهمية مُحددة؟</h5>
+		<p>١. <code class="br">em</code> ❌</p>
+		<p>٢. <code class="br">strong</code> ❌</p>
+		<p><mark>٣. <code class="br">i</code> ✅</mark></p>
+		<p>٤. <code class="br">mark</code> ❌</p>
+		
+
+		<br>
+
+		<h5>متى يُنصح باستخدام <strong>CSS</strong> بدلاً من عنصري <code class="br">i</code> أو <code class="br">em</code> ؟</h5>
+		<p> ١. عندما يكون للنص غرض <em>a purpose</em> أو معنى خاص <em>a special meaning</em> في الفقرة. ❌</p>
+		<p><mark> ٢. عندما تريد عرض النص بخط مائل <em>italics</em> لأغراض العرض <em>presentational purposes</em> فقط. ✅</mark></p>
+		<p> ٣. عندما يكون النص تعبيرًا اصطلاحيًا <em>an idiomatic expression</em>. ❌</p>
+		<p> ٤.عندما يحتاج النص إلى التأكيد عليه <em>be emphasized</em> لأهميته. ❌</p>
+		
+
+		<br>
+
+
+		<h5>ما هو الفرق الرئيسي بين <code class="br">i</code> و <code class="br">em</code> ؟</h5>
+		<p> ١. لا يوجد فرق، كلاهما يُبرز <em>emphasize</em> النص. ❌</p>
+		<p><mark>٢. يشير  <code class="br">i</code> إلى اختلاف النص عن المحتوى المحيط به، بينما يُبرز  <code class="br">em</code> النص المهم.  ✅</mark></p>
+		<p>٣. يُشير  <code class="br">i</code> إلى التأكيد، بينما يُشير  <code class="br">em</code> إلى التصميم.  ❌</p>
+		<p>٤. يُبرز كلاهما النص بنفس الطريقة، لكن  <code class="br">em</code> يُبرز أهمية أكبر.  ❌</p>
+		
+
+	
+
+		
+	
+		</div>
+
 	</section>
+
+
+
 
     <section id="2">
+		<h3>ب. متى يجب استخدام عنصر التشديد القوي The Strong Element بدلًا من عنصر لفت الانتباه The Bring Attention To Element ؟</h3>
+		
+		<p>يُستخدم عنصر "لفت الانتباه إلى" <em>bring attention to</em> , <code class="br">b</code> عادةً لتسليط الضوء على الكلمات الرئيسية في الملخصات، أو أسماء المنتجات في المراجعات. عادةً ما تعرض المتصفحات <em>browsers</em> هذا النص بخط عريض <strong>boldface</strong>.</p>
+	
+		<h4>فيما يلي مثال لاستخدام عنصر <code class="br">b</code> لتسليط الضوء على أسماء المنتجات في هذه المراجعة:</h4>
+	
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+	،لجودة الصوت<span class="tag"> &lt;b&gt;</span>SuperSound 3000<span class="tag">&lt;/b&gt; </span>لقد قمنا باختبار العديد من المنتجات، بما في ذلك 
+	،للشحن السريع<span class="tag"> &lt;b&gt;</span>QuickCharge Pro<span class="tag">&lt;/b&gt;</span>
+	.للتنظيف<span class="tag"> &lt;b&gt;</span>EcoClean Vacuum<span class="tag">&lt;/b&gt; </span>ومكنسة
+	.لم يلبِّ التوقعات<span class="tag"> &lt;b&gt;</span>EcoClean Vacuum<span class="tag">&lt;/b&gt; </span>لقد حقق الجهازان الأولان أداءً جيدًا، ولكن جهاز
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>
+				لقد قمنا باختبار العديد من المنتجات، بما في ذلك <b>SuperSound 3000</b> لجودة الصوت،
+				<b>QuickCharge Pro</b> للشحن السريع،
+				ومكنسة <b>EcoClean Vacuum</b> للتنظيف.
+				لقد حقق الجهازان الأولان أداءً جيدًا، ولكن جهاز <b>EcoClean Vacuum</b> لم يلبِّ التوقعات.
+			</p>
+		</div>
+
+		<p>يعرض المتصفح <i>browser</i> هذه الأجزاء من النص بخط عريض <b>bold text</b>. هذا التركيز البصري <em>This visual emphasis</em> يجذب انتباه القراء إلى أسماء المنتجات.</p>
+		
+		<p>إذا كنت بحاجة إلى التأكيد <em>to emphasize</em> على أهمية النص، فيجب عليك استخدام العنصر <code class="br">strong</code> بدلاً من عنصر <code class="br">b</code>.</p>
+		
+		<p><code class="br">strong</code> هو عنصر "اتش.تي.إم.إل" دلالي <em>a semantic HTML element</em> يسلط الضوء على النص الذي يعتبر بالغ الأهمية <b>Crucial</b> أو عاجلاً <b>Urgent</b>.</p>
+		
+		<h4>هذا مثال حيث يتم استخدام العنصر <code class="br">strong</code> لوضع علامة على تحذير مهم للغاية بشأن ردود الفعل التحسسية المحتملة <i>The potential allergic reactions</i> التي قد يعاني منها العملاء <i>Customers</i> تجاه منتج ما:</h4>
+
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;p&gt;</span>
+	.قد يسبب هذا المنتج ردود فعل تحسسية <span class="tag">&lt;strong&gt;</span>:تحذير<span class="tag">&lt;/strong&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<p>
+				<strong>تحذير:</strong> قد يسبب هذا المنتج ردود فعل تحسسية.
+			</p>
+		</div>
+
+		<p>العنصر <code class="br">strong</code> ينقل هذا الشعور بالإلحاح.</p>
+
+		<p>كلاهما متشابهان بصريًا <i>Visually</i>، لأنهما يُعرَضان بخط عريض <b>bold</b> افتراضيًا <i>by default</i>. لكن معانيهما مختلفة تمامًا. فبينما يلفت عنصر "لفت الانتباه" <em>bring attention to</em> الانتباه إلى النص فقط، دون الإشارة إلى مستوى أهميته، فإن العنصر <code class="br">strong</code> يفعل أكثر من ذلك. فهو ينقل شعورًا بالأهمية أو الإلحاح. وهذا هو الفرق الرئيسي بينهما.</p>
+
+		<p>ولكي تختار بينهما، عليك أن تأخذ بعين الاعتبار غرض النص <em>The purpose of the text</em> وأهميته <em>Its importance</em> ضمن المحتوى المحيط به.</p>
+
+
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+		<h4>أسئلة :</h4>
+			
+		<h5>ما هو عنصر "اتش.تي.إم.إل" HTML element المستخدم لجذب الانتباه إلى جزء معين من النص دون الإشارة إلى أهمية محددة؟</h5>
+
+		<p>١. <code class="br">strong</code> ❌</p>
+		<p>٢. <code class="br">mark</code> ❌</p>
+		<p>٣. <code class="br">em</code> ❌</p>
+		<p><mark>٤. <code class="br">b</code> ✅</mark></p>
+
+		<br>
+
+		<h5>ما هو عنصر "اتش.تي.إم.إل" HTML element المستخدم للإشارة إلى نص ذي أهمية خاصة specially important أو مُلحّ urgent ؟</h5>
+
+		<p><mark>١. <code class="br">strong</code> ✅</mark></p>
+		<p>٢. <code class="br">b</code> ❌</p>
+		<p>٣. <code class="br">em</code> ❌</p>
+		<p>٤. <code class="br">mark</code> ❌</p>
+		
+
+		<br>
+
+
+		<h5>ما هو الفرق الرئيسي بين <code class="br">b</code> و <code class="br">strong</code> ؟</h5>
+
+		<p>١. لا يوجد فرق ء كلاهما يجعل النص غامقًا <b>bold</b>. ❌</p>
+		<p><mark>٢. <code class="br">b</code> للتأكيد البصري، بينما  <code class="br">strong</code> للتأكيد على الأهمية. ✅</mark></p>
+		<p>٣. <code class="br">strong</code> للتنسيق، بينما <code class="br">b</code>  للتأكيد على الأهمية. ❌</p>
+		<p>٤. يُستخدم كلاهما لأغراض العرض <i>presentational purposes</i> فقط. ❌</p>
+		
+	
+
+		
+	
+		</div>
+
+
+
 	</section>
 
+
+
+
     <section id="3">
+		<h3>ج. ما هي قوائم الوصف Description Lists، ومتى يجب استخدامها؟</h3>
+
+		<p>تعتبر قوائم الوصف <strong>Description lists</strong> مثالية لتقديم المصطلحات <em>terms</em> والتعريفات <em>definitions</em> بتنسيق منظم <em>organized</em> وسهل القراءة، كما هو الحال في المسرد <i>a glossary</i> أو القاموس الحقيقي، حيث يمكنك العثور على الكلمات مع تعريفاتها المقابلة.</p>
+
+		<h4>هذا مثال لقائمة وصف <em>description list</em> في "اتش.تي.إم.إل" HTML تحتوي على مصطلحين وتفاصيلهما المقابلة:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;dl&gt;</span>
+	<span class="tag">&lt;dt&gt;</span>HTML اتش.تي.إم.إل<span class="tag">&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;</span>HyperText Markup Language لغة ترميز النص الفائق<span class="tag">&lt;/dd&gt;</span>
+	<span class="tag">&lt;dt&gt;</span>CSS سي.أس.أس<span class="tag">&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;</span>Cascading Style Sheets أوراق الأنماط المتتالية<span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<dl>
+				<dt>اتش.تي.إم.إل HTML</dt>
+				<dd>لغة ترميز النص الفائق HyperText Markup Language</dd>
+				<dt>سي.أس.أس CSS</dt>
+				<dd>أوراق الأنماط المتتالية Cascading Style Sheets</dd>
+			</dl>
+		</div>
+
+		<p>في هذه الحالة، المصطلحان هما اختصارا "اتش.تي.إم.إل" HTML و"سي.أس.أس" CSS، والتفاصيل هي امتدادات لهما <i>their expansions</i>. قد تكون التفاصيل أيضًا تعريفات أو معلومات أخرى متعلقة بالمصطلحين.</p>
+
+		<p>ستحتاج إلى ثلاثة عناصر "اتش.تي.إم.إل" HTML لتعريف قائمة وصف <em>description list</em>. أولًا، عنصر قائمة الوصف، <code class="br">dl</code>، وهو الحاوية <em>the container</em> للقائمة بأكملها. كما هو موضح في المثال، فهو يلتف حول جميع عناصر قائمة الوصف الأخرى.</p>
+
+		<p>ثم، عنصر وصف واحد <em>description term</em> <code class="br">dt</code>، لكل مصطلح. في هذه الحالة، تحتوي قائمة الوصف <em>description list</em> على مصطلحين، "اتش.تي.إم.إل" HTML و "سي.أس.أس" CSS، لذا فهي تحتوي على عنصرين منهما.</p>
+
+		<p>وأخيرًا، بعد كل مصطلح، ستجد عنصر "وصف التفاصيل" <em>description detail</em>، <code class="br">dd</code>، للوصف أو التفاصيل المرتبطة به. في هذا المثال، هذه هي لغة ترميز النص الفائق وأوراق الأنماط المتتالية.</p>
+
+		<p>في المتصفح <i>In the browser</i>، ستجد كل مصطلح <em>each term</em> متبوعًا بوصفه. افتراضيًا <em>By default</em>، تكون الأوصاف متباعدة قليلاً نحو اليمين لتمييزها بصريًا.</p>
+
+		<p>لكن "قوائم الوصف" <em>Description lists</em> لا تقتصر على المصطلحات والتعريفات فحسب، بل هي أكثر تنوعًا من ذلك بكثير.</p>
+
+		<h4>لدينا هنا وصفة مكونة من ثلاثة مكونات <i>three ingredients</i>:</h4>
+
+		<div class="code-block">
+			<pre><code>
+<span class="tag">&lt;dl&gt;</span>
+	<span class="tag">&lt;dt&gt;</span>دقيق<span class="tag">&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;</span>كوبان<span class="tag">&lt;/dd&gt;</span>
+	<span class="tag">&lt;dt&gt;</span>سكر<span class="tag">&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;</span>نصف كوب<span class="tag">&lt;/dd&gt;</span>
+	<span class="tag">&lt;dt&gt;</span>زيت نباتي<span class="tag">&lt;/dt&gt;</span>
+	<span class="tag">&lt;dd&gt;</span>ملعقتان كبيرتان<span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span>
+			</code></pre>
+		</div>
+
+		<div class="preview">
+			<dl>
+				<dt>دقيق</dt>
+				<dd>كوبان</dd>
+				<dt>سكر</dt>
+				<dd>نصف كوب</dd>
+				<dt>زيت نباتي</dt>
+				<dd>ملعقتان كبيرتان</dd>
+			</dl>
+		</div>
+
+		<p>قائمة الوصف الكاملة <strong>The entire description list</strong> موجودة ضمن عنصر قائمة الوصف <em>description list element</em>. المكون الأول، <code class="br">دقيق</code>، موجود ضمن عنصر" مصطلح الوصف" <em>description term element</em>. بعد ذلك، يمكنك معرفة الكمية المطلوبة من هذا المكون: <code class="br">كوبان</code>. هذا موجود ضمن عنصر "تفاصيل الوصف" <em>description details element</em> مباشرةً بعد مكوناته المقابلة.</p>
+
+		وتُكرّر نفس التركيبة لـ <code class="br">سكر</code>. في هذه الحالة، تحتوي الوصفة على مكونين فقط، ولكن إذا كانت المكونات أكثر، يُمكن تكرار التركيبة نفسها في "قائمة الوصف" <em>The description list</em>.
+
+		<p>في المتصفح <i>In the browser</i>، سوف ترى المكونات محاذية إلى اليسار، والقياسات متباعدة <em>indented</em> لفصلها بصريًا <i>visually</i>.</p>
+
+		<p>تشمل حالات الاستخدام الأخرى لقوائم الوصف <em>description lists</em> مواصفات المنتج <em>product specifications</em>، والأسئلة الشائعة <em>frequently asked questions</em>، ومعلومات الاتصال <em>contact information</em>، والبيانات الوصفية <em>metadata</em>. في الأساس، عندما يكون لديك معلومتان مرتبطتان في صيغة مفتاح-قيمة <strong>key-value</strong>، حيث تعمل إحداهما كعلامة "المفتاح" <em>the key</em>، والأخرى كمعلومات إضافية ذات صلة "القيمة" <em>the value</em>، يمكنك استخدام قائمة وصف <em>description list</em>.</p>
+
+
+
+		<!-- QUESTIONS -->
+		<div class="questions">
+			<h4>أسئلة :</h4>
+
+			<h5>ما هو وسم "اتش.تي.إم.إل" HTML tag المُستخدم لتعريف قائمة وصف كاملة <em>an entire description list</em> ؟</h5>
+
+			<p>١. <code class="br">dt</code> ❌</p>
+			<p>٢. <code class="br">dd</code> ❌</p>
+			<p><mark>٣. <code class="br">dl</code> ✅</mark></p>
+			<p>٤. <code class="br">li</code> ❌</p>
+			
+
+			<br>
+
+			<h5>ما هو وسم "اتش.تي.إم.إل" HTML tag المُستخدم لتمثيل مصطلح <em>a term</em> في قائمة وصف؟</h5>
+
+			<p>١. <code class="br">dl</code> ❌</p>
+			<p><mark>٢. <code class="br">dt</code> ✅</mark></p>
+			<p>٣. <code class="br">dd</code> ❌</p>
+			<p>٤. <code class="br">li</code> ❌</p>
+			
+			
+			<br>
+
+
+			<h5>ما هو وسم "اتش.تي.إم.إل" HTML tag المُستخدم لتعريف  مصطلح في قائمة وصف أو تقديم تفاصيل <em>details</em> إضافية عنه؟</h5>
+
+			<p>١. <code class="br">dl</code> ❌</p>
+			<p>٢. <code class="br">dt</code> ❌</p>
+			<p><mark>٣. <code class="br">dd</code> ✅</mark></p>
+			<p>٤. <code class="br">li</code> ❌</p>
+			
+			
+
+		</div>
+
+
+
 	</section>
    
 
